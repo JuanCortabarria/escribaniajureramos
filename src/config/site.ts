@@ -1,0 +1,26 @@
+export const site = {
+  name: 'Escribanía Jure Ramos', url: 'https://escribaniajureramos.com.ar',
+  person: 'Solange Jure Ramos', registration: '132', since: 2002,
+  address: 'Paraná 540, piso 1, oficina B', city: 'Córdoba', postalCode: 'X5000HXL',
+  phone: '0351 460-4614', phoneHref: '+543514604614', whatsapp: '+54 9 351 686-7532',
+  whatsappUrl: 'https://wa.me/5493516867532?text=Hola%2C%20quisiera%20hacer%20una%20consulta%20a%20la%20escriban%C3%ADa.',
+  email: 'escribaniajureramos@gmail.com', hours: 'Lunes a viernes, de 9 a 17 h',
+  maps: 'https://maps.app.goo.gl/pffBjQ2gELqhX14o8', latitude: -31.4245341, longitude: -64.1799683,
+  updated: '2026-10-12',
+  services: [
+    { title: 'Actuación notarial', label: 'Tus trámites, con claridad', icon: 'seal', description: 'Te acompañamos en las gestiones notariales de todos los días, con atención personalizada.', items: ['Certificación de firmas y copias', 'Actas notariales', 'Asesoramiento notarial'] },
+    { title: 'Patrimonio e inmuebles', label: 'Cuidar lo que construiste', icon: 'home', description: 'Asesoramiento para las decisiones que involucran tus bienes y operaciones inmobiliarias.', items: ['Compraventa, donaciones y permutas', 'Dación en pago y derechos reales', 'Contratos en general'] },
+    { title: 'Sociedades y empresa', label: 'Una base para crecer', icon: 'company', description: 'Acompañamos la organización de tu empresa y la planificación de su continuidad.', items: ['Constitución de sociedades y SAS', 'Empresa familiar y contratos', 'Fideicomisos de administración y sucesorios'] },
+    { title: 'Familia', label: 'Acompañar cada etapa', icon: 'family', description: 'Orientación para organizar las decisiones patrimoniales y los trámites de tu familia.', items: ['Protección de la vivienda', 'Régimen patrimonial y pactos de convivencia', 'Autorizaciones para viajar y conducir'] },
+    { title: 'Sucesiones y previsión', label: 'Planificar con tranquilidad', icon: 'leaf', description: 'Te ayudamos a expresar tu voluntad y a pensar el futuro de tu patrimonio.', items: ['Herencias y cesiones de derechos hereditarios', 'Testamentos y legados', 'Autoprotección y directivas médicas anticipadas'] },
+  ],
+  credentials: ['Doctora en Derecho y Ciencias Sociales · UNC', 'Abogada · Universidad Nacional de Córdoba', 'Magíster en Derecho Empresario · Universidad Austral', 'Profesora adjunta por concurso de Derecho Privado IV · UNC'],
+  faq: [
+    { q: '¿Cómo puedo coordinar una consulta?', a: 'Podés escribirnos por WhatsApp, llamarnos o enviarnos un correo. Contanos qué gestión necesitás y coordinaremos la atención con la escribanía.' },
+    { q: '¿Dónde está la escribanía y en qué horario atiende?', a: 'Estamos en Paraná 540, piso 1, oficina B, en Córdoba capital. Atendemos de lunes a viernes, de 9 a 17 h. Contactanos antes de tu visita para coordinar.' },
+    { q: '¿Qué documentación necesito llevar?', a: 'La documentación depende del trámite y de las personas que intervengan. Consultanos antes de la visita para que podamos indicarte qué documentación corresponde a tu gestión.' },
+    { q: '¿Puedo consultar por un trámite de mi empresa?', a: 'Sí. Brindamos asesoramiento para constitución de sociedades, SAS, contratos de empresa, fideicomisos y planificación de la empresa familiar.' },
+    { q: '¿Cómo consulto el costo y el tiempo de un trámite?', a: 'Escribinos con una breve descripción de la gestión que necesitás. La escribanía podrá evaluar tu caso e informarte los costos, la documentación y los tiempos correspondientes.' },
+    { q: '¿Atienden consultas sobre inmuebles y planificación patrimonial?', a: 'Sí. Podés consultarnos sobre compraventas, donaciones, derechos reales, protección de la vivienda, testamentos y otras gestiones patrimoniales.' },
+  ],
+};

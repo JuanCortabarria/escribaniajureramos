@@ -1,0 +1,2 @@
+/* Role-based design tokens, following Astro Chalet's theme architecture. */
+:root{--color-dark-bg:#14213D;--color-accent:#B08D57;--color-accent-bright:#D4B483;--color-bg:#F7F4EE;--color-surface:#fff;--color-text:#14213D;--color-text-muted:#4A5160;--color-dark-text:#F7F4EE;--color-border:#dedbd4;--font-heading:'Cormorant Garamond',Georgia,serif;--font-body:'Inter',sans-serif;--content-width:1200px;--space-section:100px;--transition:220ms ease}
