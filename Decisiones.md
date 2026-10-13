@@ -121,4 +121,6 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 
 - Compilación Astro correcta: 0 errores, 0 advertencias y 0 observaciones. Auditoría técnica existente correcta.
 - Servidor de desarrollo activo en `http://127.0.0.1:4321/`, usando Node 24 del runtime disponible, ya que el Node predeterminado es 22.16 y el proyecto requiere 22.19 o superior.
-- Envío a GitHub: se registrará el resultado tras guardar el commit de integración.
+- Navegador: HTTP 200, seis FAQ reales, horarios diferenciados correctos y foto de oficina cargada.
+- Commit de integración `53fc08a` enviado correctamente a `origin/main`; la autenticación de escritura ya funciona en esta sesión.
+- El archivo ajeno `outputs/vmasport-referencias-y-prospectos-uruguay.md` conserva su estado previo y no se incluyó en el commit.
