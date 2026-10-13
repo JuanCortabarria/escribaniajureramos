@@ -35,4 +35,7 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 
 ### Publicación
 
-- Pendiente de verificar el primer commit y push de estos archivos.
+- Creado el commit local `9f35284` (`docs: registrar decisiones y flujo de colaboración`) con ambos archivos.
+- El push a `origin/main` se intentó y falló: Git no tiene disponible la autenticación de GitHub por HTTPS (`could not read Username`). El acceso de lectura verificado no confirma permiso de escritura.
+- Los archivos están guardados localmente; queda pendiente autenticar GitHub con una cuenta con permiso de escritura y volver a ejecutar el push.
+- La actualización de este resultado se guarda en un segundo commit de documentación.
