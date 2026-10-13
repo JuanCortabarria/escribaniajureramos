@@ -50,3 +50,9 @@ Lighthouse 12.6.1 se ejecutó sobre la compilación estática en localhost, con 
 - `artifacts/lighthouse-mobile.report.html` y `.json`.
 
 La auditoría confirma la estructura del JSON-LD y su tipado, pero no sustituye una revisión externa en Schema.org o en herramientas de Google tras la publicación. No se hicieron envíos a servicios externos de validación ni se prometen resultados enriquecidos de FAQ.
+
+## Actualización de portada · 13/10/2026
+
+Título cambiado a «Escribanía en Nueva Córdoba» y descripción reducida a «Asesoramiento notarial y legal general». Se retiraron el eslogan de confianza, el texto vertical y la frase «Experiencia que da tranquilidad». El recuadro conserva únicamente «Atención personalizada desde el primer encuentro». Se reemplazó el certificado por la foto de oficina suministrada, con variantes AVIF/WebP. Se actualizaron los metadatos, Markdown y la imagen para compartir.
+
+Compilación y auditoría técnica correctas; revisión visual a 1440 y 390 px sin desbordes, con la nueva imagen cargada y los textos solicitados. Capturas: `artifacts/portada-actualizada-1440.png` y `artifacts/portada-actualizada-390.png`. Los puntajes Lighthouse anteriores corresponden a la revisión del 12/10/2026; no se repitió esa medición para este cambio de contenido.

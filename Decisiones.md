@@ -106,3 +106,19 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - Logo, autorización de las fotos conservadas, cargos y afiliaciones restantes y pin de Maps, según `PENDIENTES.md`.
 - Configurar Analytics y Search Console en una etapa posterior.
 - El envío a GitHub continúa bloqueado por la autenticación pendiente. Los cambios se guardan en un commit local.
+
+## 2026-10-13 — Integración de cambios y reanudación local
+
+### Decisiones y cambios ejecutados
+
+- Revisados el historial, las instrucciones y los cambios del compañero en el commit `61c309f`: FAQ reales, horarios diferenciados, servicios prioritarios y contacto por WhatsApp.
+- Resueltos cuatro conflictos de aplicación de cambios guardados en `src/components/Seo.astro`, `src/pages/index.astro`, `src/pages/index.md.ts` y `src/pages/llms.txt.ts`.
+- Conservados los horarios, credenciales, FAQ y enfoque de servicios del compañero, junto con la portada de oficina, el título «Escribanía en Nueva Córdoba» y el tono informativo solicitados directamente en este chat. La imagen generada de firma se conserva disponible como alternativa.
+- Conservados todos los demás cambios existentes, incluido el archivo ajeno a esta tarea en `outputs/`, sin incorporarlo al commit de integración.
+- Guardada una copia de los cuatro archivos con conflictos en `/private/tmp/escribania-conflictos-20261013` antes de editarlos. No se descartó el stash.
+
+### Verificaciones y ejecución
+
+- Compilación Astro correcta: 0 errores, 0 advertencias y 0 observaciones. Auditoría técnica existente correcta.
+- Servidor de desarrollo activo en `http://127.0.0.1:4321/`, usando Node 24 del runtime disponible, ya que el Node predeterminado es 22.16 y el proyecto requiere 22.19 o superior.
+- Envío a GitHub: se registrará el resultado tras guardar el commit de integración.
