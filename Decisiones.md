@@ -67,3 +67,42 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 
 - Recibir las respuestas de la usuaria antes de decidir las modificaciones.
 - Compartir los commits con GitHub cuando esté disponible la autenticación con permiso de escritura; el bloqueo del push registrado en la entrada anterior sigue sin resolverse.
+
+## 2026-10-13 — Enfoque comercial y contenido suministrado por la profesional
+
+### Decisiones confirmadas
+
+- Objetivo principal: recibir más consultas por WhatsApp.
+- Público prioritario: particulares, empresas e inmobiliarias. Dar prioridad a inmuebles, certificaciones por su volumen y movimiento, y reestructuración y asesoramiento societario.
+- Conservar el estilo azul, dorado y crema, la tipografía y el tono profesional y cercano.
+- Sustituir la portada por una mujer firmando; se incorporó una imagen ilustrativa fotográfica generada, sujeta a revisión de la usuaria.
+- Horario confirmado: lunes a jueves de 9 a 17 h; viernes de 9 a 14 h.
+- La profesional confirmó el doctorado en Derecho y suministró seis preguntas frecuentes con sus respuestas. Se respetó su contenido con correcciones menores de redacción.
+- La usuaria es la profesional responsable y aprobará el resultado final. Quiere tenerlo listo de inmediato para revisión.
+- Google Analytics y Google Search Console se configurarán después: la usuaria confirmó que todavía no están configurados.
+
+### Cambios ejecutados
+
+- `src/config/site.ts`: horarios diferenciados, fecha, prioridad de servicios, asesoramiento y reestructuración societaria, doctorado y las seis FAQ reales.
+- `src/pages/index.astro`: portada nueva, botón principal explícito de WhatsApp, público prioritario, presentación de servicios y eliminación de la leyenda de FAQ preliminares.
+- `src/components/Seo.astro`: horarios coherentes en los datos estructurados y descripción alineada con los servicios prioritarios.
+- `src/pages/index.md.ts` y `src/pages/llms.txt.ts`: contenido alternativo coherente con la página.
+- `src/styles/global.css`: posición del recuadro de la portada para mantener visible el gesto de firma.
+- `public/images/mujer-firmando*`: imagen nueva con variantes JPEG, WebP y AVIF; conservada la imagen anterior.
+- `licenses/mujer-firmando-origen.md`: procedencia y prompt completo de la imagen generada con la herramienta integrada.
+- `PENDIENTES.md`: actualizado según las respuestas recibidas.
+
+### Verificaciones
+
+- Compilación y revisión de Astro: 0 errores, 0 advertencias y 0 observaciones.
+- Auditoría técnica existente: correcta.
+- Verificados los horarios de lunes a jueves y viernes en los datos estructurados, la eliminación de FAQ preliminares del HTML y Markdown, y la presencia de las variantes optimizadas en la compilación.
+- Navegador: sin desborde a 1440 y 390 px; portada visible con la nueva imagen, menú móvil funcional y FAQ desplegable con la respuesta suministrada. Sin errores ni advertencias de consola registrados en la revisión.
+- Captura de revisión local: `artifacts/portada-actualizada.jpg`.
+
+### Pendientes
+
+- Revisión y aprobación de esta versión por la usuaria.
+- Logo, autorización de las fotos conservadas, cargos y afiliaciones restantes y pin de Maps, según `PENDIENTES.md`.
+- Configurar Analytics y Search Console en una etapa posterior.
+- El envío a GitHub continúa bloqueado por la autenticación pendiente. Los cambios se guardan en un commit local.
