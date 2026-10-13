@@ -39,3 +39,31 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - El push a `origin/main` se intentó y falló: Git no tiene disponible la autenticación de GitHub por HTTPS (`could not read Username`). El acceso de lectura verificado no confirma permiso de escritura.
 - Los archivos están guardados localmente; queda pendiente autenticar GitHub con una cuenta con permiso de escritura y volver a ejecutar el push.
 - La actualización de este resultado se guarda en un segundo commit de documentación.
+
+## 2026-10-13 — Revisión del código y ejecución local
+
+### Decisiones
+
+- Revisar y ejecutar la versión existente antes de modificar el diseño o el contenido, por solicitud de la usuaria.
+- Mantener la vista de desarrollo en `http://127.0.0.1:4321/`, accesible desde esta computadora.
+- Consultar el objetivo principal, el público y los servicios prioritarios, las preferencias de diseño, la vigencia de los datos y credenciales, las preguntas frecuentes reales, la autorización de imágenes, el logo, el plazo, la aprobación final y los indicadores de éxito. Las respuestas siguen pendientes.
+
+### Trabajo ejecutado
+
+- Revisados los componentes, la portada, la configuración de contacto y servicios, los estilos, los metadatos y los informes previos.
+- Instaladas las dependencias con `npm ci`, usando las versiones del archivo `package-lock.json` y el entorno Node.js disponible en Codex.
+- Iniciado el servidor de desarrollo local con la telemetría de Astro desactivada para esta ejecución.
+- Abierta la página en el navegador de Codex y dejada disponible para revisión.
+- Actualizado únicamente este registro; el diseño y el contenido de la web conservan su versión previa.
+
+### Verificaciones
+
+- Compilación y revisión de Astro correctas: 0 errores, 0 advertencias y 0 observaciones.
+- Auditoría técnica existente ejecutada correctamente; informe local en `artifacts/auditoria-tecnica.json`.
+- Verificadas la carga de la página en el navegador y la apariencia de la portada.
+- La revisión identifica pendientes previos de validación de FAQ, credenciales, derechos de uso de fotos, logo y ubicación en Google Maps.
+
+### Pendientes
+
+- Recibir las respuestas de la usuaria antes de decidir las modificaciones.
+- Compartir los commits con GitHub cuando esté disponible la autenticación con permiso de escritura; el bloqueo del push registrado en la entrada anterior sigue sin resolverse.
