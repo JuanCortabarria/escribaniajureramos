@@ -1,5 +1,16 @@
 # Revisión de contenido y publicación
 
+## Resuelto en la versión local
+
+- Conflictos Git de los cuatro archivos de contenido resueltos y compartidos.
+- Portada restaurada según lo solicitado: «Escribanía en Nueva Córdoba», «Asesoramiento notarial y legal general» y únicamente «Atención personalizada desde el primer encuentro» en el recuadro. Foto de oficina suministrada por el usuario.
+- Eliminados «Confianza en cada decisión», «Experiencia que da tranquilidad», la segunda frase de la descripción y el texto vertical de la portada.
+- FAQ reales, servicios prioritarios y horarios nuevos del compañero conservados.
+- Autenticación de GitHub: push de integración verificado; dejó de ser un bloqueo.
+
+## Información o acciones previas a la publicación
+
+
 - **RECIBIDO — preguntas frecuentes reales:** la profesional suministró seis preguntas y respuestas el 13/10/2026. Se incorporaron con correcciones menores de redacción; queda su aprobación de la vista final.
 - **PENDIENTE — logo:** se usa un logotipo tipográfico. Se puede reemplazar cuando esté disponible el original en SVG, PDF o PNG de alta resolución.
 - **PENDIENTE — fotos:** confirmar autorización de uso del retrato y de la imagen de cierre antes de publicar. La portada usa la foto de oficina suministrada en este chat. La imagen ilustrativa generada de una mujer firmando se conserva como alternativa para revisión.

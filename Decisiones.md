@@ -124,3 +124,12 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - Navegador: HTTP 200, seis FAQ reales, horarios diferenciados correctos y foto de oficina cargada.
 - Commit de integración `53fc08a` enviado correctamente a `origin/main`; la autenticación de escritura ya funciona en esta sesión.
 - El archivo ajeno `outputs/vmasport-referencias-y-prospectos-uruguay.md` conserva su estado previo y no se incluyó en el commit.
+
+## 2026-10-13 — Cierre de conflictos y confirmación de portada
+
+- Verificado que el índice Git no presenta archivos sin fusionar y que el código no contiene marcadores de conflicto.
+- Ratificada la portada solicitada directamente por el usuario: Nueva Córdoba, descripción informativa, foto de oficina y recuadro con una sola frase. Restaurado el botón «Coordiná tu consulta» para conservar la versión previa solicitada.
+- Conservadas las FAQ reales y los horarios y servicios actualizados del compañero.
+- Actualizados `PENDIENTES.md` e `INFORME.md` para distinguir los asuntos resueltos de la información externa todavía necesaria; no se dan por confirmados permisos de fotos, cargos ni acceso a servicios que no fueron suministrados.
+- El archivo ajeno de `outputs/` permanece fuera de esta tarea.
+- Verificaciones finales: Astro sin errores ni advertencias, auditoría técnica correcta, HTTP 200 y portada revisada a 1440 y 390 px sin desbordes. Archivo comprimido del proyecto regenerado con el contenido integrado.

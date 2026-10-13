@@ -56,3 +56,7 @@ La auditoría confirma la estructura del JSON-LD y su tipado, pero no sustituye 
 Título cambiado a «Escribanía en Nueva Córdoba» y descripción reducida a «Asesoramiento notarial y legal general». Se retiraron el eslogan de confianza, el texto vertical y la frase «Experiencia que da tranquilidad». El recuadro conserva únicamente «Atención personalizada desde el primer encuentro». Se reemplazó el certificado por la foto de oficina suministrada, con variantes AVIF/WebP. Se actualizaron los metadatos, Markdown y la imagen para compartir.
 
 Compilación y auditoría técnica correctas; revisión visual a 1440 y 390 px sin desbordes, con la nueva imagen cargada y los textos solicitados. Capturas: `artifacts/portada-actualizada-1440.png` y `artifacts/portada-actualizada-390.png`. Los puntajes Lighthouse anteriores corresponden a la revisión del 12/10/2026; no se repitió esa medición para este cambio de contenido.
+
+## Cierre de integración · 13/10/2026
+
+Se conserva la portada informativa solicitada y el botón «Coordiná tu consulta». Los conflictos están resueltos. La sección FAQ contiene las seis respuestas suministradas por la profesional; ya no es un borrador genérico. Los horarios vigentes son lunes a jueves de 9 a 17 y viernes de 9 a 14. Las observaciones antiguas de FAQ provisionales y bloqueo de push están superadas; la lista vigente se encuentra en `PENDIENTES.md`. Logo original, derechos de fotos, cargos restantes y ficha de Maps requieren confirmación externa. Analytics y Search Console siguen previstos para una etapa posterior.
