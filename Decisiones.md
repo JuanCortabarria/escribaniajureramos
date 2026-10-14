@@ -158,3 +158,11 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - Conservadas la portada y la franja de datos de trayectoria; la información complementaria de modalidad de atención queda después de los servicios, antes del cierre de contacto.
 - Archivos modificados: `src/pages/index.astro` y este registro.
 - Verificaciones: compilación sin errores ni advertencias, auditoría técnica correcta y orden de secciones y menú confirmado en localhost a 1440 y 390 px, sin desbordes.
+
+## 2026-10-14 — Modalidad de atención y distribución de la paleta
+
+- Movida «Modalidad de atención» inmediatamente antes de «Servicios», siguiendo la solicitud del usuario.
+- Aplicada una secuencia de fondos acorde al recorrido: perfil blanco, ubicación marfil, preguntas blanco, modalidad azul tinta y servicios marfil con tarjetas blancas. Portada y cierre conservan el azul tinta.
+- Conservados los colores de marca confirmados. Centralizados el dorado oscuro para texto legible, la superficie cálida secundaria, los bordes y el texto secundario sobre azul; reducidas las variaciones locales entre secciones.
+- Archivos modificados: `src/pages/index.astro`, `src/styles/tokens.css`, `src/styles/global.css` y este registro.
+- Verificaciones: Astro sin errores ni advertencias, auditoría técnica correcta, recorrido y fondos confirmados a 1440 y 390 px sin desbordes. Revisada la captura de escritorio. Contrastes de las parejas principales de texto entre 5,36:1 y 15,97:1.
