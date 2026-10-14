@@ -14,7 +14,7 @@
 - **RECIBIDO — preguntas frecuentes reales:** la profesional suministró seis preguntas y respuestas el 13/10/2026. Se incorporaron con correcciones menores de redacción; queda su aprobación de la vista final.
 - **PENDIENTE — logo:** se usa un logotipo tipográfico. Se puede reemplazar cuando esté disponible el original en SVG, PDF o PNG de alta resolución.
 - **PENDIENTE — fotos:** confirmar autorización de uso del retrato y de la imagen de cierre antes de publicar. La portada usa la foto de oficina suministrada en este chat. La imagen ilustrativa generada de una mujer firmando se conserva como alternativa para revisión.
-- **CONFIRMADO — doctorado:** la profesional confirmó el título de doctora en Derecho el 13/10/2026. Queda validar los demás cargos y afiliaciones antes de publicar.
+- **ACTUALIZADO — perfil profesional:** el usuario suministró el 14/10/2026: Doctora en Derecho Societario, Magíster en Derecho Empresario, Gobierno corporativo, Escribana titular por concurso y Académica y docente universitaria. Reemplazada la lista anterior, sin añadir universidades ni cargos no incluidos en esta actualización. Las afiliaciones del detalle de trayectoria siguen pendientes de validación.
 - **PENDIENTE — Google Maps:** se conserva el enlace suministrado. El mapa por clic apunta a las coordenadas del documento; verificar que coincida con la ubicación exacta y con la ficha del negocio.
 - Datos de contacto y paleta: tomados de la planificación suministrada. El usuario confirmó la paleta el 12/10/2026.
 - **CONFIRMADO — horarios:** lunes a jueves de 9 a 17 h y viernes de 9 a 14 h; actualizados en la página y los datos estructurados.

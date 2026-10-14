@@ -142,3 +142,11 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - Conservados el título de portada y la frase del recuadro solicitados previamente, los servicios, FAQ suministradas y datos de contacto.
 - Archivos: `src/pages/index.astro`, `src/config/site.ts`, `src/pages/404.astro` y este registro.
 - Verificaciones: compilación sin errores ni advertencias, auditoría técnica correcta y vista local a 1440 y 390 px sin desbordes; los seis encabezados principales muestran títulos institucionales.
+
+## 2026-10-14 — Actualización del perfil profesional
+
+- Reemplazadas las cuatro credenciales anteriores por las cinco indicadas por el usuario: Doctora en Derecho Societario, Magíster en Derecho Empresario, Gobierno corporativo, Escribana titular por concurso y Académica y docente universitaria.
+- Conservada la presentación en lista, con una línea por título o área, sin agregar instituciones ni calificaciones no suministradas.
+- La descripción de la persona en JSON-LD utiliza ahora la misma lista de `site.ts`; la versión Markdown también la toma de esa configuración. Actualizada la fecha del contenido al 14/10/2026.
+- Archivos modificados: `src/config/site.ts`, `src/components/Seo.astro`, `PENDIENTES.md` y este registro.
+- Verificaciones: Astro sin errores ni advertencias, auditoría técnica correcta y cinco credenciales actualizadas visibles en localhost; vista móvil sin desbordes.

@@ -10,7 +10,7 @@ export const site = {
     { days: ['Friday'] as const, opens: '09:00', closes: '14:00' },
   ],
   maps: 'https://maps.app.goo.gl/pffBjQ2gELqhX14o8', latitude: -31.4245341, longitude: -64.1799683,
-  updated: '2026-10-13',
+  updated: '2026-10-14',
   services: [
     { title: 'Patrimonio e inmuebles', label: 'Operaciones inmobiliarias', icon: 'home', description: 'Asesoramiento para las decisiones que involucran tus bienes y operaciones inmobiliarias.', items: ['Compraventa, donaciones y permutas', 'Dación en pago y derechos reales', 'Contratos en general'] },
     { title: 'Certificaciones y actas', label: 'Certificaciones notariales', icon: 'seal', description: 'Certificación de firmas y copias para particulares, empresas e inmobiliarias. Consultanos qué necesitás presentar.', items: ['Certificación de firmas', 'Certificación de copias', 'Actas notariales'] },
@@ -18,7 +18,7 @@ export const site = {
     { title: 'Familia', label: 'Actos y acuerdos familiares', icon: 'family', description: 'Orientación para organizar las decisiones patrimoniales y los trámites de tu familia.', items: ['Protección de la vivienda', 'Régimen patrimonial y pactos de convivencia', 'Autorizaciones para viajar y conducir'] },
     { title: 'Sucesiones y previsión', label: 'Planificación patrimonial', icon: 'leaf', description: 'Te ayudamos a expresar tu voluntad y a pensar el futuro de tu patrimonio.', items: ['Herencias y cesiones de derechos hereditarios', 'Testamentos y legados', 'Autoprotección y directivas médicas anticipadas'] },
   ],
-  credentials: ['Doctora en Derecho · UNC', 'Abogada · Universidad Nacional de Córdoba', 'Magíster en Derecho Empresario · Universidad Austral', 'Profesora adjunta por concurso de Derecho Privado IV · UNC'],
+  credentials: ['Doctora en Derecho Societario', 'Magíster en Derecho Empresario', 'Gobierno corporativo', 'Escribana titular por concurso', 'Académica y docente universitaria'],
   faq: [
     { q: '¿Qué papeles necesito para escriturar una casa o un departamento?', a: 'En general, necesitás la escritura original anterior, los datos de las partes y la documentación del inmueble. Según cada operación pueden requerirse otros documentos. En la escribanía te orientamos para que tengas todo listo.' },
     { q: '¿Cuánto cuesta hacer una escritura y quién paga los gastos?', a: 'El costo depende del precio del inmueble o de la base imponible determinada por la Dirección General de Rentas, el que sea mayor. La distribución de los gastos dependerá de lo acordado por las partes y, en su caso, de la normativa aplicable. Podemos prepararte un presupuesto detallado.' },
