@@ -150,3 +150,11 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - La descripción de la persona en JSON-LD utiliza ahora la misma lista de `site.ts`; la versión Markdown también la toma de esa configuración. Actualizada la fecha del contenido al 14/10/2026.
 - Archivos modificados: `src/config/site.ts`, `src/components/Seo.astro`, `PENDIENTES.md` y este registro.
 - Verificaciones: Astro sin errores ni advertencias, auditoría técnica correcta y cinco credenciales actualizadas visibles en localhost; vista móvil sin desbordes.
+
+## 2026-10-14 — Orden de las secciones
+
+- Reordenadas las cuatro secciones principales: La escribana → Ubicación → Preguntas frecuentes → Servicios.
+- Actualizados el menú y la numeración de las secciones para seguir el mismo recorrido.
+- Conservadas la portada y la franja de datos de trayectoria; la información complementaria de modalidad de atención queda después de los servicios, antes del cierre de contacto.
+- Archivos modificados: `src/pages/index.astro` y este registro.
+- Verificaciones: compilación sin errores ni advertencias, auditoría técnica correcta y orden de secciones y menú confirmado en localhost a 1440 y 390 px, sin desbordes.
