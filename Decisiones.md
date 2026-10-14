@@ -166,3 +166,12 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - Conservados los colores de marca confirmados. Centralizados el dorado oscuro para texto legible, la superficie cálida secundaria, los bordes y el texto secundario sobre azul; reducidas las variaciones locales entre secciones.
 - Archivos modificados: `src/pages/index.astro`, `src/styles/tokens.css`, `src/styles/global.css` y este registro.
 - Verificaciones: Astro sin errores ni advertencias, auditoría técnica correcta, recorrido y fondos confirmados a 1440 y 390 px sin desbordes. Revisada la captura de escritorio. Contrastes de las parejas principales de texto entre 5,36:1 y 15,97:1.
+
+## 2026-10-14 — Planificación de profesionalización, SEO local y GEO
+
+- Creado `PLAN_SEO_GEO.md` con diagnóstico del código actual, estado implementado frente a pendiente, revisión de los tres repositorios locales, arquitectura propuesta, contenidos, SEO local, schema, GEO, migración, medición y mantenimiento.
+- Contrastadas las recomendaciones con documentación oficial de Google, Bing y proveedores de rastreadores; incluida la actualización vigente de informes y controles de búsqueda generativa de Google.
+- Diferenciadas las mediciones Lighthouse históricas del 12/10 de la auditoría técnica del 14/10, y las hipótesis de palabras clave de una investigación de volumen todavía pendiente.
+- Incluidos backlog de 24 acciones, responsables, dependencias, criterios de aceptación, cronograma orientativo y datos necesarios.
+- Detectados para planificar la ampliación: revisar `founder`/`foundingDate` y producir schema por página; hoy el componente SEO común incluye FAQ generales. No se modificó la web ni se publicó, configuró Analytics o cambió el dominio.
+- Verificación de esta tarea: documento revisado contra el código y fuentes, enlaces de referencia incorporados; no requiere recompilar la web por ser planificación documental.
