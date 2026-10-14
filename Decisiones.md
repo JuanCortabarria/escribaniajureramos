@@ -133,3 +133,12 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - Actualizados `PENDIENTES.md` e `INFORME.md` para distinguir los asuntos resueltos de la información externa todavía necesaria; no se dan por confirmados permisos de fotos, cargos ni acceso a servicios que no fueron suministrados.
 - El archivo ajeno de `outputs/` permanece fuera de esta tarea.
 - Verificaciones finales: Astro sin errores ni advertencias, auditoría técnica correcta, HTTP 200 y portada revisada a 1440 y 390 px sin desbordes. Archivo comprimido del proyecto regenerado con el contenido integrado.
+
+## 2026-10-13 — Titulares institucionales
+
+- Sustituidos los eslóganes de las secciones por títulos descriptivos: «Servicios notariales», «Modalidad de atención», «Preguntas frecuentes», «Ubicación y horarios» y «Contacto con la escribanía».
+- Sustituidos los subtítulos publicitarios de las tarjetas por categorías de práctica, y los títulos del proceso por «Consulta inicial», «Documentación» y «Gestión notarial».
+- Simplificados los textos complementarios del perfil y contacto; el retrato ahora identifica a la profesional y su registro. Eliminada la pregunta comercial del recuadro de consultas y actualizado el título de la página 404.
+- Conservados el título de portada y la frase del recuadro solicitados previamente, los servicios, FAQ suministradas y datos de contacto.
+- Archivos: `src/pages/index.astro`, `src/config/site.ts`, `src/pages/404.astro` y este registro.
+- Verificaciones: compilación sin errores ni advertencias, auditoría técnica correcta y vista local a 1440 y 390 px sin desbordes; los seis encabezados principales muestran títulos institucionales.
