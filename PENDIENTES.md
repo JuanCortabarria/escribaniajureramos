@@ -8,6 +8,12 @@
 - FAQ reales, servicios prioritarios y horarios nuevos del compañero conservados.
 - Autenticación de GitHub: push de integración verificado; dejó de ser un bloqueo.
 
+## Decisiones confirmadas el 15/10/2026
+
+- Preparar primero las tres páginas de inmuebles, certificaciones y sociedades, en entorno local para revisión.
+- La necesidad de turno depende del trámite. Falta precisar qué gestiones pueden atenderse sin turno; no publicar una regla general.
+- Los presupuestos se solicitan por WhatsApp: el cliente describe la gestión y la escribanía indica los datos necesarios.
+
 ## Información o acciones previas a la publicación
 
 

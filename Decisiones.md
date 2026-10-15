@@ -175,3 +175,11 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - Incluidos backlog de 24 acciones, responsables, dependencias, criterios de aceptación, cronograma orientativo y datos necesarios.
 - Detectados para planificar la ampliación: revisar `founder`/`foundingDate` y producir schema por página; hoy el componente SEO común incluye FAQ generales. No se modificó la web ni se publicó, configuró Analytics o cambió el dominio.
 - Verificación de esta tarea: documento revisado contra el código y fuentes, enlaces de referencia incorporados; no requiere recompilar la web por ser planificación documental.
+
+## 2026-10-15 — Primera selección para implementar el plan SEO/GEO
+
+- El usuario eligió preparar las tres páginas prioritarias: inmuebles, certificaciones y sociedades. Se mantienen en entorno local hasta su revisión.
+- Confirmó que algunos trámites requieren turno y otros no; los casos concretos están por precisar.
+- Confirmó que los presupuestos se solicitan por WhatsApp: el cliente describe la gestión y recibe indicaciones sobre los datos necesarios.
+- Actualizado `PENDIENTES.md` para conservar estas respuestas y evitar volver a preguntar lo ya decidido. Siguiente paso: precisar atención sin turno y datos iniciales de consulta.
+- No se modificó contenido público ni se inventaron requisitos, importes o plazos. Verificación documental y `git diff --check`; no corresponde recompilar por estos cambios de registro.
