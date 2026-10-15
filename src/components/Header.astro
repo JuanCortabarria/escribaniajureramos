@@ -1,0 +1,18 @@
+---
+import Icon from './Icon.astro';
+import { site } from '../config/site';
+const navigation = [{label:'La escribana',id:'escribana'},{label:'Ubicación',id:'ubicacion'},{label:'Preguntas frecuentes',id:'preguntas'},{label:'Servicios',id:'servicios'}];
+---
+<header class="header"><div class="container header-inner">
+  <a class="brand" href="/" aria-label="Jure Ramos. Escribanía, inicio"><span class="brand-name">Jure Ramos<span class="brand-dot">.</span></span><span class="brand-caption">ESCRIBANÍA</span></a>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="navigation" aria-label="Abrir menú"><span></span><span></span></button>
+  <nav id="navigation" aria-label="Navegación principal">{navigation.map(item=><a href={`${Astro.url.pathname === "/" ? "" : "/"}#${item.id}`}>{item.label}</a>)}<a class="nav-cta" href={site.whatsappUrl} target="_blank" rel="noopener noreferrer">WhatsApp <Icon name="arrow" size={17}/></a></nav>
+</div></header>
+<script>
+ const menu = document.querySelector<HTMLButtonElement>('.menu-toggle');
+ const nav = document.querySelector<HTMLElement>('#navigation');
+ const closeMenu = () => { menu?.setAttribute('aria-expanded','false'); menu?.setAttribute('aria-label','Abrir menú'); nav?.classList.remove('is-open'); };
+ menu?.addEventListener('click',()=>{const expanded=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(expanded));menu.setAttribute('aria-label',expanded?'Cerrar menú':'Abrir menú');nav?.classList.toggle('is-open',expanded);});
+ nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+ document.addEventListener('keydown',event=>{if(event.key==='Escape'){closeMenu();menu?.focus();}});
+</script>

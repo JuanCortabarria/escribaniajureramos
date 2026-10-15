@@ -49,3 +49,9 @@ La migración del dominio, las redirecciones 301 de las URLs antiguas y el alta 
 ## Evidencia y revisión visual
 
 `INFORME.md` registra las verificaciones y los pendientes. Las capturas y los informes originales de Lighthouse se encuentran en `artifacts/`. Para repetir la revisión de navegador, con Google Chrome instalado, iniciar `npm run preview -- --port 4322` y ejecutar `npm run audit:browser` en otra terminal.
+
+## Páginas de servicios
+
+La información se edita en `src/config/service-pages.ts`, incluyendo las reglas de atención y presupuesto. Las tres rutas son `/servicios/escrituras-inmuebles/`, `/servicios/certificaciones/` y `/servicios/sociedades/`. La plantilla HTML y las versiones Markdown se generan desde ese mismo contenido.
+
+`src/lib/structured-data.ts` construye el grafo correspondiente a cada página. Las FAQ se incluyen solo en la página que las muestra. Para revisar las tres páginas con Chrome, iniciar `npm run preview -- --port 4322` y ejecutar `npm run audit:services`. Las páginas están en revisión local y requieren aprobación del texto antes de publicar.

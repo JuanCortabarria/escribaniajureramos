@@ -8,7 +8,8 @@
     "build": "astro check && astro build",
     "preview": "astro preview --host 127.0.0.1",
     "audit": "node scripts/audit.mjs",
-    "audit:browser": "node scripts/browser-qa.mjs"
+    "audit:browser": "node scripts/browser-qa.mjs",
+    "audit:services": "node scripts/services-qa.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.0.0",

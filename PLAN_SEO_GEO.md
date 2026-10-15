@@ -379,3 +379,10 @@ Criterios de cierre del proyecto de lanzamiento:
 No se necesita contratar herramientas SEO de pago para empezar. Se evaluará cualquier herramienta adicional por una necesidad de datos concreta. No se proponen compra de enlaces, reseñas ficticias, páginas masivas por barrio ni cambios de marca orientados a palabras clave.
 
 **Próximo paso propuesto:** cerrar la ficha de información y diseñar el mapa de las tres páginas prioritarias antes de añadir contenido o modificar el sitio público.
+
+## Avance del 15/10/2026 — Tres páginas en revisión local
+
+- El usuario eligió avanzar con las tres páginas prioritarias. Se prepararon las rutas propuestas de inmuebles, certificaciones y sociedades, enlazadas desde las tarjetas de la portada.
+- Contenido construido con las FAQ y actuaciones suministradas, y las reglas de contacto confirmadas: WhatsApp antes de concurrir para certificaciones, presupuesto por WhatsApp y consulta societaria seguida de reunión cuando corresponda.
+- Metadatos y schema propios, navegación compartida y versiones Markdown incorporadas a llms.txt. Retiradas las propiedades de fundador y fundación que no estaban confirmadas.
+- Las tareas de contenidos 09–11 están implementadas como borrador local; su aprobación profesional permanece pendiente. No se configura Analytics, no se modifica la ficha y no se publica la web en esta etapa.

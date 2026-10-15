@@ -1,0 +1,20 @@
+.service-hero{background:var(--color-dark-bg);color:var(--color-dark-text);padding:30px 0 65px}
+.breadcrumbs{display:flex;flex-wrap:wrap;gap:12px;font-size:11px;color:var(--color-dark-text-muted);margin-bottom:42px}
+.breadcrumbs a{text-decoration:underline;text-underline-offset:4px}.breadcrumbs a:hover{color:var(--color-accent-bright)}
+.service-hero h1{font-size:clamp(40px,5vw,66px);max-width:850px;letter-spacing:-1.5px;line-height:1.07}
+.service-lead{font-size:15px;max-width:720px;color:var(--color-dark-text-muted);margin:25px 0 28px;line-height:1.9}
+.service-body{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:85px;padding-block:70px;align-items:start}
+.service-prose>section{padding-bottom:38px;margin-bottom:36px;border-bottom:1px solid var(--color-border)}
+.service-prose>section:last-child{padding:0;margin:0;border:0}.service-prose h2{font-size:37px;letter-spacing:-.7px;line-height:1.15;margin-bottom:20px}.service-prose p{font-size:14px;line-height:1.95}
+.scope-list{margin:24px 0 0}.scope-list li{display:flex;align-items:flex-start;gap:13px;font-size:14px;padding:11px 0}.scope-list svg{color:var(--color-accent-text);flex-shrink:0;margin-top:3px}
+.service-prose .eyebrow{margin-bottom:16px}.service-faq h3{font-size:13px}.service-faq details>p{font-size:13px}.service-prose .text-link{font-size:13px}
+.service-sidebar{position:sticky;top:125px;padding:30px;background:var(--color-surface);border:1px solid var(--color-border);border-top:3px solid var(--color-accent)}
+.service-sidebar h2{font-size:31px;line-height:1.1;letter-spacing:-.6px}.sidebar-registration{font-size:11px;margin-top:12px}.sidebar-contact{display:flex;gap:13px;margin-top:25px}.sidebar-contact svg{color:var(--color-accent-text);flex-shrink:0}.sidebar-contact address,.sidebar-contact p{font-size:12px;font-style:normal;line-height:1.8;color:var(--color-text-muted)}.sidebar-visit{font-size:12px;margin:25px 0 22px;padding-top:22px;border-top:1px solid var(--color-border)}
+.service-sidebar .button{width:100%;font-size:11px;gap:15px;padding:15px}.service-sidebar>.text-link{font-size:13px;margin-top:18px}.sidebar-profile{font-size:11px;display:flex;align-items:center;justify-content:space-between;margin-top:26px;color:var(--color-text-muted)}
+.related-services{background:var(--color-surface);border-top:1px solid var(--color-border)}.related-services h2{font-size:42px}.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:32px}.related-grid>a{display:flex;align-items:center;justify-content:space-between;gap:20px;border:1px solid var(--color-border);padding:25px;transition:border-color var(--transition)}.related-grid>a:hover{border-color:var(--color-accent)}.related-grid h3{font-size:27px;line-height:1.15}.related-grid svg{flex-shrink:0;color:var(--color-accent-text)}.related-services>.container>.text-link{margin-top:30px}
+.service-card>.service-detail-link+a{margin-top:12px;padding-top:0;border-top:0}
+@media(max-width:1050px){.service-body{gap:40px;grid-template-columns:minmax(0,1fr) 290px}.service-sidebar{padding:24px}}
+@media(max-width:760px){.service-hero{padding:25px 0 45px}.breadcrumbs{font-size:10px;gap:9px;margin-bottom:30px}.service-lead{font-size:14px;margin-top:22px}.service-body{grid-template-columns:1fr;gap:45px;padding-block:45px}.service-sidebar{position:static;padding:28px}.service-prose h2{font-size:32px}.related-services h2{font-size:36px}.related-grid{grid-template-columns:1fr}.related-grid h3{font-size:26px}.service-prose>section{padding-bottom:30px;margin-bottom:30px}}
+
+/* Compact contact shortcut leaves room for the service sidebar. */
+.service-page .floating-wa span{display:none}.service-page .floating-wa{padding:14px}

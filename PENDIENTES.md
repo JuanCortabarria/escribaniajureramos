@@ -11,8 +11,10 @@
 ## Decisiones confirmadas el 15/10/2026
 
 - Preparar primero las tres páginas de inmuebles, certificaciones y sociedades, en entorno local para revisión.
-- La necesidad de turno depende del trámite. Falta precisar qué gestiones pueden atenderse sin turno; no publicar una regla general.
-- Los presupuestos se solicitan por WhatsApp: el cliente describe la gestión y la escribanía indica los datos necesarios.
+- La necesidad de turno depende del trámite. Para certificaciones se debe consultar por WhatsApp antes de concurrir, según gestión y disponibilidad; no se promete atención sin turno.
+- Los presupuestos se solicitan y coordinan por WhatsApp: el cliente describe la gestión y la escribanía indica los datos necesarios. Para inmuebles no se publica una lista obligatoria de datos iniciales.
+- Sociedades: descripción inicial por WhatsApp y reunión cuando corresponde.
+- Preparadas las tres páginas locales de servicios, con información y FAQ basadas en lo suministrado. Pendiente aprobación de la redacción final antes de publicar.
 
 ## Información o acciones previas a la publicación
 

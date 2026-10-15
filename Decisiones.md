@@ -183,3 +183,29 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - Confirmó que los presupuestos se solicitan por WhatsApp: el cliente describe la gestión y recibe indicaciones sobre los datos necesarios.
 - Actualizado `PENDIENTES.md` para conservar estas respuestas y evitar volver a preguntar lo ya decidido. Siguiente paso: precisar atención sin turno y datos iniciales de consulta.
 - No se modificó contenido público ni se inventaron requisitos, importes o plazos. Verificación documental y `git diff --check`; no corresponde recompilar por estos cambios de registro.
+
+## 2026-10-15 — Borradores locales de inmuebles, certificaciones y sociedades
+
+### Información confirmada
+
+- Certificaciones: consultar por WhatsApp antes de concurrir, según gestión y disponibilidad. No afirmar atención sin turno.
+- Inmuebles: la coordinación del presupuesto se realiza por WhatsApp; no se fija una lista obligatoria de datos iniciales no confirmada. La coordinación por ese canal no implica que los actos se realicen íntegramente a distancia.
+- Sociedades: descripción por WhatsApp y reunión cuando corresponde.
+
+### Cambios ejecutados
+
+- Creados `src/config/service-pages.ts` y las plantillas dinámicas `src/pages/servicios/[slug].astro` y `[slug].md.ts`: tres páginas y sus equivalentes Markdown, con textos institucionales, actuaciones, modalidad, presupuesto y preguntas pertinentes. Se reutilizan las FAQ técnicas suministradas, sin inventar tarifas ni plazos. Redacción final pendiente de aprobación profesional.
+- Extraídos encabezado y pie compartidos en `Header.astro` y `Footer.astro`; mantenidos orden y paleta de portada. Añadidos enlaces de detalle desde las tres primeras tarjetas y enlaces entre servicios.
+- Creados estilos de servicio en `src/styles/services.css`. La portada muestra consulta inicial por WhatsApp y la regla de visita actualizada.
+- Nuevo constructor `src/lib/structured-data.ts`: `WebPage`, `Service`, `BreadcrumbList` y FAQ correspondientes a cada página. Retirados `founder` y `foundingDate` por falta de confirmación, conservando la trayectoria profesional desde 2002.
+- `Seo.astro` y `Layout.astro` aceptan título, descripción y servicio propios. `llms.txt` e `index.md` enlazan el contenido nuevo.
+- Ampliada la auditoría técnica para contrastar HTML, JSON-LD, Markdown, sitemap y horarios; creada revisión de navegación de servicios. Documentadas las rutas y las decisiones en README, PENDIENTES y el plan.
+- No se publicó, cambió dominio, activó Analytics ni modificó Google Business Profile.
+
+### Verificaciones
+
+- Compilación Astro: 0 errores, 0 advertencias y 0 observaciones. Auditoría técnica ampliada correcta.
+- Tres páginas comprobadas a 1440, 390 y 320 px: HTTP 200, sin desbordes ni errores de JavaScript, FAQ desplegables, mensajes WhatsApp con el servicio elegido, versiones Markdown con tipo correcto y menú móvil funcional.
+- Navegación desde tarjetas a cada servicio y regreso al inicio comprobada. Revisión existente de la portada correcta a 1440, 390 y 768 px, incluido el mapa por clic.
+- Capturas de escritorio y móvil conservadas en `artifacts/`; estado de textos: borradores locales para revisión. No se repitió Lighthouse.
+- Ajustado el acceso flotante de WhatsApp a formato compacto en páginas de servicio para reducir la superposición con la columna de contacto.
