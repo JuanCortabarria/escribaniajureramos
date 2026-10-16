@@ -209,3 +209,19 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - Navegación desde tarjetas a cada servicio y regreso al inicio comprobada. Revisión existente de la portada correcta a 1440, 390 y 768 px, incluido el mapa por clic.
 - Capturas de escritorio y móvil conservadas en `artifacts/`; estado de textos: borradores locales para revisión. No se repitió Lighthouse.
 - Ajustado el acceso flotante de WhatsApp a formato compacto en páginas de servicio para reducir la superposición con la columna de contacto.
+
+## 2026-10-15 — Una página por cada área de práctica
+
+- A pedido del usuario, completadas las páginas de las cinco áreas. Conservada la página existente de sociedades y empresa; añadidas `/servicios/familia/` y `/servicios/sucesiones-prevision/`.
+- Incorporadas en `src/config/service-pages.ts` las actuaciones familiares y sucesorias que ya constaban en la configuración del sitio. Las FAQ nuevas describen alcance y coordinación, sin inventar requisitos, precios, plazos ni resultados. Redacción final sujeta a aprobación profesional antes de publicar.
+- La plantilla compartida incorpora automáticamente enlaces desde las cinco tarjetas, páginas relacionadas, metadatos, schema por página, sitemap, versiones Markdown e índice llms.txt.
+- Ampliadas las auditorías existentes a las cinco rutas; actualizados README y PENDIENTES. No se modificaron el orden ni la paleta de la portada.
+
+## 2026-10-15 — Tarjetas completas como enlaces de servicio
+
+- Sustituido el botón «Información del servicio» por un enlace nativo que abarca toda la tarjeta: título, descripción, lista y superficie libre conducen a la página del área correspondiente.
+- Retirado también el enlace de WhatsApp interno de esas tarjetas para no crear destinos distintos dentro de la misma superficie ni enlaces anidados. Los contactos de WhatsApp siguen disponibles en la página de detalle, el encabezado y el acceso flotante.
+- Conservados los títulos, contenido y paleta de tarjetas. Añadida una flecha discreta, con foco visible y navegación de teclado nativa.
+- Adaptada la revisión de navegación a las tarjetas completas. Se completa en esta misma tarea la validación pendiente de Familia y Sucesiones.
+- Verificaciones de ambas tareas: compilación sin errores ni advertencias y auditoría técnica correcta para cinco páginas. Navegador a 1440, 390 y 320 px sin desbordes ni errores, FAQ y Markdown correctos, menú móvil funcional y navegación desde las cinco tarjetas comprobada.
+- En localhost:4321 se verificaron cinco tarjetas-enlace, cero enlaces anidados y ausencia de «Información del servicio»; un clic en el título de Patrimonio abre su detalle. Captura de tarjetas conservada en `artifacts/`.

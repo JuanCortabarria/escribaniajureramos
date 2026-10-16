@@ -14,7 +14,7 @@
 - La necesidad de turno depende del trámite. Para certificaciones se debe consultar por WhatsApp antes de concurrir, según gestión y disponibilidad; no se promete atención sin turno.
 - Los presupuestos se solicitan y coordinan por WhatsApp: el cliente describe la gestión y la escribanía indica los datos necesarios. Para inmuebles no se publica una lista obligatoria de datos iniciales.
 - Sociedades: descripción inicial por WhatsApp y reunión cuando corresponde.
-- Preparadas las tres páginas locales de servicios, con información y FAQ basadas en lo suministrado. Pendiente aprobación de la redacción final antes de publicar.
+- Preparadas cinco páginas locales, una por área: inmuebles, certificaciones, sociedades, familia y sucesiones/previsión. Las tres primeras reutilizan las FAQ y condiciones suministradas; las dos nuevas describen las actuaciones ya incluidas en el sitio, sin añadir requisitos legales. Pendiente aprobación de la redacción final antes de publicar.
 
 ## Información o acciones previas a la publicación
 

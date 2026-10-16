@@ -24,7 +24,7 @@ assert.ok(!/fonts\.googleapis|googletagmanager|google-analytics/.test(html));
 
 // Cross-check independent public representations and route-specific FAQ scope.
 const sitemap=await readFile('dist/sitemap-0.xml','utf8');
-for (const slug of ['escrituras-inmuebles','certificaciones','sociedades']) {
+for (const slug of ['escrituras-inmuebles','certificaciones','sociedades','familia','sucesiones-prevision']) {
   const path=`/servicios/${slug}/`;
   const page=await readFile(`dist${path}index.html`,'utf8');
   const md=await readFile(`dist/servicios/${slug}.md`,'utf8');
@@ -45,6 +45,6 @@ for (const slug of ['escrituras-inmuebles','certificaciones','sociedades']) {
   assert.ok(page.includes('href="/#escribana"') && page.includes('href="/#servicios"'));
 }
 
-const report={date:new Date().toISOString(),status:'passed',checks:['H1 único','JSON-LD parseable con cuatro entidades tipadas','Contacto coherente entre HTML y schema','6 FAQ visibles y en Markdown','Anclas internas y recursos presentes','robots, sitemap, llms.txt, Markdown y 404 generados','Sin iframe inicial ni rastreadores externos','Tres páginas enlazadas e incluidas en sitemap','FAQ específicas coinciden entre HTML, JSON-LD y Markdown','Horarios y navegación a la portada coherentes']};
+const report={date:new Date().toISOString(),status:'passed',checks:['H1 único','JSON-LD parseable con cuatro entidades tipadas','Contacto coherente entre HTML y schema','6 FAQ visibles y en Markdown','Anclas internas y recursos presentes','robots, sitemap, llms.txt, Markdown y 404 generados','Sin iframe inicial ni rastreadores externos','Cinco páginas enlazadas e incluidas en sitemap','FAQ específicas coinciden entre HTML, JSON-LD y Markdown','Horarios y navegación a la portada coherentes']};
 await writeFile('artifacts/auditoria-tecnica.json',JSON.stringify(report,null,2));
 console.log('Auditoría técnica: todas las verificaciones pasaron.');

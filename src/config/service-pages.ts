@@ -65,6 +65,40 @@ export const servicePages: ServicePage[] = [
       { q: '¿Cómo solicito un presupuesto?', a: consultation.budget },
     ],
   },
+  {
+    slug: 'familia', serviceIndex: 3,
+    title: 'Familia',
+    seoTitle: 'Actuaciones notariales de familia en Córdoba | Jure Ramos',
+    description: 'Protección de la vivienda, régimen patrimonial, pactos de convivencia y autorizaciones. Consultas notariales de familia en Nueva Córdoba por WhatsApp.',
+    introduction: 'Asesoramiento notarial sobre actos y acuerdos familiares, con atención en Nueva Córdoba. Consultas sobre vivienda, régimen patrimonial, convivencia y autorizaciones.',
+    scopeTitle: 'Actos y acuerdos familiares',
+    scope: ['Protección de la vivienda', 'Régimen patrimonial del matrimonio', 'Uniones convivenciales y pactos de convivencia', 'Autorizaciones para viajar y para conducir'],
+    guidanceTitle: 'Información para la consulta',
+    guidance: 'Describí por WhatsApp la gestión familiar que necesitás consultar. La escribanía te indicará qué información y documentación corresponde presentar según el trámite.',
+    attention: consultation.visit,
+    faq: [
+      { q: '¿Qué consultas de familia puedo realizar?', a: 'Podés consultar por protección de la vivienda, régimen patrimonial del matrimonio, uniones convivenciales, pactos de convivencia y autorizaciones para viajar o conducir.' },
+      { q: '¿Qué documentación necesito presentar?', a: 'La documentación depende de la actuación que necesites. Consultá por WhatsApp antes de concurrir para recibir las indicaciones correspondientes a tu gestión.' },
+      { q: '¿Cómo solicito un presupuesto?', a: consultation.budget },
+    ],
+  },
+  {
+    slug: 'sucesiones-prevision', serviceIndex: 4,
+    title: 'Sucesiones y previsión',
+    seoTitle: 'Sucesiones y planificación patrimonial en Córdoba | Jure Ramos',
+    description: 'Asesoramiento notarial sobre herencias, cesiones hereditarias, testamentos y actos de autoprotección en Córdoba. Consultas y presupuestos por WhatsApp.',
+    introduction: 'Asesoramiento notarial sobre herencias y planificación patrimonial, con atención en Nueva Córdoba. Consultas sobre cesiones de derechos hereditarios, testamentos y actos de previsión personal.',
+    scopeTitle: 'Actuaciones sucesorias y de previsión',
+    scope: ['Herencias y cesiones de derechos hereditarios', 'Testamentos y legados', 'Actos de autoprotección', 'Directivas médicas anticipadas'],
+    guidanceTitle: 'Consulta y antecedentes',
+    guidance: 'Describí por WhatsApp el asunto que necesitás consultar. Según la gestión sucesoria o de previsión, la escribanía te indicará qué información y antecedentes corresponde aportar.',
+    attention: consultation.visit,
+    faq: [
+      { q: '¿Puedo consultar sobre testamentos y planificación patrimonial?', a: 'Sí. La escribanía brinda asesoramiento notarial sobre testamentos, legados, cesiones de derechos hereditarios y actos de previsión personal.' },
+      { q: '¿Qué antecedentes necesito para la primera consulta?', a: 'Los antecedentes dependen del asunto que se consulta. Al describir tu gestión por WhatsApp, la escribanía te indicará qué información y documentación corresponde presentar.' },
+      { q: '¿Cómo solicito un presupuesto?', a: consultation.budget },
+    ],
+  },
 ];
 
 export const servicePath = (service: ServicePage) => `/servicios/${service.slug}/`;

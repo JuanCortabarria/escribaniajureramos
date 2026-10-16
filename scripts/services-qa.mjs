@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { writeFile } from 'node:fs/promises';
 const browser=await chromium.launch({channel:'chrome',headless:true});
 const results=[];
-const slugs=['escrituras-inmuebles','certificaciones','sociedades'];
+const slugs=['escrituras-inmuebles','certificaciones','sociedades','familia','sucesiones-prevision'];
 try {
  for (const width of [1440,390,320]) {
   for (const slug of slugs) {
@@ -24,7 +24,7 @@ try {
  }
  const home=await browser.newPage({viewport:{width:1440,height:1000},reducedMotion:'reduce'});
  await home.goto('http://127.0.0.1:4322/',{waitUntil:'networkidle'});
- for(const slug of slugs){const link=home.locator(`.service-card a[href="/servicios/${slug}/"]`);await link.click();await home.waitForURL(`**/servicios/${slug}/`);await home.locator('.breadcrumbs a').click();await home.waitForURL('http://127.0.0.1:4322/');}
+ for(const slug of slugs){const link=home.locator(`.service-card[href="/servicios/${slug}/"]`);await link.click();await home.waitForURL(`**/servicios/${slug}/`);await home.locator('.breadcrumbs a').click();await home.waitForURL('http://127.0.0.1:4322/');}
  await home.close();
  await writeFile('artifacts/auditoria-servicios.json',JSON.stringify(results,null,2));console.log(JSON.stringify(results));
 } finally { await browser.close(); }

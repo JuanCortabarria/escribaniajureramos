@@ -52,6 +52,6 @@ La migración del dominio, las redirecciones 301 de las URLs antiguas y el alta 
 
 ## Páginas de servicios
 
-La información se edita en `src/config/service-pages.ts`, incluyendo las reglas de atención y presupuesto. Las tres rutas son `/servicios/escrituras-inmuebles/`, `/servicios/certificaciones/` y `/servicios/sociedades/`. La plantilla HTML y las versiones Markdown se generan desde ese mismo contenido.
+La información se edita en `src/config/service-pages.ts`, incluyendo las reglas de atención y presupuesto. Hay una página por área: `/servicios/escrituras-inmuebles/`, `/servicios/certificaciones/`, `/servicios/sociedades/`, `/servicios/familia/` y `/servicios/sucesiones-prevision/`. La plantilla HTML y las versiones Markdown se generan desde ese mismo contenido.
 
-`src/lib/structured-data.ts` construye el grafo correspondiente a cada página. Las FAQ se incluyen solo en la página que las muestra. Para revisar las tres páginas con Chrome, iniciar `npm run preview -- --port 4322` y ejecutar `npm run audit:services`. Las páginas están en revisión local y requieren aprobación del texto antes de publicar.
+`src/lib/structured-data.ts` construye el grafo correspondiente a cada página. Las FAQ se incluyen solo en la página que las muestra. Para revisar las cinco páginas con Chrome, iniciar `npm run preview -- --port 4322` y ejecutar `npm run audit:services`. Las páginas están en revisión local y requieren aprobación del texto antes de publicar.
