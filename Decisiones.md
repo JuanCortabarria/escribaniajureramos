@@ -264,3 +264,12 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - Verificaciones: compilación y Astro check sin errores, advertencias ni sugerencias; Chrome a 1440 y 390 px confirmó primera actualización 1000, valores intermedios dentro del rango y cierre en 2002.
 - Investigadas referencias de Motion (Split reveal, Stagger reveal, ejemplos de scroll, Parallax layers) y Webflow (webpage-animation). Se presentan como propuestas para elegir: títulos por líneas, entrada suave de encabezados, revelado de imágenes, zoom de entrada, parallax discreto, tarjetas escalonadas, respuesta de enlaces y apertura de preguntas. No se implementó ninguna de estas propuestas adicionales.
 - Referencias: https://motion.dev/ui/components/split-reveal ; https://motion.dev/ui/components/stagger-reveal ; https://motion.dev/examples?category=scroll ; https://motion.dev/ui/components/parallax-layers ; https://webflow.com/blog/webpage-animation . Pendiente: selección del usuario para nuevas animaciones.
+
+## 2026-10-15 — Servicios notariales compactos
+
+- Simplificadas las cinco tarjetas de servicios en `src/pages/index.astro`: se conservan ícono, número, categoría, título y flecha; retiradas del resumen las descripciones y listas. La primera mantiene «Operaciones inmobiliarias» y «Patrimonio e inmuebles». Cada tarjeta sigue enlazando en toda su superficie a su página informativa.
+- Retirado el párrafo introductorio de la sección y compactada la tarjeta de consultas, conservando su enlace de WhatsApp. La información detallada de servicios permanece en la configuración y páginas individuales.
+- Ajustados espaciados, tamaños de íconos y tipografía en `src/styles/global.css`, con títulos legibles, bordes discretos y paleta existente. No se agregan nuevas animaciones.
+- Medidas antes/después: tarjeta inicial a 1440 px de 400 a 215 px; a 390 px de 401 a 190 px. Sección completa de 1163 a 693 px en escritorio y de 2744 a 1442 px en celular.
+- Verificaciones: compilación y Astro check sin errores, advertencias ni sugerencias; Chrome a 1440, 768, 390 y 320 px sin desbordes ni errores de JavaScript. Confirmados cinco enlaces con respuesta 200 y navegación desde la tarjeta inmobiliaria. Capturas guardadas en `artifacts/servicios-compactos-*.png`, con revisión visual de escritorio y celular. `git diff --check` correcto.
+- Sin pendientes para este cambio; continúa en entorno local.
