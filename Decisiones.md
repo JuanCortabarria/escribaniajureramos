@@ -296,3 +296,8 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - El contador de trayectoria, biografía y demás referencias existentes siguen usando el año 2002 previamente confirmado; esta solicitud cambia únicamente el encabezado de portada.
 - Verificaciones: compilación y Astro check sin errores, advertencias ni sugerencias. Chrome a 1440 y 390 px: comprobados 1000, valores intermedios y final 2022, sin desbordes. Con movimiento reducido o sin JavaScript se muestra directamente 2022. `git diff --check` correcto.
 - Sin pendientes de implementación para este cambio; continúa en entorno local.
+
+## 2026-10-16 — Corrección del año final de portada a 2002
+
+- El usuario aclara que el año correcto es 2002. Actualizado `src/pages/index.astro` para que el encabezado use `site.since`, compartiendo el mismo dato confirmado que el contador de trayectoria y evitando duplicarlo. Se mantiene la animación desde 1000.
+- Verificaciones: compilación y Astro check sin errores, advertencias ni sugerencias; HTML de producción confirma los dos contadores con destino 2002. `git diff --check` correcto. Sin pendientes.
