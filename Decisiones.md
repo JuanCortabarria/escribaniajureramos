@@ -301,3 +301,15 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 
 - El usuario aclara que el año correcto es 2002. Actualizado `src/pages/index.astro` para que el encabezado use `site.since`, compartiendo el mismo dato confirmado que el contador de trayectoria y evitando duplicarlo. Se mantiene la animación desde 1000.
 - Verificaciones: compilación y Astro check sin errores, advertencias ni sugerencias; HTML de producción confirma los dos contadores con destino 2002. `git diff --check` correcto. Sin pendientes.
+
+## 2026-10-16 — Revisión de avances y propuestas de animación
+
+- Revisados el historial y el código del compañero hasta `5206c96`; la consulta a GitHub confirmó que `origin/main` apunta al mismo commit.
+- Revisados los cambios de portada, las cinco páginas de servicio, las tarjetas compactas, los títulos institucionales, los dos contadores y las animaciones existentes en `home-motion.ts` y `motion.css`.
+- Confirmado el servidor de desarrollo y abierta la página en el navegador visible de Codex, en `http://127.0.0.1:4321/`. Revisada la portada; observados los contadores y la entrada del título durante la carga.
+- Propuestas para elegir: coordinar título, fotografía y botón de portada; animar el menú móvil y el indicador de sección activa; extender un lenguaje de movimiento consistente a las páginas de servicios; afinar las entradas escalonadas de tarjetas. Como alternativa editorial, mantener el año 2002 legible y animar su acento visual en lugar de contar años intermedios.
+- Consultadas las preferencias de intensidad, zona prioritaria y valoración de los efectos actuales. Las propuestas no se implementan en esta tarea; queda pendiente la elección de la usuaria.
+- Mantener el respeto por movimiento reducido y la disponibilidad del contenido sin JavaScript que ya incorpora el proyecto.
+- Referencias consultadas: https://motion.dev/docs/stagger y https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion . Son referencias de interacción; no se agregó ninguna dependencia.
+- Único archivo modificado: este registro. No requiere recompilación por tratarse de una revisión y planificación documental.
+- El intento de push de esta revisión falló porque esta computadora no tiene disponible la autenticación HTTPS de GitHub (`could not read Username`). El registro queda guardado en un commit local; el acceso de lectura al remoto sí fue verificado.
