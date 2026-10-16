@@ -329,3 +329,11 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - Incorporado un ejemplar cerrado con tapa amarilla y fucsia, autoría, título, prólogo y editorial. Conservados computadora, café, agenda lateral, mesa e iluminación cálida; retirado el lápiz para dejar visible la tapa.
 - Resultado guardado en `artifacts/libro-promocional/libro-escritorio-cafe.png`, sin sobrescribir las imágenes anteriores ni modificar la web. Vista previa estática de esta edición; no se exportó un video.
 - Verificación visual de composición, cubierta y objetos conservados. No requiere pruebas de código. El envío a GitHub continúa bloqueado por la autenticación HTTPS comprobada en esta sesión; se conserva el avance en un commit local.
+
+## 2026-10-16 — Dos nuevas composiciones del libro
+
+- Sustituidos los libros de las dos fotografías adjuntas por el libro amarillo y rosado de la escribana mediante la herramienta integrada de imágenes, usando la foto original de la cubierta como referencia.
+- Guardadas `artifacts/libro-promocional/libro-mesa-clara.png` (mesa crema, café y agua, vertical) y `libro-cafe-vapor.png` (madera, café con vapor, anteojos y papelería, cuadrada). Conservados los ambientes y las versiones anteriores. Actualizado `ORIGEN.md`.
+- Verificación visual de ambas imágenes: un ejemplar promocionado por escena, título, autora y prólogo legibles, sin restos del título del libro reemplazado. Son ediciones gráficas para revisión, sin cambios ni publicación de la web; no requieren compilación.
+- La usuaria consulta también por edición de imágenes y letras animadas para la web. Explicado el flujo y solicitados referencia, texto y ubicación. Esa animación queda pendiente de dichos datos; no se implementa un efecto elegido arbitrariamente.
+- Los avances se guardan localmente; sigue pendiente resolver la autenticación HTTPS de GitHub para compartirlos, según el fallo comprobado en esta sesión.

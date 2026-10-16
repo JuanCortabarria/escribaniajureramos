@@ -19,3 +19,12 @@ Pinterest solicitó iniciar sesión; las dos referencias no pudieron examinarse.
 ## Edición de escritorio y café
 
 `libro-escritorio-cafe.png`: herramienta integrada de imágenes, sobre la referencia de escritorio adjunta y la foto original del libro. Prompt: sustituir únicamente el cuaderno abierto de primer plano por un ejemplar cerrado del libro de María Solange Jure Ramos, con la tapa original amarilla y fucsia, título, prólogo y editorial; quitar el lápiz que tapa la cubierta. Conservar composición cuadrada, computadora, taza y plato, agenda lateral, madera, perspectiva y luz cálida. No agregar objetos ni textos publicitarios. Se conserva como edición independiente para revisión; no se incorporó a la web.
+
+## Mesa clara y café con vapor
+
+Dos ediciones independientes con la herramienta integrada de imágenes sobre las referencias adjuntas `Kitap.jpeg` y `_ (1).jpeg`, respectivamente, y la fotografía original de la tapa como referencia de identidad.
+
+Prompt común: replace only the featured reading book with one physical paperback of the legal book in the reference. Preserve scene, objects, camera angle, lighting and crop. Reproduce original bright yellow upper half, fuchsia lower half, navy typography and publisher mark; exact author, full title, prólogo de Fernando Pérez Hualde y Laura Filippi and CATHEDRA JURÍDICA. Crisp readable cover, correct perspective, natural shadows and paper texture. No duplicate copies, advertising text or watermark.
+
+- `libro-mesa-clara.png`: replace Emily Brontë's book at lower left, retaining position and size; preserve off-white table, cream rug, wooden tray, coffee and glass of water. Warm bright editorial aesthetic; portrait aspect ratio, entire book in frame.
+- `libro-cafe-vapor.png`: replace Atomic Habits in foreground, remove English text and red ribbon; keep steaming coffee, glasses, journal, notepad, pens and directional golden sunlight. Matching yellow/pink/navy spine, rich shadows with readable cover, square composition.
