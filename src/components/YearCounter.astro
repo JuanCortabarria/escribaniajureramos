@@ -1,0 +1,44 @@
+---
+interface Props { year: number }
+const { year } = Astro.props;
+---
+<span class="year-counter" data-year-counter={year} aria-label={`Desde ${year}`}>
+  <span aria-hidden="true">Desde <span class="year-value">{year}</span></span>
+</span>
+
+<style>
+  .year-value { display: inline-block; min-width: 4ch; font-variant-numeric: tabular-nums; }
+</style>
+
+<script>
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  document.querySelectorAll<HTMLElement>('[data-year-counter]').forEach(counter => {
+    const value = counter.querySelector<HTMLElement>('.year-value');
+    const target = Number(counter.dataset.yearCounter);
+    if (!value || !Number.isFinite(target) || reducedMotion.matches || !('IntersectionObserver' in window)) return;
+
+    const observer = new IntersectionObserver(entries => {
+      if (!entries.some(entry => entry.isIntersecting)) return;
+      observer.disconnect();
+      if (reducedMotion.matches) return;
+
+      let frame = 0;
+      const finish = () => {
+        cancelAnimationFrame(frame);
+        value.textContent = String(target);
+        reducedMotion.removeEventListener('change', finish);
+      };
+      reducedMotion.addEventListener('change', finish);
+      const start = performance.now();
+      value.textContent = '0';
+      const tick = (now: number) => {
+        const progress = Math.min((now - start) / 1200, 1);
+        value.textContent = String(Math.floor(target * (1 - (1 - progress) ** 3)));
+        if (progress < 1) frame = requestAnimationFrame(tick);
+        else finish();
+      };
+      frame = requestAnimationFrame(tick);
+    }, { threshold: 0.5 });
+    observer.observe(counter);
+  });
+</script>

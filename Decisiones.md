@@ -249,3 +249,11 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - No se cambian titulares, paleta, orden ni contenido de servicios.
 - Verificaciones: compilación de producción y revisión de Astro sin errores, advertencias ni sugerencias; portada revisada visualmente a 1440 y 390 px, imagen cargada y sin desbordes horizontales. El nombre Jure Ramos queda visible en ambos tamaños. `git diff --check` correcto.
 - Sin pendientes para este cambio. La web permanece en entorno local.
+
+## 2026-10-15 — Contador animado en «Desde 2002»
+
+- A pedido del usuario, incorporado un contador ascendente de 0 a 2002 en el indicador de trayectoria. Se activa una sola vez cuando al menos la mitad del indicador entra en pantalla, durante 1,2 segundos y con desaceleración al final.
+- Creado `src/components/YearCounter.astro` e integrado en `src/pages/index.astro`, utilizando el año de `site.since`. No se animan las otras menciones del año.
+- Conservado 2002 en el HTML inicial y sin JavaScript. Los lectores de pantalla reciben «Desde 2002» sin anunciar cada incremento. Se respeta la preferencia de movimiento reducido, también si cambia durante la animación. Reservado ancho para evitar desplazamientos al cambiar las cifras.
+- Verificaciones: compilación y Astro check sin errores, advertencias ni sugerencias. Chrome a 1440 y 390 px: comprobado incremento intermedio, final exacto en 2002 y ausencia de repetición al volver a la sección, sin errores de JavaScript. Verificados también movimiento reducido y JavaScript desactivado. El navegador requirió ejecución fuera del sandbox para iniciarse.
+- Sin pendientes para este cambio; continúa en entorno local.
