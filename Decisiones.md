@@ -458,3 +458,10 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - Interpretado «cuadrado» como alineación del libro, conservando su forma rectangular. Indicación de edición: enderezar la cubierta, mantener diseño amarillo y magenta y sus textos, sustituir el entorno por madera marrón profesional, sin añadir objetos.
 - Inspeccionados el original y el resultado: libro completo y alineado, fondo de madera y diseño de cubierta conservado visualmente. La fuente original es una miniatura de 320 × 240 px; la edición generativa reconstruye detalles pequeños.
 - Resultado de vista previa: `/Users/juancortabarria/.codex/generated_images/01a14620-a61e-7fc3-ba38-65fdb60ef392/exec-ac66bec6-94de-4869-97f6-5e03c4fdf2c8.png`. Original intacto; no se incorpora todavía a la web. Único archivo del repositorio modificado: `Decisiones.md`. Pendiente: valoración de esta primera versión por la usuaria.
+
+## 2026-10-16 — Nueva imagen del libro y título en cursiva
+
+- Incorporada al acceso lateral del libro la nueva imagen adjunta por la usuaria, con el libro alineado sobre madera. Generadas variantes optimizadas AVIF y WebP de 480 px (`public/images/libro-madera-480.*`), sin modificar el contenido de la imagen ni reemplazar la fotografía de la página independiente.
+- Actualizado `src/components/BookTeaser.astro` con las nuevas rutas y el título completo desde `book.title`, debajo de la imagen. Añadido estilo en `src/styles/book.css`: cursiva de 11 px, interlineado 1,55 y color secundario. Tanto imagen como título forman parte del mismo enlace a `/libro/`.
+- Verificaciones: compilación y Astro check sin errores, advertencias ni sugerencias; Chrome a 1440, 390 y 320 px confirma carga de la nueva imagen, título en cursiva y ausencia de desbordes. En celular, clic tanto en imagen como en título abre el libro en pestaña nueva. Revisadas capturas `artifacts/libro-madera-titulo-*.png` en escritorio y celular. `git diff --check` correcto.
+- Sin pendientes de implementación; web local y rama `feature-vico`.
