@@ -435,3 +435,12 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - Capturas y evidencia: `artifacts/libro-pagina-independiente.jpg`, `faq-control-movimiento.jpg` y `libro-movimientos-qa.json`. Ambas páginas quedan abiertas para revisión.
 - Referencia técnica: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@view-transition .
 - Pendiente valoración de la usuaria sobre los efectos y la nueva redacción. Cambios guardados en la rama `feature-vico`; el push sigue pendiente por la falta de autenticación HTTPS comprobada en esta sesión. No se publicó ni se modificó el dominio.
+
+## 2026-10-16 — Acceso al libro únicamente con su imagen
+
+- Confirmada la rama `feature-vico`, con estado limpio al iniciar. La usuaria solicita reabrir la web y mostrar únicamente la imagen del libro como acceso a su página existente.
+- Simplificado `src/components/BookTeaser.astro`: retirados rótulo, título, frase y flecha visibles. Conservados enlace nativo a `/libro/`, apertura en pestaña nueva y nombre accesible que informa el destino.
+- Actualizado `src/styles/book.css`: eliminados fondo, borde y relleno del recuadro; imagen completa en proporción 4:3, ancho de hasta 240 px y toda su superficie clickeable. Se mantiene el foco visible y el zoom discreto existente, condicionado a la preferencia de movimiento.
+- Iniciado el servidor local y abierta la biografía en `http://127.0.0.1:4322/#escribana`; el primer intento de inicio no quedó listo dentro del sandbox y el segundo confirmó el servidor activo. No se publicó la web.
+- Verificaciones: compilación y Astro check sin errores, advertencias ni sugerencias. Chrome a 1440, 390 y 320 px: imagen cargada, sin texto ni ícono adicional, enlace e imagen de iguales dimensiones (240 × 180 px), cuatro esquinas clickeables y sin desbordes. Confirmadas apertura de `/libro/` con clic y Enter, un H1 en destino y regreso a la biografía. Sin errores de JavaScript. `git diff --check` correcto.
+- Evidencias: `artifacts/libro-solo-imagen-qa.json` y `artifacts/libro-solo-imagen-*.png`. Sin pendientes de implementación.

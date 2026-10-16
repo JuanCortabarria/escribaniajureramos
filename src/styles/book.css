@@ -1,13 +1,7 @@
-/* A small publication link within the biography, with one editorial destination. */
-.book-teaser{display:flex;align-items:center;gap:16px;margin-top:24px;padding:14px;background:var(--color-bg);border:1px solid var(--color-border);border-left:3px solid var(--color-accent);max-width:410px;transition:border-color var(--transition),background var(--transition)}
-.book-teaser picture{display:block;flex:0 0 76px;overflow:hidden}
-.book-teaser img{width:76px;height:76px;object-fit:cover}
-.book-teaser-copy{display:flex;flex-direction:column;gap:4px;flex:1;min-width:0}
-.book-teaser-label{font-size:9px;letter-spacing:1.6px;color:var(--color-accent-text);font-weight:600}
-.book-teaser strong{font-family:var(--font-heading);font-size:28px;line-height:1.1;font-weight:400}
-.book-teaser-copy>span:last-child{font-size:11px;color:var(--color-text-muted);line-height:1.5}
-.book-teaser>svg{flex-shrink:0;color:var(--color-accent-text)}
-.book-teaser:is(:hover,:focus-visible){border-color:var(--color-accent);background:var(--color-surface-alt)}
+/* The entire book image is a native link to the publication page. */
+.book-teaser{display:block;width:min(240px,100%);margin-top:24px}
+.book-teaser picture{display:block;overflow:hidden}
+.book-teaser img{display:block;width:100%;height:auto;aspect-ratio:4/3}
 .book-section{padding-block:75px;background:var(--color-bg);border-block:1px solid var(--color-border)}
 .book-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:75px;align-items:center}
 .book-visual{position:relative;max-width:520px}
@@ -35,9 +29,8 @@
 .hero-bottom .services-jump:is(:hover,:focus-visible){background:#e7ca9d;border-color:#e7ca9d}
 
 @media(prefers-reduced-motion:no-preference){
-  .book-teaser img,.book-teaser>svg,.services-jump>svg{transition:transform 250ms ease}
+  .book-teaser img,.services-jump>svg{transition:transform 250ms ease}
   .book-teaser:is(:hover,:focus-visible) img{transform:scale(1.04)}
-  .book-teaser:is(:hover,:focus-visible)>svg{transform:translateX(4px)}
   .services-jump:is(:hover,:focus-visible)>svg{transform:translateY(4px)}
 }
 @media(max-width:1050px){.book-grid{gap:40px}.hero-bottom>span{max-width:220px;line-height:1.8}}
@@ -55,4 +48,4 @@
   .services-jump strong{font-size:14px}
   .services-jump-copy>span{font-size:10px}
 }
-@media(max-width:360px){.book-teaser{gap:11px;padding:12px}.book-teaser picture{flex-basis:62px}.book-teaser img{width:62px;height:70px}.book-teaser-copy>span:last-child{font-size:10px}.book-copy h1{font-size:35px}}
+@media(max-width:360px){.book-copy h1{font-size:35px}}
