@@ -451,3 +451,10 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - Agrupados listado e imagen en `src/pages/index.astro`. Ajustada la grilla adaptable en `src/styles/book.css`: imagen de hasta 176 px en escritorio y tamaño reducido en celular para mantenerla al costado sin recortar el libro ni superponer texto. Continúa siendo un enlace íntegramente clickeable a `/libro/` en pestaña nueva.
 - Verificaciones: compilación y Astro check sin errores, advertencias ni sugerencias; Chrome a 1440, 1024, 768, 390 y 320 px confirmó imagen al costado del listado, cinco credenciales y ausencia de desbordes. Clic en celular abre `/libro/`. Revisadas visualmente capturas de escritorio y celular guardadas en `artifacts/libro-credenciales-*.png`. `git diff --check` correcto.
 - Sin pendientes de implementación. Se mantiene la web local en el puerto 4322 y la rama `feature-vico`.
+
+## 2026-10-16 — Libro alineado sobre mesa de madera
+
+- Editada la imagen suministrada `libro-miniatura.avif` con la herramienta integrada de imágenes. Entregada una primera versión para revisión con el libro alineado a los bordes, vista cenital sin giro y fondo de mesa clásica de madera marrón.
+- Interpretado «cuadrado» como alineación del libro, conservando su forma rectangular. Indicación de edición: enderezar la cubierta, mantener diseño amarillo y magenta y sus textos, sustituir el entorno por madera marrón profesional, sin añadir objetos.
+- Inspeccionados el original y el resultado: libro completo y alineado, fondo de madera y diseño de cubierta conservado visualmente. La fuente original es una miniatura de 320 × 240 px; la edición generativa reconstruye detalles pequeños.
+- Resultado de vista previa: `/Users/juancortabarria/.codex/generated_images/01a14620-a61e-7fc3-ba38-65fdb60ef392/exec-ac66bec6-94de-4869-97f6-5e03c4fdf2c8.png`. Original intacto; no se incorpora todavía a la web. Único archivo del repositorio modificado: `Decisiones.md`. Pendiente: valoración de esta primera versión por la usuaria.
