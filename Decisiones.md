@@ -313,3 +313,12 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - Referencias consultadas: https://motion.dev/docs/stagger y https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion . Son referencias de interacción; no se agregó ninguna dependencia.
 - Único archivo modificado: este registro. No requiere recompilación por tratarse de una revisión y planificación documental.
 - El intento de push de esta revisión falló porque esta computadora no tiene disponible la autenticación HTTPS de GitHub (`could not read Username`). El registro queda guardado en un commit local; el acceso de lectura al remoto sí fue verificado.
+
+## 2026-10-16 — Propuesta cálida y animada para el libro
+
+- A pedido de la usuaria, creada una fotografía promocional con un único ejemplar del libro, conservando diseño amarillo y fucsia, autoría, título y prólogo. Ambiente de piedra crema, lino y luz de tarde para acompañar la paleta de la web.
+- Utilizada la herramienta integrada de imágenes sobre la foto adjunta. Guardados `artifacts/libro-promocional/libro-luz-calida.jpg` y `ORIGEN.md`, con procedencia, prompt y alcance. La foto original se conserva.
+- Creada una vista animada en el chat con acercamiento suave y desplazamiento mínimo, pausa y respeto por movimiento reducido. El fragmento queda en el directorio de visualizaciones de este chat; no es un video exportado ni se incorporó a la web.
+- Los dos enlaces de Pinterest se abrieron, pero exigieron iniciar sesión e impidieron examinar las imágenes. Se siguieron las preferencias expresas y la paleta existente; no se afirma haber reproducido las referencias.
+- Verificaciones: inspección visual de un solo libro y textos principales, JPEG cargado en navegador, animación activa y pausa/reanudación funcionales. Fragmento de menos de 1 MB. No corresponde recompilar la web porque su código permanece sin cambios.
+- Pendiente: valoración de la usuaria e incorporación a la web si la solicita. Consulta del remoto correcta y sin avances nuevos por integrar; propuesta guardada en commit local. El push se intentó y falló por falta de autenticación HTTPS (`could not read Username`), por lo que estos archivos todavía no están compartidos en GitHub.
