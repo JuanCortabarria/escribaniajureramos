@@ -240,3 +240,12 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - Verificada visualmente la escritura y la diferencia de peso tipográfico. Entregada la imagen en el chat; el original se conserva y no se incorporó la imagen a la web.
 - Resultado guardado por la herramienta en `/Users/juancortabarria/.codex/generated_images/01a14229-7b34-7873-b55f-b83aeb5058c2/exec-fff118b5-9ed8-45b2-b971-2a2f52b2eedb.png`.
 - Único archivo del repositorio modificado: `Decisiones.md`. Sin pruebas de código por tratarse de una entrega gráfica independiente. Sin pendientes de edición.
+
+## 2026-10-15 — Sustitución de imagen principal por Portada_ofi.jpeg
+
+- Incorporada a la portada la imagen suministrada por el usuario en `/Users/juancortabarria/Downloads/Portada_ofi.jpeg`, con el nombre Jure Ramos en la pared.
+- Generadas variantes AVIF y WebP de 420/800 px y respaldo JPEG optimizado, conservando la composición y sin alterar el contenido de la imagen. Archivos con nombre nuevo para evitar reutilizar una versión anterior en caché.
+- Actualizados la ruta de imagen, dimensiones y texto alternativo descriptivo en `src/pages/index.astro`. La fotografía anterior se conserva entre los recursos.
+- No se cambian titulares, paleta, orden ni contenido de servicios.
+- Verificaciones: compilación de producción y revisión de Astro sin errores, advertencias ni sugerencias; portada revisada visualmente a 1440 y 390 px, imagen cargada y sin desbordes horizontales. El nombre Jure Ramos queda visible en ambos tamaños. `git diff --check` correcto.
+- Sin pendientes para este cambio. La web permanece en entorno local.
