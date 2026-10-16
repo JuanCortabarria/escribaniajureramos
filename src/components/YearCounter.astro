@@ -1,9 +1,9 @@
 ---
-interface Props { year: number }
-const { year } = Astro.props;
+interface Props { year: number; prefix?: string }
+const { year, prefix = 'Desde' } = Astro.props;
 ---
 <span class="year-counter" data-year-counter={year} aria-label={`Desde ${year}`}>
-  <span aria-hidden="true">Desde <span class="year-value">{year}</span></span>
+  <span aria-hidden="true">{prefix} <span class="year-value">{year}</span></span>
 </span>
 
 <style>

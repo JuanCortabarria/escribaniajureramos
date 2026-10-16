@@ -288,3 +288,11 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - Archivos: `src/pages/index.astro`, `src/scripts/home-motion.ts`, `src/styles/motion.css` y `src/styles/global.css`.
 - Verificaciones: compilación y Astro check sin errores, advertencias ni sugerencias; Chrome a 1440, 768, 390 y 320 px sin desbordes ni errores de JavaScript. Probados FAQ con mouse, Enter y clics rápidos, activación única de tarjetas y navegación al servicio inmobiliario. Probadas alternativas con movimiento reducido, sin JavaScript y cambio de preferencia durante la animación. Se mantienen cinco tarjetas sin listas y líneas de 1 px. Capturas de portada revisadas en escritorio y celular; evidencia en `artifacts/animaciones-qa.json` y `artifacts/animaciones-portada-*.png`. `git diff --check` correcto.
 - Pendiente: valoración visual del usuario sobre esta primera combinación en la web local; no se publica la web.
+
+## 2026-10-16 — Contador en el encabezado de portada
+
+- Sustituido el texto estático «CÓRDOBA · DESDE 2002» por «CÓRDOBA · DESDE» y contador de 1000 a 2022, según el año final indicado expresamente por el usuario en esta solicitud. La animación se inicia al abrir la portada, cuando el encabezado está visible, y dura 1,2 segundos.
+- Reutilizado `YearCounter.astro` con una propiedad opcional de prefijo para conservar las mayúsculas del encabezado. Archivos modificados: `src/components/YearCounter.astro` y `src/pages/index.astro`.
+- El contador de trayectoria, biografía y demás referencias existentes siguen usando el año 2002 previamente confirmado; esta solicitud cambia únicamente el encabezado de portada.
+- Verificaciones: compilación y Astro check sin errores, advertencias ni sugerencias. Chrome a 1440 y 390 px: comprobados 1000, valores intermedios y final 2022, sin desbordes. Con movimiento reducido o sin JavaScript se muestra directamente 2022. `git diff --check` correcto.
+- Sin pendientes de implementación para este cambio; continúa en entorno local.
