@@ -24,13 +24,23 @@ if ('IntersectionObserver' in window && 'animate' in Element.prototype) {
       if (motionPreference.matches) continue;
       const element = entry.target;
       if (element.matches('#hero-title, #about-title')) {
+        const isHero = element.matches('#hero-title');
         element.querySelectorAll('[data-title-line]').forEach((line, index) => {
-          animate(line, [{ transform: 'translateY(105%)' }, { transform: 'translateY(0)' }],
-            { duration: 720, delay: index * 100, easing, fill: 'backwards' });
+          animate(line, isHero
+            ? [{ opacity: .65, transform: 'translateY(28%)' }, { opacity: 1, transform: 'translateY(0)' }]
+            : [{ transform: 'translateY(105%)' }, { transform: 'translateY(0)' }],
+            { duration: isHero ? 560 : 720, delay: index * (isHero ? 60 : 100), easing, fill: 'backwards' });
         });
       } else if (element.matches('.hero-visual img')) {
-        animate(element, [{ transform: 'scale(1.035)' }, { transform: 'scale(1)' }],
-          { duration: 1100, easing });
+        animate(element, [{ transform: 'scale(1.018)' }, { transform: 'scale(1)' }],
+          { duration: 800, easing });
+      } else if (element.matches('.hero-description, .hero-copy > .button, .hero-person, .hero-visual .photo-note')) {
+        const delay = element.matches('.hero-copy > .button') ? 160
+          : element.matches('.hero-person') ? 200 : 90;
+        animate(element, [
+          { opacity: .65, transform: 'translateY(8px)' },
+          { opacity: 1, transform: 'translateY(0)' },
+        ], { duration: 420, delay, easing, fill: 'backwards' });
       } else if (element.matches('.portrait-wrap > picture')) {
         animate(element, [
           { clipPath: 'inset(0 0 14% 0)', transform: 'translateY(16px)' },
@@ -47,7 +57,7 @@ if ('IntersectionObserver' in window && 'animate' in Element.prototype) {
     }
   }, { threshold: .12 });
 
-  document.querySelectorAll('#hero-title, #about-title, .hero-visual img, .portrait-wrap > picture, main h2:not(#about-title), .service-card, .service-help')
+  document.querySelectorAll('#hero-title, #about-title, .hero-visual img, .hero-description, .hero-copy > .button, .hero-person, .hero-visual .photo-note, .portrait-wrap > picture, main h2:not(#about-title), .service-card, .service-help')
     .forEach(element => observer.observe(element));
 
   // Preserve native details semantics and keyboard activation, including rapid toggles.

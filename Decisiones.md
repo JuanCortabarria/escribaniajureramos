@@ -337,3 +337,14 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - Verificación visual de ambas imágenes: un ejemplar promocionado por escena, título, autora y prólogo legibles, sin restos del título del libro reemplazado. Son ediciones gráficas para revisión, sin cambios ni publicación de la web; no requieren compilación.
 - La usuaria consulta también por edición de imágenes y letras animadas para la web. Explicado el flujo y solicitados referencia, texto y ubicación. Esa animación queda pendiente de dichos datos; no se implementa un efecto elegido arbitrariamente.
 - Los avances se guardan localmente; sigue pendiente resolver la autenticación HTTPS de GitHub para compartirlos, según el fallo comprobado en esta sesión.
+
+## 2026-10-16 — Entrada sutil y coordinada de la portada
+
+- La usuaria eligió movimientos breves y discretos, con prioridad en título, fotografía y botón de consulta. Valoró positivamente las animaciones existentes; se conservan el contador y los efectos del resto de la página.
+- Ajustado `src/scripts/home-motion.ts`: el título de portada entra con desplazamiento del 28 %, opacidad inicial de 0,65, duración de 560 ms y desfase de 60 ms entre líneas. La foto reduce su acercamiento inicial a 1,8 % y su duración a 800 ms.
+- Agregadas entradas de 420 ms y 8 px para la descripción, botón, identificación profesional y recuadro de la foto, con desfases breves de 90 a 200 ms. Cada elemento se activa al entrar en pantalla, también en celular, y una sola vez.
+- Sin dependencias nuevas ni cambios en textos, diseño, enlaces o animaciones de otras secciones. Se conserva el contenido visible sin JavaScript y la finalización de efectos al activar movimiento reducido.
+- Verificaciones: Astro y compilación sin errores, advertencias ni sugerencias; auditoría técnica correcta. Prueba aislada del script con observadores y animaciones simulados: secuencia y tiempos, destino visible, retirada del observador y ausencia de animaciones con movimiento reducido; finalización de efectos al cambiar la preferencia.
+- Navegador a 1440 y 390 px: portada revisada durante la entrada, sin desbordes, imagen cargada y enlace de consulta correcto. Ambos contadores finalizan en 2002; sin errores de consola registrados. Vista local dejada abierta.
+- Captura de revisión: `artifacts/portada-movimiento-sutil.jpg`. Archivos del commit: script y este registro.
+- Pendiente: valoración visual de la usuaria. El commit queda local mientras siga sin resolverse la autenticación HTTPS de GitHub, cuyo fallo fue comprobado en esta sesión.
