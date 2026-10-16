@@ -9,7 +9,19 @@
 .portrait-wrap > picture { display: block; overflow: clip; }
 .hero .photo-frame > picture { display: block; height: 100%; overflow: clip; }
 
+.services-jump-group{display:flex;flex-direction:column;align-items:flex-end;gap:2px}
+.motion-toggle{display:block;border:0;background:transparent;color:var(--color-accent-bright);font-size:10px;line-height:1.5;min-height:36px;padding:8px 2px;text-decoration:underline;text-underline-offset:3px}
+.motion-toggle[hidden]{display:none}
+.motion-toggle-light{color:var(--color-accent-text);margin-top:12px}
+.faq-heading-text{display:inline-block;transform-origin:center}
+@media(max-width:760px){.services-jump-group{align-items:stretch}.services-jump-group .motion-toggle{align-self:flex-end}}
+
 @media (prefers-reduced-motion: no-preference) {
+  .services-jump.continuous-motion{animation:services-float 3s ease-in-out infinite}
+  .faq-heading-text.continuous-motion{animation:faq-turn 14s linear infinite}
+  .services-jump-group:is(:hover,:focus-within) .services-jump,
+  [data-motion-paused="true"] .continuous-motion{animation-play-state:paused}
+  [data-motion-paused="true"] .faq-heading-text{animation:none}
   .text-link svg, .button svg, .nav-cta svg {
     transition: transform 220ms ease;
   }
@@ -20,3 +32,7 @@
   }
   .service-card:focus-visible .card-navigation svg { transform: translateX(4px); }
 }
+
+@keyframes services-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@keyframes faq-turn{from{transform:perspective(700px) rotateY(0deg)}to{transform:perspective(700px) rotateY(360deg)}}
+@media(prefers-reduced-motion:reduce){.continuous-motion{animation:none!important}.motion-toggle{display:none}}

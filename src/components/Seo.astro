@@ -2,10 +2,10 @@
 import { site } from '../config/site';
 import { serviceMarkdownPath, type ServicePage } from '../config/service-pages';
 import { structuredData } from '../lib/structured-data';
-interface Props { title?: string; description?: string; noindex?: boolean; service?: ServicePage; }
+interface Props { title?: string; description?: string; noindex?: boolean; service?: ServicePage; markdown?: string; }
 const { title = 'Escribanía en Nueva Córdoba | Solange Jure Ramos · Registro 132', description = 'Asesoramiento notarial y legal general en Nueva Córdoba desde 2002. Esc. Solange Jure Ramos, Registro 132. Inmuebles, sociedades, familia y certificaciones.', noindex = false, service } = Astro.props;
 const canonical = new URL(Astro.url.pathname, site.url).href;
-const markdown = service ? serviceMarkdownPath(service) : '/index.md';
+const markdown = Astro.props.markdown ?? (service ? serviceMarkdownPath(service) : '/index.md');
 ---
 <title>{title}</title><meta name="description" content={description}/><link rel="canonical" href={canonical}/>
 {noindex && <meta name="robots" content="noindex,follow"/>}

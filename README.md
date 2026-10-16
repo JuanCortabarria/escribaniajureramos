@@ -55,3 +55,9 @@ La migración del dominio, las redirecciones 301 de las URLs antiguas y el alta 
 La información se edita en `src/config/service-pages.ts`, incluyendo las reglas de atención y presupuesto. Hay una página por área: `/servicios/escrituras-inmuebles/`, `/servicios/certificaciones/`, `/servicios/sociedades/`, `/servicios/familia/` y `/servicios/sucesiones-prevision/`. La plantilla HTML y las versiones Markdown se generan desde ese mismo contenido.
 
 `src/lib/structured-data.ts` construye el grafo correspondiente a cada página. Las FAQ se incluyen solo en la página que las muestra. Para revisar las cinco páginas con Chrome, iniciar `npm run preview -- --port 4322` y ejecutar `npm run audit:services`. Las páginas están en revisión local y requieren aprobación del texto antes de publicar.
+
+## Libro y movimiento
+
+La miniatura de la biografía abre `/libro/` en una pestaña nueva. El relato y datos se editan en `src/config/book.ts`; `/libro.md` ofrece la misma información en Markdown. La página incluye datos estructurados del libro y aparece en el sitemap.
+
+`src/styles/page-transitions.css` habilita transiciones nativas de 200 ms entre páginas en navegadores compatibles. Los efectos continuos del acceso a servicios y del título de FAQ pueden pausarse con sus controles sincronizados. El dispositivo con movimiento reducido los muestra estáticos. La preferencia de pausa se aplica a la página actual y se reinicia al volver a cargarla.

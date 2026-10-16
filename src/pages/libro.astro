@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import BookSection from '../components/BookSection.astro';
+import { book } from '../config/book';
+import '../styles/book.css';
+---
+<Layout title={`Libro de Solange Jure Ramos | ${book.title}`} description="Conocé el libro de María Solange Jure Ramos y la historia personal que acompaña esta publicación sobre derecho societario." markdown="/libro.md">
+  <a class="skip-link" href="#contenido">Ir al contenido</a>
+  <Header/>
+  <main id="contenido"><BookSection/></main>
+  <Footer/>
+</Layout>

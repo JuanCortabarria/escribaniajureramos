@@ -12,12 +12,12 @@ import { book } from '../config/book';
     </div>
     <div class="book-copy">
       <p class="eyebrow">MI LIBRO · DERECHO SOCIETARIO</p>
-      <h2 id="book-title">Una parte de mi <em>recorrido.</em></h2>
-      <h3 class="book-name">{book.title}</h3>
+      <h1 id="book-title">Una parte de mi <em>recorrido.</em></h1>
+      <h2 class="book-name">{book.title}</h2>
       <blockquote>{book.story.map(paragraph=><p>{paragraph}</p>)}</blockquote>
       <p class="book-signature">{book.author}</p>
       <p class="book-publisher">{book.publisher}<span>Prólogo de {book.foreword}</span></p>
-      <a class="book-back" href="#escribana">Volver a la biografía <span aria-hidden="true">↑</span></a>
+      <a class="book-back" href="/#escribana">Volver a la biografía <span aria-hidden="true">↑</span></a>
     </div>
   </div>
 </section>

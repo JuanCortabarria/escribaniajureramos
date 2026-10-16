@@ -34,5 +34,6 @@ No hay testimonios, calificaciones, precios ni resultados inventados. La página
 
 ## Libro de la escribana · 16/10/2026
 
-- Incorporadas la primera y tercera imágenes adjuntas por la usuaria: miniatura en la biografía y fotografía en la sección del libro. La segunda queda como alternativa y no se publica en la web.
+- Incorporadas la primera y tercera imágenes adjuntas por la usuaria: miniatura en la biografía y fotografía en la página independiente `/libro/`, que abre en una pestaña nueva. El relato completo se retiró de la portada. La segunda queda como alternativa y no se publica en la web.
 - Texto en primera persona redactado a partir de los motivos aportados por la usuaria: trayectoria, mentor y pasión por el tema. Título, autoría, editorial y prólogo tomados de la cubierta. Pendiente aprobación de la redacción final por Solange; sin inventar nombre del mentor, fechas ni duración de investigación.
+- A pedido de la usuaria, sustituida la frase técnica «En sus páginas estudio…» y corregida la editorial visible a «Cátedra Jurídica».

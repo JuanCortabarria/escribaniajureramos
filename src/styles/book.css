@@ -15,9 +15,9 @@
 .book-visual picture{display:block;overflow:hidden;position:relative}
 .book-visual img{width:100%;height:auto;aspect-ratio:1;object-fit:cover}
 .book-copy .eyebrow{margin-bottom:16px}
-.book-copy h2{font-size:clamp(36px,3.7vw,49px)}
-.book-copy h2 em{color:var(--color-accent-text)}
-.book-name{font-family:var(--font-body);font-size:15px;font-weight:500;line-height:1.65;margin-top:24px;max-width:460px}
+.book-copy h1{font-size:clamp(36px,3.7vw,49px)}
+.book-copy h1 em{color:var(--color-accent-text)}
+.book-name{font-family:var(--font-body);font-size:15px;font-weight:500;line-height:1.65;letter-spacing:normal;margin-top:24px;max-width:460px}
 .book-copy blockquote{padding:0 0 0 20px;margin:24px 0 20px;border-left:2px solid var(--color-accent)}
 .book-copy blockquote p{font-size:13px;line-height:1.9}
 .book-copy blockquote p+p{margin-top:12px}
@@ -46,7 +46,7 @@
   .book-grid{grid-template-columns:1fr;gap:40px}
   .book-visual{width:calc(100% - 12px);max-width:450px;margin-inline:auto}
   .book-visual:before{inset:12px -12px -12px 12px}
-  .book-copy h2{font-size:40px}
+  .book-copy h1{font-size:40px}
   .book-name{font-size:14px;margin-top:20px}
   .book-copy blockquote{padding-left:16px}
   .hero-bottom{flex-direction:column;align-items:stretch;gap:14px;padding-block:22px}
@@ -55,4 +55,4 @@
   .services-jump strong{font-size:14px}
   .services-jump-copy>span{font-size:10px}
 }
-@media(max-width:360px){.book-teaser{gap:11px;padding:12px}.book-teaser picture{flex-basis:62px}.book-teaser img{width:62px;height:70px}.book-teaser-copy>span:last-child{font-size:10px}.book-copy h2{font-size:35px}}
+@media(max-width:360px){.book-teaser{gap:11px;padding:12px}.book-teaser picture{flex-basis:62px}.book-teaser img{width:62px;height:70px}.book-teaser-copy>span:last-child{font-size:10px}.book-copy h1{font-size:35px}}

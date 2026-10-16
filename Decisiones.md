@@ -409,3 +409,29 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - Evidencias: `artifacts/libro-seccion-escritorio.jpg`, `libro-miniatura-biografia.jpg`, `servicios-acceso-dorado.jpg`, `libro-seccion-movil.jpg` y `libro-servicios-qa.json`.
 - Propuestas adicionales, sin implementar: transición breve al abrir páginas de servicios y subrayado que marque la sección activa en el menú. Referencia técnica consultada: https://docs.astro.build/en/guides/view-transitions/ .
 - Pendiente aprobación del texto en primera persona. La web permanece local. Comprobación de push con `--dry-run` a `origin/feature-vico` fallida por falta de autenticación HTTPS (`could not read Username`); el avance queda en un commit local.
+
+## 2026-10-16 — Libro independiente, transición de páginas y movimientos continuos
+
+### Decisiones y cambios
+
+- La usuaria aclara que el relato del libro debe quedar fuera de la página principal y abrirse como una página independiente, en una pestaña nueva. Conservada la miniatura de la biografía, ahora enlazada a `/libro/` con aviso accesible de nueva pestaña.
+- Creada `src/pages/libro.astro`, con encabezado, pie, fotografías y relato existentes. Retirado `BookSection` de la portada. Creada su versión `/libro.md`; el Markdown de inicio enlaza al libro en lugar de repetir el relato completo.
+- Sustituida «En sus páginas estudio la figura del director suplente…» por «Quise transformar esa experiencia en un aporte que acompañe el trabajo y la reflexión de otros profesionales». Corregida la editorial a «Cátedra Jurídica», según indicación expresa de la usuaria.
+- Adaptado `BookSection.astro` con un H1 y enlace `/#escribana`; ajustado el espaciado de letras del título bibliográfico en `book.css`.
+- `Layout.astro` y `Seo.astro` admiten la versión Markdown específica del libro. Añadidos WebPage y Book en `structured-data.ts`, sin FAQ ajenas a esa página ni datos bibliográficos no suministrados. Enlace agregado a `llms.txt` y ruta incorporada automáticamente al sitemap.
+- Añadido `src/styles/page-transitions.css` al layout común: desvanecimiento nativo entre documentos del mismo origen, con salida de 160 ms y entrada de 200 ms. Abarca las páginas de servicios y conserva la navegación normal y los scripts por página. Los navegadores sin soporte mantienen navegación convencional.
+- Acceso «Conocé nuestros servicios» con oscilación vertical de 4 px cada 3 segundos, pausada al cursor o foco para facilitar el clic.
+- Consultado el tipo de giro del título de preguntas frecuentes; la usuaria eligió expresamente giro completo de 360 grados. Aplicada rotación sobre el eje vertical cada 14 segundos, en repetición continua, sin desplazar el resto de la sección.
+- Incorporados dos controles sincronizados «Pausar movimiento»/«Reanudar movimiento», mediante `src/scripts/continuous-motion.ts`. Al pausar, el título se muestra de frente y el acceso queda quieto. Sin JavaScript los controles permanecen ocultos; el contenido sigue visible. Los efectos y las transiciones se desactivan con movimiento reducido.
+- Actualizados `README.md`, `PENDIENTES.md` y la auditoría técnica para documentar y comprobar el libro independiente.
+
+### Verificaciones y pendientes
+
+- Astro check y compilación: 0 errores, 0 advertencias y 0 sugerencias; ocho páginas HTML generadas. Auditoría técnica ampliada correcta: libro con un H1, contenido y editorial coherentes, enlace Markdown propio, entidad Book sin FAQ, sitemap y ausencia del relato completo en portada.
+- Navegador: clic en la miniatura abre efectivamente una segunda pestaña en `/libro/`; comprobados frase, editorial y enlace de regreso. Libro sin desbordes a 1440, 390 y 320 px, con imagen cargada.
+- Navegados los cinco servicios y comprobados sus titulares. Confirmada la URL del servicio inmobiliario tras completar la navegación. La transición está configurada mediante la regla nativa, cuya disponibilidad depende del navegador; no se sustituyó la navegación por un router.
+- Confirmados en los estilos computados del navegador `faq-turn`, duración de 14 segundos, repetición infinita y transformación 3D activa, así como `services-float`. Probadas pausa y reanudación con Enter: ambos controles se sincronizan, el título vuelve a su posición legible y la oscilación se pausa.
+- Portada móvil de 390 px sin desbordes, menú abre y cierra al navegar a preguntas. Sin errores de consola registrados en esa comprobación. Prueba aislada del controlador y revisión de las alternativas CSS para movimiento reducido correctas. `git diff --check` correcto.
+- Capturas y evidencia: `artifacts/libro-pagina-independiente.jpg`, `faq-control-movimiento.jpg` y `libro-movimientos-qa.json`. Ambas páginas quedan abiertas para revisión.
+- Referencia técnica: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@view-transition .
+- Pendiente valoración de la usuaria sobre los efectos y la nueva redacción. Cambios guardados en la rama `feature-vico`; el push sigue pendiente por la falta de autenticación HTTPS comprobada en esta sesión. No se publicó ni se modificó el dominio.
