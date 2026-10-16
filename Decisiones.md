@@ -225,3 +225,11 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - Adaptada la revisión de navegación a las tarjetas completas. Se completa en esta misma tarea la validación pendiente de Familia y Sucesiones.
 - Verificaciones de ambas tareas: compilación sin errores ni advertencias y auditoría técnica correcta para cinco páginas. Navegador a 1440, 390 y 320 px sin desbordes ni errores, FAQ y Markdown correctos, menú móvil funcional y navegación desde las cinco tarjetas comprobada.
 - En localhost:4321 se verificaron cinco tarjetas-enlace, cero enlaces anidados y ausencia de «Información del servicio»; un clic en el título de Patrimonio abre su detalle. Captura de tarjetas conservada en `artifacts/`.
+
+## 2026-10-15 — Evaluación profesional de la versión local
+
+- Evaluadas la portada y cinco páginas de servicio, el código, pendientes e informes. Creado `EVALUACION_WEB.md` con nota general cualitativa 7,5/10, puntuación por sección y servicio, fundamentos, evidencia y prioridades.
+- Separadas las notas editoriales de las métricas: no se puntúa el posicionamiento real sin Search Console, ficha o datos de usuarios. El Lighthouse del 12/10 se identifica como histórico y no se volvió a ejecutar.
+- Navegador actual a 1440 y 390 px: doce respuestas HTTP 200, sin desbordes ni errores de JavaScript observados. Medidos textos funcionales de 8–11 px; recomendada revisión de lectura sin atribuir automáticamente un incumplimiento normativo.
+- Áreas principales de mejora: profundidad en sociedades/familia/sucesiones, explicaciones de actas, legibilidad, respaldos profesionales, datos de ubicación y preparación de publicación/medición.
+- Guardadas evidencias en `artifacts/evaluacion-actual.json` y capturas. No se modificaron diseño o contenido de la web. Documentación contrastada con fuentes oficiales de Google; evaluación sin comparación sistemática con competidores ni pruebas con clientes.
