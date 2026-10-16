@@ -301,3 +301,10 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 
 - El usuario aclara que el año correcto es 2002. Actualizado `src/pages/index.astro` para que el encabezado use `site.since`, compartiendo el mismo dato confirmado que el contador de trayectoria y evitando duplicarlo. Se mantiene la animación desde 1000.
 - Verificaciones: compilación y Astro check sin errores, advertencias ni sugerencias; HTML de producción confirma los dos contadores con destino 2002. `git diff --check` correcto. Sin pendientes.
+
+## 2026-10-16 — Conversión de PDF académico a Markdown
+
+- Convertido el PDF suministrado «Obligatorio 2 - Octubre 2026» a `output/markdown/Obligatorio 2 - Octubre 2026.md`, con el contenido textual de sus 14 páginas, títulos, listas anidadas y tablas de evaluación reconstruidas.
+- Conservado el contenido original, incluidas sus indicaciones e inconsistencias, como texto del documento; las consignas académicas no se ejecutaron como instrucciones de esta tarea. Encabezados y pies repetidos reunidos al inicio; el pequeño ícono de entrega se representa mediante una descripción textual. No se modifica la web.
+- Verificaciones: extracción de las 14 páginas, inspección visual de portada, tablas y recordatorio; comparación de frecuencias de palabras sin pérdidas respecto del cuerpo original y revisión de ambas tablas. Sin caracteres de sustitución. Original intacto.
+- Archivos de esta tarea: el Markdown indicado y `Decisiones.md`. Sin pendientes de conversión.
