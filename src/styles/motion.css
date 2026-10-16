@@ -1,0 +1,22 @@
+/* Content remains visible without JavaScript or with reduced motion. */
+.title-line {
+  display: block;
+  overflow: clip;
+  padding-bottom: .15em;
+  margin-bottom: -.15em;
+}
+.title-line > span, .title-line > em { display: block; }
+.portrait-wrap > picture { display: block; overflow: clip; }
+.hero .photo-frame > picture { display: block; height: 100%; overflow: clip; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .text-link svg, .button svg, .nav-cta svg {
+    transition: transform 220ms ease;
+  }
+  .text-link:is(:hover, :focus-visible) svg,
+  .button:is(:hover, :focus-visible) svg:last-child,
+  .nav-cta:is(:hover, :focus-visible) svg {
+    transform: translateX(3px);
+  }
+  .service-card:focus-visible .card-navigation svg { transform: translateX(4px); }
+}

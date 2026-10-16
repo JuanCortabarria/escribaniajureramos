@@ -278,3 +278,13 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 
 - Restituido en `src/styles/global.css` el borde superior de 1 px sobre la flecha de las cinco tarjetas de servicios, a pedido del usuario. Se mantiene el formato compacto.
 - Verificación en Chrome local: cinco líneas con estilo sólido y grosor de 1 px; `git diff --check` correcto. Sin pendientes.
+
+## 2026-10-15 — Primera combinación de animaciones de la portada
+
+- El usuario autoriza probar varias de las animaciones propuestas. Incorporados títulos por líneas en la portada y el nombre de la escribana (720 ms, desfase de 100 ms), zoom inicial discreto de la fotografía principal (3,5 %, 1100 ms), revelado parcial del retrato (850 ms), entrada suave de otros títulos y tarjetas de servicios (600 ms, desfase de hasta 140 ms).
+- Las entradas se activan una sola vez al entrar en pantalla. Se conserva el contador de 1000 a 2002 y el diseño compacto de servicios con línea sobre la flecha. Mejorada la respuesta de las flechas al cursor y al foco del teclado.
+- Agregadas apertura y cierre fluidos de las preguntas frecuentes (280 ms), conservando el elemento nativo details, activación por teclado y cambios rápidos de intención.
+- Implementación con APIs del navegador, sin nuevas dependencias. Contenido visible sin JavaScript; se respeta movimiento reducido y se finalizan las animaciones activas al cambiar esa preferencia. Retirada la entrada previa del contenedor completo de portada para evitar superponer movimientos.
+- Archivos: `src/pages/index.astro`, `src/scripts/home-motion.ts`, `src/styles/motion.css` y `src/styles/global.css`.
+- Verificaciones: compilación y Astro check sin errores, advertencias ni sugerencias; Chrome a 1440, 768, 390 y 320 px sin desbordes ni errores de JavaScript. Probados FAQ con mouse, Enter y clics rápidos, activación única de tarjetas y navegación al servicio inmobiliario. Probadas alternativas con movimiento reducido, sin JavaScript y cambio de preferencia durante la animación. Se mantienen cinco tarjetas sin listas y líneas de 1 px. Capturas de portada revisadas en escritorio y celular; evidencia en `artifacts/animaciones-qa.json` y `artifacts/animaciones-portada-*.png`. `git diff --check` correcto.
+- Pendiente: valoración visual del usuario sobre esta primera combinación en la web local; no se publica la web.
