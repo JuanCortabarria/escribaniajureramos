@@ -233,3 +233,10 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - Navegador actual a 1440 y 390 px: doce respuestas HTTP 200, sin desbordes ni errores de JavaScript observados. Medidos textos funcionales de 8–11 px; recomendada revisión de lectura sin atribuir automáticamente un incumplimiento normativo.
 - Áreas principales de mejora: profundidad en sociedades/familia/sucesiones, explicaciones de actas, legibilidad, respaldos profesionales, datos de ubicación y preparación de publicación/medición.
 - Guardadas evidencias en `artifacts/evaluacion-actual.json` y capturas. No se modificaron diseño o contenido de la web. Documentación contrastada con fuentes oficiales de Google; evaluación sin comparación sistemática con competidores ni pruebas con clientes.
+
+## 2026-10-15 — Imagen de oficina con nombre Jure Ramos
+
+- A pedido del usuario, editada la fotografía adjunta `Portada_ofi.jpeg` con la herramienta integrada de imágenes: reemplazado «SILO STUDIOS» por «Jure Ramos», con Jure en negrita y Ramos en trazo fino.
+- Verificada visualmente la escritura y la diferencia de peso tipográfico. Entregada la imagen en el chat; el original se conserva y no se incorporó la imagen a la web.
+- Resultado guardado por la herramienta en `/Users/juancortabarria/.codex/generated_images/01a14229-7b34-7873-b55f-b83aeb5058c2/exec-fff118b5-9ed8-45b2-b971-2a2f52b2eedb.png`.
+- Único archivo del repositorio modificado: `Decisiones.md`. Sin pruebas de código por tratarse de una entrega gráfica independiente. Sin pendientes de edición.
