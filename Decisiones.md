@@ -273,3 +273,8 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - Medidas antes/después: tarjeta inicial a 1440 px de 400 a 215 px; a 390 px de 401 a 190 px. Sección completa de 1163 a 693 px en escritorio y de 2744 a 1442 px en celular.
 - Verificaciones: compilación y Astro check sin errores, advertencias ni sugerencias; Chrome a 1440, 768, 390 y 320 px sin desbordes ni errores de JavaScript. Confirmados cinco enlaces con respuesta 200 y navegación desde la tarjeta inmobiliaria. Capturas guardadas en `artifacts/servicios-compactos-*.png`, con revisión visual de escritorio y celular. `git diff --check` correcto.
 - Sin pendientes para este cambio; continúa en entorno local.
+
+## 2026-10-15 — Línea sobre la flecha de servicios
+
+- Restituido en `src/styles/global.css` el borde superior de 1 px sobre la flecha de las cinco tarjetas de servicios, a pedido del usuario. Se mantiene el formato compacto.
+- Verificación en Chrome local: cinco líneas con estilo sólido y grosor de 1 px; `git diff --check` correcto. Sin pendientes.
