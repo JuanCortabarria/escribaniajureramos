@@ -1,0 +1,23 @@
+---
+import { book } from '../config/book';
+---
+<section class="book-section" id="libro" aria-labelledby="book-title" tabindex="-1">
+  <div class="container book-grid">
+    <div class="book-visual">
+      <picture>
+        <source srcset="/images/libro-cafe-600.avif 600w, /images/libro-cafe-1000.avif 1000w" sizes="(max-width: 760px) calc(100vw - 40px), 520px" type="image/avif"/>
+        <source srcset="/images/libro-cafe-600.webp 600w, /images/libro-cafe-1000.webp 1000w" sizes="(max-width: 760px) calc(100vw - 40px), 520px" type="image/webp"/>
+        <img src="/images/libro-cafe-1000.webp" alt="Libro de María Solange Jure Ramos sobre una mesa de madera, junto a una taza de café y anteojos" width="1254" height="1254" loading="lazy"/>
+      </picture>
+    </div>
+    <div class="book-copy">
+      <p class="eyebrow">MI LIBRO · DERECHO SOCIETARIO</p>
+      <h2 id="book-title">Una parte de mi <em>recorrido.</em></h2>
+      <h3 class="book-name">{book.title}</h3>
+      <blockquote>{book.story.map(paragraph=><p>{paragraph}</p>)}</blockquote>
+      <p class="book-signature">{book.author}</p>
+      <p class="book-publisher">{book.publisher}<span>Prólogo de {book.foreword}</span></p>
+      <a class="book-back" href="#escribana">Volver a la biografía <span aria-hidden="true">↑</span></a>
+    </div>
+  </div>
+</section>

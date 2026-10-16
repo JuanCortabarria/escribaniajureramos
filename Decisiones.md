@@ -381,3 +381,31 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - Plan propuesto: identificar y obtener administración, preservar copia, preparar alojamiento y vista temporal, aprobar, conectar dominio, verificar HTTPS y redirecciones. Sin contratación, publicación ni cambios en DNS ejecutados.
 - Fuentes: https://nic.ar/index.php/es/como-ingresar-tad ; https://nic.ar/es/ayuda/instructivos/transferencia-de-dominio ; https://nic.ar/es/ayuda/faq ; https://nic.ar/es/dominios/buscar-dominio .
 - Único cambio: este registro. Commit local; continúa el bloqueo de autenticación de GitHub ya registrado. No corresponde ejecutar pruebas de código.
+
+## 2026-10-16 — Libro de la escribana y acceso destacado a servicios
+
+### Decisiones y contenido
+
+- La usuaria solicita una imagen pequeña del libro dentro de la biografía, enlazada a una sección propia, usando la primera foto adjunta como miniatura y alguna de las otras dos en la sección.
+- Elegida la tercera fotografía (libro, café y anteojos sobre madera) por su integración con los tonos crema, azul y dorado de la web. La segunda queda como alternativa sin incorporarse.
+- Consultada la motivación real; la usuaria aporta trayectoria, mentor y pasión por la materia. Redactado un relato breve en primera persona sobre esos motivos y el derecho societario, sujeto a aprobación final de Solange, sin inventar nombre del mentor, fechas, ISBN, investigación o premios.
+- Título, autoría, editorial y prólogo transcritos de la cubierta suministrada.
+
+### Cambios ejecutados
+
+- Nuevos `src/components/BookTeaser.astro` y `BookSection.astro`: miniatura clicable dentro de la biografía, sección `#libro` inmediatamente después del perfil y enlace de regreso.
+- Nuevo `src/config/book.ts`: datos del libro y relato centralizados. Incluidos también en `src/pages/index.md.ts` para coherencia con la versión alternativa.
+- `src/pages/index.astro`: componentes incorporados y enlace «Ver áreas de práctica» sustituido por «Conocé nuestros servicios», con mención de inmuebles, certificaciones y sociedades.
+- Nuevo `src/styles/book.css`: composición adaptable, miniatura de 76 px, sección editorial con fotografía y borde dorado, y acceso a servicios con fondo dorado, mayor tamaño y contraste.
+- `src/scripts/home-motion.ts`: reutilizada la entrada suave al aparecer para la miniatura y foto del libro; respuesta breve de imágenes y flechas al cursor o foco mediante CSS. Se conservan movimiento reducido y contenido visible sin JavaScript. No se añadieron dependencias ni movimientos continuos.
+- Seis variantes WebP/AVIF de las imágenes usadas en `public/images/`, 214 KB sumando todas las variantes. Sin alterar el contenido de las fotografías; procedencia en `licenses/libro-imagenes.md`.
+- Actualizada la fecha de contenido en `src/config/site.ts` y añadido el pendiente de revisión del relato en `PENDIENTES.md`.
+
+### Verificaciones y pendientes
+
+- Compilación y Astro check: 0 errores, 0 advertencias y 0 sugerencias. Auditoría técnica existente correcta para portada y cinco páginas de servicios; `git diff --check` correcto.
+- Comprobada coherencia del libro entre HTML y Markdown, destinos `#libro`/`#servicios` y presencia de las seis variantes en la compilación.
+- Navegador: escritorio de 1440 px revisado visualmente; 768, 390 y 320 px sin desbordes y con ambas imágenes cargadas. Comprobadas navegación desde la miniatura, regreso a biografía y nuevo enlace de servicios; activación de la miniatura con Enter actualiza el destino. En celular de 390 px, el clic deja la sección debajo del encabezado fijo. Sin errores de consola registrados.
+- Evidencias: `artifacts/libro-seccion-escritorio.jpg`, `libro-miniatura-biografia.jpg`, `servicios-acceso-dorado.jpg`, `libro-seccion-movil.jpg` y `libro-servicios-qa.json`.
+- Propuestas adicionales, sin implementar: transición breve al abrir páginas de servicios y subrayado que marque la sección activa en el menú. Referencia técnica consultada: https://docs.astro.build/en/guides/view-transitions/ .
+- Pendiente aprobación del texto en primera persona. La web permanece local. Comprobación de push con `--dry-run` a `origin/feature-vico` fallida por falta de autenticación HTTPS (`could not read Username`); el avance queda en un commit local.

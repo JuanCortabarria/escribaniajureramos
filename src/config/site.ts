@@ -10,7 +10,7 @@ export const site = {
     { days: ['Friday'] as const, opens: '09:00', closes: '14:00' },
   ],
   maps: 'https://maps.app.goo.gl/pffBjQ2gELqhX14o8', latitude: -31.4245341, longitude: -64.1799683,
-  updated: '2026-10-15',
+  updated: '2026-10-16',
   services: [
     { title: 'Patrimonio e inmuebles', label: 'Operaciones inmobiliarias', icon: 'home', description: 'Asesoramiento para las decisiones que involucran tus bienes y operaciones inmobiliarias.', items: ['Compraventa, donaciones y permutas', 'Dación en pago y derechos reales', 'Contratos en general'] },
     { title: 'Certificaciones y actas', label: 'Certificaciones notariales', icon: 'seal', description: 'Certificación de firmas y copias para particulares, empresas e inmobiliarias. Consultanos qué necesitás presentar.', items: ['Certificación de firmas', 'Certificación de copias', 'Actas notariales'] },

@@ -57,7 +57,7 @@ if ('IntersectionObserver' in window && 'animate' in Element.prototype) {
     }
   }, { threshold: .12 });
 
-  document.querySelectorAll('#hero-title, #about-title, .hero-visual img, .hero-description, .hero-copy > .button, .hero-person, .hero-visual .photo-note, .portrait-wrap > picture, main h2:not(#about-title), .service-card, .service-help')
+  document.querySelectorAll('#hero-title, #about-title, .hero-visual img, .hero-description, .hero-copy > .button, .hero-person, .hero-visual .photo-note, .portrait-wrap > picture, main h2:not(#about-title), .service-card, .service-help, .book-visual, .book-teaser')
     .forEach(element => observer.observe(element));
 
   // Preserve native details semantics and keyboard activation, including rapid toggles.

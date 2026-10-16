@@ -1,0 +1,58 @@
+/* A small publication link within the biography, with one editorial destination. */
+.book-teaser{display:flex;align-items:center;gap:16px;margin-top:24px;padding:14px;background:var(--color-bg);border:1px solid var(--color-border);border-left:3px solid var(--color-accent);max-width:410px;transition:border-color var(--transition),background var(--transition)}
+.book-teaser picture{display:block;flex:0 0 76px;overflow:hidden}
+.book-teaser img{width:76px;height:76px;object-fit:cover}
+.book-teaser-copy{display:flex;flex-direction:column;gap:4px;flex:1;min-width:0}
+.book-teaser-label{font-size:9px;letter-spacing:1.6px;color:var(--color-accent-text);font-weight:600}
+.book-teaser strong{font-family:var(--font-heading);font-size:28px;line-height:1.1;font-weight:400}
+.book-teaser-copy>span:last-child{font-size:11px;color:var(--color-text-muted);line-height:1.5}
+.book-teaser>svg{flex-shrink:0;color:var(--color-accent-text)}
+.book-teaser:is(:hover,:focus-visible){border-color:var(--color-accent);background:var(--color-surface-alt)}
+.book-section{padding-block:75px;background:var(--color-bg);border-block:1px solid var(--color-border)}
+.book-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:75px;align-items:center}
+.book-visual{position:relative;max-width:520px}
+.book-visual:before{content:'';position:absolute;inset:15px -15px -15px 15px;border:1px solid var(--color-accent);pointer-events:none}
+.book-visual picture{display:block;overflow:hidden;position:relative}
+.book-visual img{width:100%;height:auto;aspect-ratio:1;object-fit:cover}
+.book-copy .eyebrow{margin-bottom:16px}
+.book-copy h2{font-size:clamp(36px,3.7vw,49px)}
+.book-copy h2 em{color:var(--color-accent-text)}
+.book-name{font-family:var(--font-body);font-size:15px;font-weight:500;line-height:1.65;margin-top:24px;max-width:460px}
+.book-copy blockquote{padding:0 0 0 20px;margin:24px 0 20px;border-left:2px solid var(--color-accent)}
+.book-copy blockquote p{font-size:13px;line-height:1.9}
+.book-copy blockquote p+p{margin-top:12px}
+.book-signature{font-family:var(--font-heading);font-size:25px;font-style:italic;color:var(--color-text)}
+.book-publisher{font-size:11px;line-height:1.8;margin-top:17px}
+.book-publisher span{display:block}
+.book-back{display:inline-flex;gap:15px;align-items:center;min-height:44px;margin-top:18px;font-size:11px;color:var(--color-accent-text)}
+
+/* The service entry remains a native anchor and clearly describes its destination. */
+.hero-bottom .services-jump{display:flex;gap:22px;max-width:none;align-items:center;padding:15px 20px;border:1px solid var(--color-accent-bright);background:var(--color-accent-bright);color:var(--color-dark-bg);letter-spacing:0;transition:background var(--transition),border-color var(--transition)}
+.services-jump-copy{display:flex;flex-direction:column;gap:5px}
+.services-jump strong{font-size:14px;line-height:1.4;font-weight:600}
+.services-jump-copy>span{font-size:10px;line-height:1.5}
+.services-jump>svg{flex-shrink:0}
+.hero-bottom .services-jump:is(:hover,:focus-visible){background:#e7ca9d;border-color:#e7ca9d}
+
+@media(prefers-reduced-motion:no-preference){
+  .book-teaser img,.book-teaser>svg,.services-jump>svg{transition:transform 250ms ease}
+  .book-teaser:is(:hover,:focus-visible) img{transform:scale(1.04)}
+  .book-teaser:is(:hover,:focus-visible)>svg{transform:translateX(4px)}
+  .services-jump:is(:hover,:focus-visible)>svg{transform:translateY(4px)}
+}
+@media(max-width:1050px){.book-grid{gap:40px}.hero-bottom>span{max-width:220px;line-height:1.8}}
+@media(max-width:760px){
+  .book-section{padding-block:55px}
+  .book-grid{grid-template-columns:1fr;gap:40px}
+  .book-visual{width:calc(100% - 12px);max-width:450px;margin-inline:auto}
+  .book-visual:before{inset:12px -12px -12px 12px}
+  .book-copy h2{font-size:40px}
+  .book-name{font-size:14px;margin-top:20px}
+  .book-copy blockquote{padding-left:16px}
+  .hero-bottom{flex-direction:column;align-items:stretch;gap:14px;padding-block:22px}
+  .hero-bottom>span{max-width:none;text-align:center;font-size:9px}
+  .hero-bottom .services-jump{justify-content:space-between;padding:16px 18px;max-width:none}
+  .services-jump strong{font-size:14px}
+  .services-jump-copy>span{font-size:10px}
+}
+@media(max-width:360px){.book-teaser{gap:11px;padding:12px}.book-teaser picture{flex-basis:62px}.book-teaser img{width:62px;height:70px}.book-teaser-copy>span:last-child{font-size:10px}.book-copy h2{font-size:35px}}
