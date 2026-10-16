@@ -359,3 +359,13 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - No se eligió proveedor ni se modificaron hosting, DNS o sitio público. El siguiente paso depende de las respuestas de la usuaria.
 - Referencias: https://escribaniajureramos.com.ar/ ; https://docs.astro.build/en/guides/deploy/ ; https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes .
 - Único archivo modificado: este registro; no requiere pruebas de código. Se conserva la rama activa `feature-vico`. El commit queda local por el bloqueo de autenticación HTTPS de GitHub ya comprobado.
+
+## 2026-10-16 — Información necesaria para solicitar al administrador
+
+- La usuaria no dispone ahora de los accesos y los solicitará para recibirlos en unos días. Su respuesta no identifica todavía al proveedor del hosting ni al administrador.
+- Respondió que no tiene correos bajo el dominio ni contenido o funciones adicionales de la web antigua que deban conservarse.
+- Concretada la información a pedir: nombre del proveedor y dirección del panel de hosting; acceso con permisos para publicar archivos; ubicación y acceso al panel que gestiona los registros DNS del dominio; estado de renovación del dominio y alojamiento. NIC Argentina puede ser necesario si hace falta cambiar la delegación, pero no sustituye siempre al panel DNS.
+- Solicitar una copia de seguridad completa de la web antigua antes del reemplazo. Si su plataforma utiliza base de datos, incluir también esa base y los archivos de configuración necesarios para restaurarla.
+- El panel de edición de la web antigua, por sí solo, puede no permitir publicar la nueva web estática. Los accesos se gestionarán mediante invitación o un canal seguro, sin registrar contraseñas en el chat ni en este archivo.
+- Se mantiene pendiente elegir entre alojamiento actual o nuevo una vez identificados el proveedor y los permisos disponibles. No se ejecutaron cambios externos.
+- Único cambio: este registro, guardado localmente; continúa pendiente la autenticación de GitHub para enviarlo. Sin pruebas de código por ser una aclaración documental.
