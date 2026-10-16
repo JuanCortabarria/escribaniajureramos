@@ -348,3 +348,14 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - Navegador a 1440 y 390 px: portada revisada durante la entrada, sin desbordes, imagen cargada y enlace de consulta correcto. Ambos contadores finalizan en 2002; sin errores de consola registrados. Vista local dejada abierta.
 - Captura de revisión: `artifacts/portada-movimiento-sutil.jpg`. Archivos del commit: script y este registro.
 - Pendiente: valoración visual de la usuaria. El commit queda local mientras siga sin resolverse la autenticación HTTPS de GitHub, cuyo fallo fue comprobado en esta sesión.
+
+## 2026-10-16 — Consulta para reemplazar la web publicada
+
+- La usuaria indica ser titular de `escribaniajureramos.com.ar` y solicita conocer los datos y accesos necesarios para reemplazar la web antigua por la versión local.
+- Revisadas la web pública y la configuración del proyecto: la nueva web genera archivos estáticos para el mismo dominio. La web pública contiene un formulario de contacto; la versión nueva utiliza WhatsApp y no incluye ese formulario.
+- Explicadas dos alternativas pendientes de evaluar: publicar en el alojamiento existente, si admite el proyecto, o usar otro alojamiento y actualizar los registros del dominio correspondientes a la web.
+- Solicitados nombre del proveedor y administrador actual, disponibilidad de acceso al hosting y administración del dominio, existencia de correos bajo el dominio y funcionalidades o contenidos antiguos que deban conservarse. No se solicitan contraseñas en el chat.
+- Propuesto preparar copia de seguridad, revisión de la nueva versión en una dirección de prueba, correspondencia y redirecciones de URLs antiguas, verificación de HTTPS y preservación de los registros del correo antes de sustituir la web.
+- No se eligió proveedor ni se modificaron hosting, DNS o sitio público. El siguiente paso depende de las respuestas de la usuaria.
+- Referencias: https://escribaniajureramos.com.ar/ ; https://docs.astro.build/en/guides/deploy/ ; https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes .
+- Único archivo modificado: este registro; no requiere pruebas de código. Se conserva la rama activa `feature-vico`. El commit queda local por el bloqueo de autenticación HTTPS de GitHub ya comprobado.
