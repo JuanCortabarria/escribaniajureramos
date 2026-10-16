@@ -369,3 +369,15 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - El panel de edición de la web antigua, por sí solo, puede no permitir publicar la nueva web estática. Los accesos se gestionarán mediante invitación o un canal seguro, sin registrar contraseñas en el chat ni en este archivo.
 - Se mantiene pendiente elegir entre alojamiento actual o nuevo una vez identificados el proveedor y los permisos disponibles. No se ejecutaron cambios externos.
 - Único cambio: este registro, guardado localmente; continúa pendiente la autenticación de GitHub para enviarlo. Sin pruebas de código por ser una aclaración documental.
+
+## 2026-10-16 — Recuperación de administración y pasos de publicación
+
+- La usuaria confirma que puede contactar al programador anterior y solicita un paso a paso, qué pedirle y cómo avanzar sin su intervención.
+- Consulta pública de DNS: el dominio responde con `ns1.onlinenow.com.ar`, `ns3.onlinenow.com.ar` y `ns5.onlinenow.com.ar`. Se presenta como pista sobre la administración DNS, sin afirmar quién contrató el hosting ni que exista deuda. No se pudo consultar el sitio web de ese proveedor con la herramienta web.
+- Contrastados con NIC Argentina los mecanismos de ingreso a TAD, consulta pública y transferencia de titularidad. No se verificó quién figura como titular del dominio concreto; la declaración de propiedad de la usuaria no sustituye esa comprobación administrativa.
+- Preparada explicación y mensaje para solicitar proveedor, panel y permisos, titularidad y delegación del dominio, vencimientos y estado de pagos, y respaldo completo. Recomendada entrega de administración a cuentas de la usuaria, sin compartir Clave Fiscal.
+- Alternativa sin programador: consultar NIC/TAD y los comprobantes propios; solicitar recuperación al proveedor según la titularidad de la cuenta. Si no se dispone del hosting antiguo pero sí del dominio, se puede utilizar un alojamiento nuevo; no es necesario recuperar el hosting anterior para publicar la nueva web.
+- Se puede preparar una publicación con URL temporal antes de disponer del dominio. Conectar el dominio existente exige control de su administración o la intervención de quien lo tenga. Si está a nombre de otra persona, corresponde gestionar la transferencia o consultar a NIC; no se promete recuperación automática.
+- Plan propuesto: identificar y obtener administración, preservar copia, preparar alojamiento y vista temporal, aprobar, conectar dominio, verificar HTTPS y redirecciones. Sin contratación, publicación ni cambios en DNS ejecutados.
+- Fuentes: https://nic.ar/index.php/es/como-ingresar-tad ; https://nic.ar/es/ayuda/instructivos/transferencia-de-dominio ; https://nic.ar/es/ayuda/faq ; https://nic.ar/es/dominios/buscar-dominio .
+- Único cambio: este registro. Commit local; continúa el bloqueo de autenticación de GitHub ya registrado. No corresponde ejecutar pruebas de código.
