@@ -15,3 +15,7 @@ Use case: precise-object-edit / product-mockup. Edit target: attached photograph
 Vista animada presentada en el chat: acercamiento lento de 1 a 1,045, con desplazamiento muy leve, 14 segundos por recorrido y retorno suave; permite pausar y respeta movimiento reducido. Es una animación de la fotografía, no un archivo de video exportado.
 
 Pinterest solicitó iniciar sesión; las dos referencias no pudieron examinarse. La propuesta se basa en la foto adjunta y en la dirección cálida indicada por la usuaria.
+
+## Edición de escritorio y café
+
+`libro-escritorio-cafe.png`: herramienta integrada de imágenes, sobre la referencia de escritorio adjunta y la foto original del libro. Prompt: sustituir únicamente el cuaderno abierto de primer plano por un ejemplar cerrado del libro de María Solange Jure Ramos, con la tapa original amarilla y fucsia, título, prólogo y editorial; quitar el lápiz que tapa la cubierta. Conservar composición cuadrada, computadora, taza y plato, agenda lateral, madera, perspectiva y luz cálida. No agregar objetos ni textos publicitarios. Se conserva como edición independiente para revisión; no se incorporó a la web.

@@ -322,3 +322,10 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - Los dos enlaces de Pinterest se abrieron, pero exigieron iniciar sesión e impidieron examinar las imágenes. Se siguieron las preferencias expresas y la paleta existente; no se afirma haber reproducido las referencias.
 - Verificaciones: inspección visual de un solo libro y textos principales, JPEG cargado en navegador, animación activa y pausa/reanudación funcionales. Fragmento de menos de 1 MB. No corresponde recompilar la web porque su código permanece sin cambios.
 - Pendiente: valoración de la usuaria e incorporación a la web si la solicita. Consulta del remoto correcta y sin avances nuevos por integrar; propuesta guardada en commit local. El push se intentó y falló por falta de autenticación HTTPS (`could not read Username`), por lo que estos archivos todavía no están compartidos en GitHub.
+
+## 2026-10-16 — Libro en la escena de escritorio y café
+
+- La usuaria suministró la referencia de escritorio y solicitó sustituir el cuaderno abierto por el libro de la escribana, manteniendo la escena. Editada con la herramienta integrada de imágenes y la foto original del libro como referencia de identidad.
+- Incorporado un ejemplar cerrado con tapa amarilla y fucsia, autoría, título, prólogo y editorial. Conservados computadora, café, agenda lateral, mesa e iluminación cálida; retirado el lápiz para dejar visible la tapa.
+- Resultado guardado en `artifacts/libro-promocional/libro-escritorio-cafe.png`, sin sobrescribir las imágenes anteriores ni modificar la web. Vista previa estática de esta edición; no se exportó un video.
+- Verificación visual de composición, cubierta y objetos conservados. No requiere pruebas de código. El envío a GitHub continúa bloqueado por la autenticación HTTPS comprobada en esta sesión; se conserva el avance en un commit local.
