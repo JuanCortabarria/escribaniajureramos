@@ -30,10 +30,11 @@ const { year } = Astro.props;
       };
       reducedMotion.addEventListener('change', finish);
       const start = performance.now();
-      value.textContent = '0';
+      const initialYear = 1000;
+      value.textContent = String(initialYear);
       const tick = (now: number) => {
         const progress = Math.min((now - start) / 1200, 1);
-        value.textContent = String(Math.floor(target * (1 - (1 - progress) ** 3)));
+        value.textContent = String(Math.floor(initialYear + (target - initialYear) * (1 - (1 - progress) ** 3)));
         if (progress < 1) frame = requestAnimationFrame(tick);
         else finish();
       };

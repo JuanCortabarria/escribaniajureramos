@@ -257,3 +257,10 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - Conservado 2002 en el HTML inicial y sin JavaScript. Los lectores de pantalla reciben «Desde 2002» sin anunciar cada incremento. Se respeta la preferencia de movimiento reducido, también si cambia durante la animación. Reservado ancho para evitar desplazamientos al cambiar las cifras.
 - Verificaciones: compilación y Astro check sin errores, advertencias ni sugerencias. Chrome a 1440 y 390 px: comprobado incremento intermedio, final exacto en 2002 y ausencia de repetición al volver a la sección, sin errores de JavaScript. Verificados también movimiento reducido y JavaScript desactivado. El navegador requirió ejecución fuera del sandbox para iniciarse.
 - Sin pendientes para este cambio; continúa en entorno local.
+
+## 2026-10-15 — Contador desde 1000 y propuestas de animación
+
+- Ajustado `src/components/YearCounter.astro` para que el contador arranque exactamente en 1000 y termine en 2002. Se mantienen la duración de 1,2 segundos, activación única al entrar en pantalla y alternativas accesibles existentes.
+- Verificaciones: compilación y Astro check sin errores, advertencias ni sugerencias; Chrome a 1440 y 390 px confirmó primera actualización 1000, valores intermedios dentro del rango y cierre en 2002.
+- Investigadas referencias de Motion (Split reveal, Stagger reveal, ejemplos de scroll, Parallax layers) y Webflow (webpage-animation). Se presentan como propuestas para elegir: títulos por líneas, entrada suave de encabezados, revelado de imágenes, zoom de entrada, parallax discreto, tarjetas escalonadas, respuesta de enlaces y apertura de preguntas. No se implementó ninguna de estas propuestas adicionales.
+- Referencias: https://motion.dev/ui/components/split-reveal ; https://motion.dev/ui/components/stagger-reveal ; https://motion.dev/examples?category=scroll ; https://motion.dev/ui/components/parallax-layers ; https://webflow.com/blog/webpage-animation . Pendiente: selección del usuario para nuevas animaciones.
