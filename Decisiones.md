@@ -444,3 +444,10 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - Iniciado el servidor local y abierta la biografía en `http://127.0.0.1:4322/#escribana`; el primer intento de inicio no quedó listo dentro del sandbox y el segundo confirmó el servidor activo. No se publicó la web.
 - Verificaciones: compilación y Astro check sin errores, advertencias ni sugerencias. Chrome a 1440, 390 y 320 px: imagen cargada, sin texto ni ícono adicional, enlace e imagen de iguales dimensiones (240 × 180 px), cuatro esquinas clickeables y sin desbordes. Confirmadas apertura de `/libro/` con clic y Enter, un H1 en destino y regreso a la biografía. Sin errores de JavaScript. `git diff --check` correcto.
 - Evidencias: `artifacts/libro-solo-imagen-qa.json` y `artifacts/libro-solo-imagen-*.png`. Sin pendientes de implementación.
+
+## 2026-10-16 — Libro al costado de las credenciales
+
+- Movido el acceso al libro desde debajo de «Más sobre su trayectoria» hacia el costado derecho del listado de formación y credenciales, según solicitud de la usuaria. Conservado el desplegable de trayectoria debajo del conjunto.
+- Agrupados listado e imagen en `src/pages/index.astro`. Ajustada la grilla adaptable en `src/styles/book.css`: imagen de hasta 176 px en escritorio y tamaño reducido en celular para mantenerla al costado sin recortar el libro ni superponer texto. Continúa siendo un enlace íntegramente clickeable a `/libro/` en pestaña nueva.
+- Verificaciones: compilación y Astro check sin errores, advertencias ni sugerencias; Chrome a 1440, 1024, 768, 390 y 320 px confirmó imagen al costado del listado, cinco credenciales y ausencia de desbordes. Clic en celular abre `/libro/`. Revisadas visualmente capturas de escritorio y celular guardadas en `artifacts/libro-credenciales-*.png`. `git diff --check` correcto.
+- Sin pendientes de implementación. Se mantiene la web local en el puerto 4322 y la rama `feature-vico`.
