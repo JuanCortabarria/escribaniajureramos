@@ -4,8 +4,8 @@
 .credentials-publication .credentials{margin:0}
 .credentials-publication .book-teaser{width:100%;margin:0}
 .credentials-publication .credentials li>svg{flex-shrink:0}
-.book-teaser picture{display:block;overflow:hidden}
-.book-teaser img{display:block;width:100%;height:auto;aspect-ratio:4/3}
+.book-teaser picture{display:block;max-width:132px;margin-inline:auto;overflow:hidden}
+.book-teaser img{display:block;width:100%;height:auto;filter:drop-shadow(0 2px 3px #14213d12)}
 .book-teaser-title{display:block;margin-top:8px;font-size:11px;line-height:1.55;font-style:italic;color:var(--color-text-muted)}
 .book-section{padding-block:75px;background:var(--color-bg);border-block:1px solid var(--color-border)}
 .book-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:75px;align-items:center}
