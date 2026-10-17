@@ -30,7 +30,7 @@ npm run preview
 - `src/components/Seo.astro`: metadatos y JSON-LD tipado.
 - `src/pages/index.md.ts`, `llms.txt.ts` y `robots.txt.ts`: generados desde la misma configuración.
 
-WhatsApp, teléfono, correo y Google Maps funcionan mediante enlaces directos. No hay formulario, analytics, cookies propias ni solicitudes a Google Fonts. El mapa externo carga únicamente tras pulsar su botón. Las FAQ usan elementos nativos de HTML.
+WhatsApp, teléfono, correo y Google Maps funcionan mediante enlaces directos. No hay formulario, analytics, cookies propias ni solicitudes a Google Fonts. El mapa externo carga únicamente tras pulsar su enlace; sin JavaScript, ese enlace abre Maps directamente. Las FAQ usan elementos nativos de HTML.
 
 ## Referencias descargadas
 
@@ -44,7 +44,7 @@ Los tres repositorios están en `references/` (ignorados en Git y excluidos de T
 
 Ver `PENDIENTES.md`. La web se mantiene en local hasta la revisión del usuario. El canonical y los enlaces del sitemap apuntan al dominio final previsto; son intencionales. `robots.txt` permite todos los agentes, incluidos bots de entrenamiento. Si se desea limitar alguno, editar ese endpoint antes de publicar.
 
-La migración del dominio, las redirecciones 301 de las URLs antiguas y el alta o revisión de Google Business Profile, Search Console y Bing Webmaster Tools quedan para una etapa posterior.
+Las redirecciones antiguas están preparadas en `public/_redirects`. Su aplicación en Cloudflare Pages, la migración del dominio y el alta o revisión de Google Business Profile, Search Console y Bing Webmaster Tools quedan para la publicación.
 
 ## Evidencia y revisión visual
 
@@ -66,7 +66,7 @@ La miniatura de la biografía abre `/libro/` en una pestaña nueva. El relato y 
 
 La portada incorpora una isla React con renderizado HTML inicial en Astro; no se migra el resto del sitio. El componente del prompt está adaptado en `src/components/ui/animated-hero.tsx`: titular que alterna «Escribanía en Nueva Córdoba.» y «Solange Jure Ramos», con una sola acción de consulta por WhatsApp y un ícono clásico de teléfono. La ubicación `src/components/ui` sigue la estructura del proyecto dentro de `src`; el alias `@/components/ui` apunta allí. `components.json` registra esa estructura para componentes shadcn.
 
-`src/components/ui/button.tsx` contiene el botón reutilizable de estilo shadcn, con Radix Slot y variantes. `src/lib/utils.ts` resuelve clases. Tailwind se integra mediante su complemento de Vite y `src/styles/hero-ui.css`, con prefijo `tw:` y sin Preflight para conservar los estilos existentes. TypeScript configura el alias `@/*` y JSX de React.
+`src/components/ui/button.tsx` conserva el botón reutilizable de estilo shadcn, con Radix Slot y variantes. El enlace de consulta de portada utiliza HTML y CSS nativos para evitar cargar estas utilidades en la isla. `src/lib/utils.ts` resuelve clases. Tailwind se integra mediante su complemento de Vite y `src/styles/hero-ui.css`, con prefijo `tw:` y sin Preflight para conservar los estilos existentes. TypeScript configura el alias `@/*` y JSX de React.
 
 La instalación habitual (`npm install`) prepara las dependencias; `npm run dev` abre la versión local. No es necesario volver a ejecutar el asistente de shadcn. Para conservar compatibilidad entre sus dependencias, la integración React y su complemento de Vite están fijados en versiones compatibles en `package.json`.
 
@@ -77,3 +77,26 @@ Verificación específica de esta portada: `npm run audit:hero` (servidor local 
 La presentación y las cinco credenciales de la escribana se revelan letra por letra al entrar en pantalla, una sola vez y en orden de lectura, con ritmo rápido de 4 ms por carácter. Cada tilde aparece al mismo tiempo que comienza su credencial. `ReadingText.astro` conserva una copia accesible completa; sin JavaScript o con movimiento reducido el texto aparece completo. Pausar movimiento termina el revelado activo y deja visible todo el texto.
 
 Verificación del revelado de biografía y de FAQ sin giro: `npm run audit:reading` (mismo servidor local y variable `QA_BASE_URL`).
+
+
+## Revisión integral y optimización — 17/10/2026
+
+La animación del titular conserva React y el contenido HTML inicial, pero usa fotogramas CSS nativos en lugar de Framer Motion. Se retiró esa dependencia. El menú móvil permanece disponible sin JavaScript; Escape solo cierra un menú abierto y devuelve el foco cuando corresponde. El control de pausa también completa los contadores y los efectos nativos activos. Los efectos continuos se habilitan cuando su control está disponible.
+
+Las imágenes de portada, retrato y libro tienen variantes adaptativas; se conservan los originales y la transparencia del libro. `public/_headers` prepara políticas de tipo MIME, referer, permisos y prevención de marcos/objetos para Pages. Su aplicación efectiva se debe comprobar en el alojamiento público.
+
+Pruebas sobre una compilación estática, con Chrome instalado:
+
+```bash
+npm run build
+npm run audit
+npm run preview -- --port 4330
+# En otra terminal:
+QA_BASE_URL=http://127.0.0.1:4330 npm run audit:site
+QA_BASE_URL=http://127.0.0.1:4330 npm run audit:browser
+QA_BASE_URL=http://127.0.0.1:4330 npm run audit:services
+QA_BASE_URL=http://127.0.0.1:4330 npm run audit:hero
+QA_BASE_URL=http://127.0.0.1:4330 npm run audit:reading
+```
+
+`audit:site` recorre las siete páginas desde el sitemap, comprueba enlaces, anclas, recursos adaptativos, metadatos y 404, y cubre navegación móvil sin JS, foco por Escape, contador pausado durante la suma, apertura del libro y ausencia de IntersectionObserver. Los informes y capturas se guardan en `artifacts/`. Las pruebas de rendimiento deben ejecutarse sin otras pruebas de navegador simultáneas para evitar distorsionar las métricas.

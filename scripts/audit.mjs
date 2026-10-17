@@ -1,5 +1,6 @@
-import { readFile, access, writeFile } from 'node:fs/promises';
+import { readFile, access, writeFile, mkdir } from 'node:fs/promises';
 import assert from 'node:assert/strict';
+await mkdir('artifacts', { recursive: true });
 const html=await readFile('dist/index.html','utf8');
 const graph=JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
 assert.equal((html.match(/<h1\b/g)||[]).length,1,'Un solo H1');
@@ -59,6 +60,6 @@ assert.ok(!bookHtml.includes('En sus páginas estudio'));
 assert.ok(bookHtml.includes('href="/libro.md"') && sitemap.includes(publication.url));
 assert.ok(llms.includes('/libro.md'));
 
-const report={date:new Date().toISOString(),status:'passed',checks:['H1 único','JSON-LD parseable con cuatro entidades tipadas','Contacto coherente entre HTML y schema','6 FAQ visibles y en Markdown','Anclas internas y recursos presentes','robots, sitemap, llms.txt, Markdown y 404 generados','Sin iframe inicial ni rastreadores externos','Cinco páginas enlazadas e incluidas en sitemap','FAQ específicas coinciden entre HTML, JSON-LD y Markdown','Horarios y navegación a la portada coherentes']};
+const report={date:new Date().toISOString(),status:'passed',checks:['H1 único','JSON-LD parseable con entidades tipadas','Contacto coherente entre HTML y schema','6 FAQ visibles y en Markdown','Anclas internas y recursos presentes','robots, sitemap, llms.txt, Markdown y 404 generados','Sin iframe inicial ni rastreadores externos','Cinco páginas enlazadas e incluidas en sitemap','FAQ específicas coinciden entre HTML, JSON-LD y Markdown','Horarios y navegación a la portada coherentes']};
 await writeFile('artifacts/auditoria-tecnica.json',JSON.stringify(report,null,2));
 console.log('Auditoría técnica: todas las verificaciones pasaron.');

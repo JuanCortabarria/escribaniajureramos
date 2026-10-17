@@ -1,3 +1,4 @@
+export {};
 // Keep the complete text in HTML; reveal only its decorative copy letter by letter.
 const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
 const pending = new Map<HTMLElement, number>();

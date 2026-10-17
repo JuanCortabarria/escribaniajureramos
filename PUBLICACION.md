@@ -177,3 +177,7 @@ La usuaria autoriza integrar `feature-vico` en `main` al terminar las comprobaci
 ### Integración del código
 
 Integración de feature-vico en main ejecutada en este cierre. Único conflicto del registro de decisiones resuelto conservando las entradas de ambas ramas; conservado el trabajo ajeno de main. Los pasos que pedían integrar la rama quedan cubiertos; sigue pendiente crear/revisar la vista previa y conectar el dominio con DNS/correo preservados.
+
+### Revisión técnica posterior del 17/10/2026
+
+Aplicadas correcciones de navegación móvil, foco, mapa alternativo y pausa de efectos/contadores, además de reducir código e incorporar variantes de imágenes. Medición final local de producción: 96 rendimiento, 100 accesibilidad, 100 buenas prácticas y 100 SEO técnico; LCP 2,6 s, TBT 0 ms, CLS 0,001. Cabeceras de seguridad preparadas en public/_headers. Ver REVISION-TECNICA.md para pruebas y límites. Continúa pendiente validar el alojamiento público, dominio/correo y las herramientas de Google.

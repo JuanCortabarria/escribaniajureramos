@@ -11,7 +11,8 @@
     "audit:browser": "node scripts/browser-qa.mjs",
     "audit:services": "node scripts/services-qa.mjs",
     "audit:hero": "node scripts/hero-qa.mjs",
-    "audit:reading": "node scripts/reading-qa.mjs"
+    "audit:reading": "node scripts/reading-qa.mjs",
+    "audit:site": "node scripts/site-qa.mjs"
   },
   "dependencies": {
     "@astrojs/react": "7.0.0",
@@ -24,7 +25,6 @@
     "astro": "^7.3.8",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "framer-motion": "^14.3.0",
     "lucide-react": "^1.59.0",
     "oxc-transform-react": "^0.145.0",
     "react": "^19.3.1",

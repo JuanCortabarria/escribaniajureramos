@@ -15,7 +15,7 @@
 @media(max-width:760px){.services-jump-group{align-items:stretch}.services-jump-group .motion-toggle{align-self:flex-end}}
 
 @media (prefers-reduced-motion: no-preference) {
-  .services-jump.continuous-motion{animation:services-float 3s ease-in-out infinite}
+  [data-motion-ready="true"] .services-jump.continuous-motion{animation:services-float 3s ease-in-out infinite}
   .services-jump-group:is(:hover,:focus-within) .services-jump,
   [data-motion-paused="true"] .continuous-motion{animation-play-state:paused}
   .text-link svg, .button svg, .nav-cta svg {

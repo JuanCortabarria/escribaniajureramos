@@ -1,11 +1,12 @@
 import { chromium } from 'playwright';
 import assert from 'node:assert/strict';
 import { writeFile } from 'node:fs/promises';
+const base = process.env.QA_BASE_URL || 'http://127.0.0.1:4322';
 const browser=await chromium.launch({channel:'chrome',headless:true});
 const results=[];
 for(const viewport of [{width:1440,height:1000},{width:390,height:844},{width:768,height:1024}]){
  const page=await browser.newPage({viewport});const errors=[];page.on('pageerror',e=>errors.push(e.message));
- await page.goto('http://127.0.0.1:4322/',{waitUntil:'networkidle'});await page.evaluate(()=>document.fonts.ready);
+ await page.goto(`${base}/`,{waitUntil:'networkidle'});await page.evaluate(()=>document.fonts.ready);
  const sizes=await page.evaluate(()=>({width:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth}));assert.ok(sizes.scroll<=sizes.width,`Sin desborde a ${viewport.width}`);
  assert.equal(await page.locator('h1').count(),1);assert.equal(await page.locator('.service-card').count(),5);assert.equal(await page.locator('iframe').count(),0);
  await page.locator('.faq-list details').first().locator('summary').click();assert.ok(await page.locator('.faq-list details').first().getAttribute('open')!==null);

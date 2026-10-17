@@ -14,7 +14,7 @@ try {
     page.on('console', message => { if (message.type() === 'error') errors.push(message.text()); });
     await page.goto(base, { waitUntil: 'networkidle' });
     await page.evaluate(() => document.fonts.ready);
-    await page.waitForTimeout(600);
+    await page.locator('.hero-description').evaluate(e => Promise.all(e.getAnimations().map(a => a.finished.catch(() => {}))));
     assert.equal(await page.locator('h1').count(), 1);
     assert.equal(await page.locator('h1').getAttribute('aria-label'), 'Escribanía en Nueva Córdoba. Solange Jure Ramos.');
     const top = await page.locator('.hero-description').evaluate(e => e.getBoundingClientRect().top + window.scrollY);

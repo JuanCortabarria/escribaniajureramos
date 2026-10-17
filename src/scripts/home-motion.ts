@@ -1,3 +1,4 @@
+export {};
 // Native animations enhance the existing HTML; content is never hidden by CSS.
 const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
 const activeAnimations = new Set<Animation>();
@@ -12,8 +13,13 @@ function animate(element: Element, frames: Keyframe[], options: KeyframeAnimatio
   return animation;
 }
 
-motionPreference.addEventListener('change', () => {
-  if (motionPreference.matches) activeAnimations.forEach(animation => animation.finish());
+const motionDisabled = () => motionPreference.matches || document.documentElement.dataset.motionPaused === 'true';
+const finishActive = () => {
+  if (motionDisabled()) activeAnimations.forEach(animation => animation.finish());
+};
+motionPreference.addEventListener('change', finishActive);
+new MutationObserver(finishActive).observe(document.documentElement, {
+  attributes: true, attributeFilter: ['data-motion-paused'],
 });
 
 if ('IntersectionObserver' in window && 'animate' in Element.prototype) {
@@ -21,7 +27,7 @@ if ('IntersectionObserver' in window && 'animate' in Element.prototype) {
     for (const entry of entries) {
       if (!entry.isIntersecting) continue;
       observer.unobserve(entry.target);
-      if (motionPreference.matches) continue;
+      if (motionDisabled()) continue;
       const element = entry.target;
       if (element.matches('#hero-title, #about-title')) {
         const isHero = element.matches('#hero-title');
@@ -67,7 +73,7 @@ if ('IntersectionObserver' in window && 'animate' in Element.prototype) {
     let current: Animation | undefined;
     let expanded = details.open;
     summary.addEventListener('click', event => {
-      if (motionPreference.matches) return;
+      if (motionDisabled()) return;
       event.preventDefault();
       const from = details.getBoundingClientRect().height;
       if (!current) expanded = details.open;

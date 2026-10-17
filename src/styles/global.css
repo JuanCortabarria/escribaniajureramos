@@ -9,3 +9,10 @@
 .hero-visual .photo-note{bottom:-18px}
 
 .faq-service-link{display:flex;align-items:center;gap:10px;width:fit-content;margin-top:15px;text-decoration:underline;text-underline-offset:4px;color:var(--color-text);font-weight:600}.faq-service-link svg{flex-shrink:0}
+
+/* Navigation remains usable if JavaScript is disabled or cannot load. */
+.menu-toggle[hidden]{display:none}
+@media(max-width:760px){
+  html:not([data-scripts-enabled]) .header .header-inner{height:auto;min-height:80px;flex-wrap:wrap}
+  html:not([data-scripts-enabled]) .header nav{display:flex;position:static;width:100%;padding:12px 0 20px;border:0}
+}

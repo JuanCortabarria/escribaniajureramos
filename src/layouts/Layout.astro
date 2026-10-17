@@ -12,4 +12,12 @@ import '../styles/page-transitions.css';
 import type { ServicePage } from '../config/service-pages';
 interface Props { title?: string; description?: string; noindex?: boolean; service?: ServicePage; markdown?: string; }
 ---
-<!doctype html><html lang="es-AR"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#14213d"/><link rel="icon" href="/favicon.svg" type="image/svg+xml"/><Seo {...Astro.props}/></head><body class:list={{'service-page': Astro.props.service !== undefined}}><slot/></body></html>
+<!doctype html><html lang="es-AR"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><script is:inline>
+  // Set before styles render so progressive navigation does not shift the page.
+  document.documentElement.dataset.scriptsEnabled = 'true';
+  document.addEventListener('DOMContentLoaded', () => {
+    if (!document.querySelector('header[data-menu-enhanced]')) {
+      delete document.documentElement.dataset.scriptsEnabled;
+    }
+  }, { once: true });
+</script><meta name="theme-color" content="#14213d"/><link rel="icon" href="/favicon.svg" type="image/svg+xml"/><Seo {...Astro.props}/></head><body class:list={{'service-page': Astro.props.service !== undefined}}><slot/></body></html>

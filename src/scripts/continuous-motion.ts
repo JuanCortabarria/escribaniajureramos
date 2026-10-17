@@ -1,3 +1,4 @@
+export {};
 // Shared, keyboard-accessible controls pause the continuous effects.
 const controls = document.querySelectorAll<HTMLButtonElement>('[data-motion-toggle]');
 const syncControls = () => {
@@ -16,3 +17,5 @@ controls.forEach(control => {
     syncControls();
   });
 });
+
+if (controls.length) document.documentElement.dataset.motionReady = 'true';

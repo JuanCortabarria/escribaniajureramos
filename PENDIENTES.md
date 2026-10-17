@@ -71,3 +71,11 @@ Este apartado prevalece sobre los pendientes históricos anteriores.
 ### Integración de ramas
 
 La integración en main se ejecuta en este cierre, conservando el historial y el archivo académico que estaban únicamente en main. La validación pública y conexión de Cloudflare siguen pendientes; main no equivale a web publicada.
+
+## Revisión técnica integral — 17/10/2026
+
+- **EJECUTADO:** optimización de animación, variantes adaptativas de imágenes y navegación progresiva; corregidos foco por Escape y pausa de efectos/contadores. Se conservan contenidos y diseño acordados.
+- **COMPROBADO:** compilación y auditorías funcionales correctas. Revisión de siete páginas, 18 destinos internos y 37 recursos auxiliares/variantes. Lighthouse móvil final local: rendimiento 96, accesibilidad 100, buenas prácticas 100 y SEO técnico 100. LCP 2,6 s, TBT 0 ms, CLS 0,001. JavaScript gzip reducido un 35,8 %. Cero vulnerabilidades conocidas reportadas por npm.
+- **PREPARADO:** cabeceras de seguridad de Pages en public/_headers. Falta verificar su aplicación HTTP junto con las redirecciones al desplegar.
+- **SIGUE PENDIENTE:** dominio/DNS/correo, previsualización pública, recepción humana de consulta y configuración real de Google. No se publicaron sitios ni cambiaron cuentas.
+- Detalle y límites de la evaluación en REVISION-TECNICA.md. Estas métricas actualizan las mediciones históricas de preparación local.

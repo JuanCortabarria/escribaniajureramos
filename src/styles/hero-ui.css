@@ -6,8 +6,16 @@
 .hero-title-viewport{position:relative;display:block;height:2.35em;overflow:clip}
 .hero-title-slide{position:absolute;inset:0;display:block;padding-block:.1em}
 .hero-title-slide--name em{white-space:nowrap}
+.hero-title-slide[data-active="false"]{opacity:0;visibility:hidden}
+@media(prefers-reduced-motion:no-preference){
+  .hero-title-slide[data-animate="true"][data-active="true"]{animation:hero-title-enter 560ms cubic-bezier(.22,1,.36,1) both}
+  .hero-title-slide[data-animate="true"][data-active="false"]{visibility:visible;animation:hero-title-exit 400ms ease both}
+}
+@keyframes hero-title-enter{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes hero-title-exit{from{opacity:1;transform:translateY(0)}to{opacity:0;transform:translateY(-28px)}}
 .hero-actions{margin-top:26px;align-items:center}
-.hero-action{font-size:12px;line-height:1.5;text-decoration:none;color:var(--color-dark-bg)}
+.hero-action{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:50px;padding:16px 24px;border:1px solid transparent;background:var(--color-accent-bright);font-size:12px;font-weight:500;line-height:1.5;text-decoration:none;color:var(--color-dark-bg);transition:background 200ms ease}
+.hero-action:hover{background:#e7ca9d}
 .hero-phone-icon{flex-shrink:0}
 .hero .hero-person{margin-top:22px}
 @media(max-width:1050px){.hero-action{padding:14px 18px}}

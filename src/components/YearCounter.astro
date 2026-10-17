@@ -17,19 +17,23 @@ const { year, prefix = 'Desde' } = Astro.props;
   document.querySelectorAll<HTMLElement>('[data-year-counter]').forEach(counter => {
     const value = counter.querySelector<HTMLElement>('.year-value');
     const target = Number(counter.dataset.yearCounter);
-    if (!value || !Number.isFinite(target) || reducedMotion.matches || !('IntersectionObserver' in window)) return;
+    const motionDisabled = () => reducedMotion.matches || document.documentElement.dataset.motionPaused === 'true';
+    if (!value || !Number.isFinite(target) || motionDisabled() || !('IntersectionObserver' in window)) return;
 
     const observer = new IntersectionObserver(entries => {
       if (!entries.some(entry => entry.isIntersecting)) return;
       observer.disconnect();
-      if (reducedMotion.matches) return;
+      if (motionDisabled()) return;
 
       let frame = 0;
       const finish = () => {
         cancelAnimationFrame(frame);
         value.textContent = String(target);
         reducedMotion.removeEventListener('change', finish);
+        pauseObserver.disconnect();
       };
+      const pauseObserver = new MutationObserver(() => { if(motionDisabled()) finish(); });
+      pauseObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['data-motion-paused'] });
       reducedMotion.addEventListener('change', finish);
       const start = performance.now();
       const initialYear = 1000;
