@@ -308,3 +308,273 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - Conservado el contenido original, incluidas sus indicaciones e inconsistencias, como texto del documento; las consignas académicas no se ejecutaron como instrucciones de esta tarea. Encabezados y pies repetidos reunidos al inicio; el pequeño ícono de entrega se representa mediante una descripción textual. No se modifica la web.
 - Verificaciones: extracción de las 14 páginas, inspección visual de portada, tablas y recordatorio; comparación de frecuencias de palabras sin pérdidas respecto del cuerpo original y revisión de ambas tablas. Sin caracteres de sustitución. Original intacto.
 - Archivos de esta tarea: el Markdown indicado y `Decisiones.md`. Sin pendientes de conversión.
+
+## 2026-10-16 — Revisión de avances y propuestas de animación
+
+- Revisados el historial y el código del compañero hasta `5206c96`; la consulta a GitHub confirmó que `origin/main` apunta al mismo commit.
+- Revisados los cambios de portada, las cinco páginas de servicio, las tarjetas compactas, los títulos institucionales, los dos contadores y las animaciones existentes en `home-motion.ts` y `motion.css`.
+- Confirmado el servidor de desarrollo y abierta la página en el navegador visible de Codex, en `http://127.0.0.1:4321/`. Revisada la portada; observados los contadores y la entrada del título durante la carga.
+- Propuestas para elegir: coordinar título, fotografía y botón de portada; animar el menú móvil y el indicador de sección activa; extender un lenguaje de movimiento consistente a las páginas de servicios; afinar las entradas escalonadas de tarjetas. Como alternativa editorial, mantener el año 2002 legible y animar su acento visual en lugar de contar años intermedios.
+- Consultadas las preferencias de intensidad, zona prioritaria y valoración de los efectos actuales. Las propuestas no se implementan en esta tarea; queda pendiente la elección de la usuaria.
+- Mantener el respeto por movimiento reducido y la disponibilidad del contenido sin JavaScript que ya incorpora el proyecto.
+- Referencias consultadas: https://motion.dev/docs/stagger y https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion . Son referencias de interacción; no se agregó ninguna dependencia.
+- Único archivo modificado: este registro. No requiere recompilación por tratarse de una revisión y planificación documental.
+- El intento de push de esta revisión falló porque esta computadora no tiene disponible la autenticación HTTPS de GitHub (`could not read Username`). El registro queda guardado en un commit local; el acceso de lectura al remoto sí fue verificado.
+
+## 2026-10-16 — Propuesta cálida y animada para el libro
+
+- A pedido de la usuaria, creada una fotografía promocional con un único ejemplar del libro, conservando diseño amarillo y fucsia, autoría, título y prólogo. Ambiente de piedra crema, lino y luz de tarde para acompañar la paleta de la web.
+- Utilizada la herramienta integrada de imágenes sobre la foto adjunta. Guardados `artifacts/libro-promocional/libro-luz-calida.jpg` y `ORIGEN.md`, con procedencia, prompt y alcance. La foto original se conserva.
+- Creada una vista animada en el chat con acercamiento suave y desplazamiento mínimo, pausa y respeto por movimiento reducido. El fragmento queda en el directorio de visualizaciones de este chat; no es un video exportado ni se incorporó a la web.
+- Los dos enlaces de Pinterest se abrieron, pero exigieron iniciar sesión e impidieron examinar las imágenes. Se siguieron las preferencias expresas y la paleta existente; no se afirma haber reproducido las referencias.
+- Verificaciones: inspección visual de un solo libro y textos principales, JPEG cargado en navegador, animación activa y pausa/reanudación funcionales. Fragmento de menos de 1 MB. No corresponde recompilar la web porque su código permanece sin cambios.
+- Pendiente: valoración de la usuaria e incorporación a la web si la solicita. Consulta del remoto correcta y sin avances nuevos por integrar; propuesta guardada en commit local. El push se intentó y falló por falta de autenticación HTTPS (`could not read Username`), por lo que estos archivos todavía no están compartidos en GitHub.
+
+## 2026-10-16 — Libro en la escena de escritorio y café
+
+- La usuaria suministró la referencia de escritorio y solicitó sustituir el cuaderno abierto por el libro de la escribana, manteniendo la escena. Editada con la herramienta integrada de imágenes y la foto original del libro como referencia de identidad.
+- Incorporado un ejemplar cerrado con tapa amarilla y fucsia, autoría, título, prólogo y editorial. Conservados computadora, café, agenda lateral, mesa e iluminación cálida; retirado el lápiz para dejar visible la tapa.
+- Resultado guardado en `artifacts/libro-promocional/libro-escritorio-cafe.png`, sin sobrescribir las imágenes anteriores ni modificar la web. Vista previa estática de esta edición; no se exportó un video.
+- Verificación visual de composición, cubierta y objetos conservados. No requiere pruebas de código. El envío a GitHub continúa bloqueado por la autenticación HTTPS comprobada en esta sesión; se conserva el avance en un commit local.
+
+## 2026-10-16 — Dos nuevas composiciones del libro
+
+- Sustituidos los libros de las dos fotografías adjuntas por el libro amarillo y rosado de la escribana mediante la herramienta integrada de imágenes, usando la foto original de la cubierta como referencia.
+- Guardadas `artifacts/libro-promocional/libro-mesa-clara.png` (mesa crema, café y agua, vertical) y `libro-cafe-vapor.png` (madera, café con vapor, anteojos y papelería, cuadrada). Conservados los ambientes y las versiones anteriores. Actualizado `ORIGEN.md`.
+- Verificación visual de ambas imágenes: un ejemplar promocionado por escena, título, autora y prólogo legibles, sin restos del título del libro reemplazado. Son ediciones gráficas para revisión, sin cambios ni publicación de la web; no requieren compilación.
+- La usuaria consulta también por edición de imágenes y letras animadas para la web. Explicado el flujo y solicitados referencia, texto y ubicación. Esa animación queda pendiente de dichos datos; no se implementa un efecto elegido arbitrariamente.
+- Los avances se guardan localmente; sigue pendiente resolver la autenticación HTTPS de GitHub para compartirlos, según el fallo comprobado en esta sesión.
+
+## 2026-10-16 — Entrada sutil y coordinada de la portada
+
+- La usuaria eligió movimientos breves y discretos, con prioridad en título, fotografía y botón de consulta. Valoró positivamente las animaciones existentes; se conservan el contador y los efectos del resto de la página.
+- Ajustado `src/scripts/home-motion.ts`: el título de portada entra con desplazamiento del 28 %, opacidad inicial de 0,65, duración de 560 ms y desfase de 60 ms entre líneas. La foto reduce su acercamiento inicial a 1,8 % y su duración a 800 ms.
+- Agregadas entradas de 420 ms y 8 px para la descripción, botón, identificación profesional y recuadro de la foto, con desfases breves de 90 a 200 ms. Cada elemento se activa al entrar en pantalla, también en celular, y una sola vez.
+- Sin dependencias nuevas ni cambios en textos, diseño, enlaces o animaciones de otras secciones. Se conserva el contenido visible sin JavaScript y la finalización de efectos al activar movimiento reducido.
+- Verificaciones: Astro y compilación sin errores, advertencias ni sugerencias; auditoría técnica correcta. Prueba aislada del script con observadores y animaciones simulados: secuencia y tiempos, destino visible, retirada del observador y ausencia de animaciones con movimiento reducido; finalización de efectos al cambiar la preferencia.
+- Navegador a 1440 y 390 px: portada revisada durante la entrada, sin desbordes, imagen cargada y enlace de consulta correcto. Ambos contadores finalizan en 2002; sin errores de consola registrados. Vista local dejada abierta.
+- Captura de revisión: `artifacts/portada-movimiento-sutil.jpg`. Archivos del commit: script y este registro.
+- Pendiente: valoración visual de la usuaria. El commit queda local mientras siga sin resolverse la autenticación HTTPS de GitHub, cuyo fallo fue comprobado en esta sesión.
+
+## 2026-10-16 — Consulta para reemplazar la web publicada
+
+- La usuaria indica ser titular de `escribaniajureramos.com.ar` y solicita conocer los datos y accesos necesarios para reemplazar la web antigua por la versión local.
+- Revisadas la web pública y la configuración del proyecto: la nueva web genera archivos estáticos para el mismo dominio. La web pública contiene un formulario de contacto; la versión nueva utiliza WhatsApp y no incluye ese formulario.
+- Explicadas dos alternativas pendientes de evaluar: publicar en el alojamiento existente, si admite el proyecto, o usar otro alojamiento y actualizar los registros del dominio correspondientes a la web.
+- Solicitados nombre del proveedor y administrador actual, disponibilidad de acceso al hosting y administración del dominio, existencia de correos bajo el dominio y funcionalidades o contenidos antiguos que deban conservarse. No se solicitan contraseñas en el chat.
+- Propuesto preparar copia de seguridad, revisión de la nueva versión en una dirección de prueba, correspondencia y redirecciones de URLs antiguas, verificación de HTTPS y preservación de los registros del correo antes de sustituir la web.
+- No se eligió proveedor ni se modificaron hosting, DNS o sitio público. El siguiente paso depende de las respuestas de la usuaria.
+- Referencias: https://escribaniajureramos.com.ar/ ; https://docs.astro.build/en/guides/deploy/ ; https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes .
+- Único archivo modificado: este registro; no requiere pruebas de código. Se conserva la rama activa `feature-vico`. El commit queda local por el bloqueo de autenticación HTTPS de GitHub ya comprobado.
+
+## 2026-10-16 — Información necesaria para solicitar al administrador
+
+- La usuaria no dispone ahora de los accesos y los solicitará para recibirlos en unos días. Su respuesta no identifica todavía al proveedor del hosting ni al administrador.
+- Respondió que no tiene correos bajo el dominio ni contenido o funciones adicionales de la web antigua que deban conservarse.
+- Concretada la información a pedir: nombre del proveedor y dirección del panel de hosting; acceso con permisos para publicar archivos; ubicación y acceso al panel que gestiona los registros DNS del dominio; estado de renovación del dominio y alojamiento. NIC Argentina puede ser necesario si hace falta cambiar la delegación, pero no sustituye siempre al panel DNS.
+- Solicitar una copia de seguridad completa de la web antigua antes del reemplazo. Si su plataforma utiliza base de datos, incluir también esa base y los archivos de configuración necesarios para restaurarla.
+- El panel de edición de la web antigua, por sí solo, puede no permitir publicar la nueva web estática. Los accesos se gestionarán mediante invitación o un canal seguro, sin registrar contraseñas en el chat ni en este archivo.
+- Se mantiene pendiente elegir entre alojamiento actual o nuevo una vez identificados el proveedor y los permisos disponibles. No se ejecutaron cambios externos.
+- Único cambio: este registro, guardado localmente; continúa pendiente la autenticación de GitHub para enviarlo. Sin pruebas de código por ser una aclaración documental.
+
+## 2026-10-16 — Recuperación de administración y pasos de publicación
+
+- La usuaria confirma que puede contactar al programador anterior y solicita un paso a paso, qué pedirle y cómo avanzar sin su intervención.
+- Consulta pública de DNS: el dominio responde con `ns1.onlinenow.com.ar`, `ns3.onlinenow.com.ar` y `ns5.onlinenow.com.ar`. Se presenta como pista sobre la administración DNS, sin afirmar quién contrató el hosting ni que exista deuda. No se pudo consultar el sitio web de ese proveedor con la herramienta web.
+- Contrastados con NIC Argentina los mecanismos de ingreso a TAD, consulta pública y transferencia de titularidad. No se verificó quién figura como titular del dominio concreto; la declaración de propiedad de la usuaria no sustituye esa comprobación administrativa.
+- Preparada explicación y mensaje para solicitar proveedor, panel y permisos, titularidad y delegación del dominio, vencimientos y estado de pagos, y respaldo completo. Recomendada entrega de administración a cuentas de la usuaria, sin compartir Clave Fiscal.
+- Alternativa sin programador: consultar NIC/TAD y los comprobantes propios; solicitar recuperación al proveedor según la titularidad de la cuenta. Si no se dispone del hosting antiguo pero sí del dominio, se puede utilizar un alojamiento nuevo; no es necesario recuperar el hosting anterior para publicar la nueva web.
+- Se puede preparar una publicación con URL temporal antes de disponer del dominio. Conectar el dominio existente exige control de su administración o la intervención de quien lo tenga. Si está a nombre de otra persona, corresponde gestionar la transferencia o consultar a NIC; no se promete recuperación automática.
+- Plan propuesto: identificar y obtener administración, preservar copia, preparar alojamiento y vista temporal, aprobar, conectar dominio, verificar HTTPS y redirecciones. Sin contratación, publicación ni cambios en DNS ejecutados.
+- Fuentes: https://nic.ar/index.php/es/como-ingresar-tad ; https://nic.ar/es/ayuda/instructivos/transferencia-de-dominio ; https://nic.ar/es/ayuda/faq ; https://nic.ar/es/dominios/buscar-dominio .
+- Único cambio: este registro. Commit local; continúa el bloqueo de autenticación de GitHub ya registrado. No corresponde ejecutar pruebas de código.
+
+## 2026-10-16 — Libro de la escribana y acceso destacado a servicios
+
+### Decisiones y contenido
+
+- La usuaria solicita una imagen pequeña del libro dentro de la biografía, enlazada a una sección propia, usando la primera foto adjunta como miniatura y alguna de las otras dos en la sección.
+- Elegida la tercera fotografía (libro, café y anteojos sobre madera) por su integración con los tonos crema, azul y dorado de la web. La segunda queda como alternativa sin incorporarse.
+- Consultada la motivación real; la usuaria aporta trayectoria, mentor y pasión por la materia. Redactado un relato breve en primera persona sobre esos motivos y el derecho societario, sujeto a aprobación final de Solange, sin inventar nombre del mentor, fechas, ISBN, investigación o premios.
+- Título, autoría, editorial y prólogo transcritos de la cubierta suministrada.
+
+### Cambios ejecutados
+
+- Nuevos `src/components/BookTeaser.astro` y `BookSection.astro`: miniatura clicable dentro de la biografía, sección `#libro` inmediatamente después del perfil y enlace de regreso.
+- Nuevo `src/config/book.ts`: datos del libro y relato centralizados. Incluidos también en `src/pages/index.md.ts` para coherencia con la versión alternativa.
+- `src/pages/index.astro`: componentes incorporados y enlace «Ver áreas de práctica» sustituido por «Conocé nuestros servicios», con mención de inmuebles, certificaciones y sociedades.
+- Nuevo `src/styles/book.css`: composición adaptable, miniatura de 76 px, sección editorial con fotografía y borde dorado, y acceso a servicios con fondo dorado, mayor tamaño y contraste.
+- `src/scripts/home-motion.ts`: reutilizada la entrada suave al aparecer para la miniatura y foto del libro; respuesta breve de imágenes y flechas al cursor o foco mediante CSS. Se conservan movimiento reducido y contenido visible sin JavaScript. No se añadieron dependencias ni movimientos continuos.
+- Seis variantes WebP/AVIF de las imágenes usadas en `public/images/`, 214 KB sumando todas las variantes. Sin alterar el contenido de las fotografías; procedencia en `licenses/libro-imagenes.md`.
+- Actualizada la fecha de contenido en `src/config/site.ts` y añadido el pendiente de revisión del relato en `PENDIENTES.md`.
+
+### Verificaciones y pendientes
+
+- Compilación y Astro check: 0 errores, 0 advertencias y 0 sugerencias. Auditoría técnica existente correcta para portada y cinco páginas de servicios; `git diff --check` correcto.
+- Comprobada coherencia del libro entre HTML y Markdown, destinos `#libro`/`#servicios` y presencia de las seis variantes en la compilación.
+- Navegador: escritorio de 1440 px revisado visualmente; 768, 390 y 320 px sin desbordes y con ambas imágenes cargadas. Comprobadas navegación desde la miniatura, regreso a biografía y nuevo enlace de servicios; activación de la miniatura con Enter actualiza el destino. En celular de 390 px, el clic deja la sección debajo del encabezado fijo. Sin errores de consola registrados.
+- Evidencias: `artifacts/libro-seccion-escritorio.jpg`, `libro-miniatura-biografia.jpg`, `servicios-acceso-dorado.jpg`, `libro-seccion-movil.jpg` y `libro-servicios-qa.json`.
+- Propuestas adicionales, sin implementar: transición breve al abrir páginas de servicios y subrayado que marque la sección activa en el menú. Referencia técnica consultada: https://docs.astro.build/en/guides/view-transitions/ .
+- Pendiente aprobación del texto en primera persona. La web permanece local. Comprobación de push con `--dry-run` a `origin/feature-vico` fallida por falta de autenticación HTTPS (`could not read Username`); el avance queda en un commit local.
+
+## 2026-10-16 — Libro independiente, transición de páginas y movimientos continuos
+
+### Decisiones y cambios
+
+- La usuaria aclara que el relato del libro debe quedar fuera de la página principal y abrirse como una página independiente, en una pestaña nueva. Conservada la miniatura de la biografía, ahora enlazada a `/libro/` con aviso accesible de nueva pestaña.
+- Creada `src/pages/libro.astro`, con encabezado, pie, fotografías y relato existentes. Retirado `BookSection` de la portada. Creada su versión `/libro.md`; el Markdown de inicio enlaza al libro en lugar de repetir el relato completo.
+- Sustituida «En sus páginas estudio la figura del director suplente…» por «Quise transformar esa experiencia en un aporte que acompañe el trabajo y la reflexión de otros profesionales». Corregida la editorial a «Cátedra Jurídica», según indicación expresa de la usuaria.
+- Adaptado `BookSection.astro` con un H1 y enlace `/#escribana`; ajustado el espaciado de letras del título bibliográfico en `book.css`.
+- `Layout.astro` y `Seo.astro` admiten la versión Markdown específica del libro. Añadidos WebPage y Book en `structured-data.ts`, sin FAQ ajenas a esa página ni datos bibliográficos no suministrados. Enlace agregado a `llms.txt` y ruta incorporada automáticamente al sitemap.
+- Añadido `src/styles/page-transitions.css` al layout común: desvanecimiento nativo entre documentos del mismo origen, con salida de 160 ms y entrada de 200 ms. Abarca las páginas de servicios y conserva la navegación normal y los scripts por página. Los navegadores sin soporte mantienen navegación convencional.
+- Acceso «Conocé nuestros servicios» con oscilación vertical de 4 px cada 3 segundos, pausada al cursor o foco para facilitar el clic.
+- Consultado el tipo de giro del título de preguntas frecuentes; la usuaria eligió expresamente giro completo de 360 grados. Aplicada rotación sobre el eje vertical cada 14 segundos, en repetición continua, sin desplazar el resto de la sección.
+- Incorporados dos controles sincronizados «Pausar movimiento»/«Reanudar movimiento», mediante `src/scripts/continuous-motion.ts`. Al pausar, el título se muestra de frente y el acceso queda quieto. Sin JavaScript los controles permanecen ocultos; el contenido sigue visible. Los efectos y las transiciones se desactivan con movimiento reducido.
+- Actualizados `README.md`, `PENDIENTES.md` y la auditoría técnica para documentar y comprobar el libro independiente.
+
+### Verificaciones y pendientes
+
+- Astro check y compilación: 0 errores, 0 advertencias y 0 sugerencias; ocho páginas HTML generadas. Auditoría técnica ampliada correcta: libro con un H1, contenido y editorial coherentes, enlace Markdown propio, entidad Book sin FAQ, sitemap y ausencia del relato completo en portada.
+- Navegador: clic en la miniatura abre efectivamente una segunda pestaña en `/libro/`; comprobados frase, editorial y enlace de regreso. Libro sin desbordes a 1440, 390 y 320 px, con imagen cargada.
+- Navegados los cinco servicios y comprobados sus titulares. Confirmada la URL del servicio inmobiliario tras completar la navegación. La transición está configurada mediante la regla nativa, cuya disponibilidad depende del navegador; no se sustituyó la navegación por un router.
+- Confirmados en los estilos computados del navegador `faq-turn`, duración de 14 segundos, repetición infinita y transformación 3D activa, así como `services-float`. Probadas pausa y reanudación con Enter: ambos controles se sincronizan, el título vuelve a su posición legible y la oscilación se pausa.
+- Portada móvil de 390 px sin desbordes, menú abre y cierra al navegar a preguntas. Sin errores de consola registrados en esa comprobación. Prueba aislada del controlador y revisión de las alternativas CSS para movimiento reducido correctas. `git diff --check` correcto.
+- Capturas y evidencia: `artifacts/libro-pagina-independiente.jpg`, `faq-control-movimiento.jpg` y `libro-movimientos-qa.json`. Ambas páginas quedan abiertas para revisión.
+- Referencia técnica: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@view-transition .
+- Pendiente valoración de la usuaria sobre los efectos y la nueva redacción. Cambios guardados en la rama `feature-vico`; el push sigue pendiente por la falta de autenticación HTTPS comprobada en esta sesión. No se publicó ni se modificó el dominio.
+
+## 2026-10-16 — Acceso al libro únicamente con su imagen
+
+- Confirmada la rama `feature-vico`, con estado limpio al iniciar. La usuaria solicita reabrir la web y mostrar únicamente la imagen del libro como acceso a su página existente.
+- Simplificado `src/components/BookTeaser.astro`: retirados rótulo, título, frase y flecha visibles. Conservados enlace nativo a `/libro/`, apertura en pestaña nueva y nombre accesible que informa el destino.
+- Actualizado `src/styles/book.css`: eliminados fondo, borde y relleno del recuadro; imagen completa en proporción 4:3, ancho de hasta 240 px y toda su superficie clickeable. Se mantiene el foco visible y el zoom discreto existente, condicionado a la preferencia de movimiento.
+- Iniciado el servidor local y abierta la biografía en `http://127.0.0.1:4322/#escribana`; el primer intento de inicio no quedó listo dentro del sandbox y el segundo confirmó el servidor activo. No se publicó la web.
+- Verificaciones: compilación y Astro check sin errores, advertencias ni sugerencias. Chrome a 1440, 390 y 320 px: imagen cargada, sin texto ni ícono adicional, enlace e imagen de iguales dimensiones (240 × 180 px), cuatro esquinas clickeables y sin desbordes. Confirmadas apertura de `/libro/` con clic y Enter, un H1 en destino y regreso a la biografía. Sin errores de JavaScript. `git diff --check` correcto.
+- Evidencias: `artifacts/libro-solo-imagen-qa.json` y `artifacts/libro-solo-imagen-*.png`. Sin pendientes de implementación.
+
+## 2026-10-16 — Libro al costado de las credenciales
+
+- Movido el acceso al libro desde debajo de «Más sobre su trayectoria» hacia el costado derecho del listado de formación y credenciales, según solicitud de la usuaria. Conservado el desplegable de trayectoria debajo del conjunto.
+- Agrupados listado e imagen en `src/pages/index.astro`. Ajustada la grilla adaptable en `src/styles/book.css`: imagen de hasta 176 px en escritorio y tamaño reducido en celular para mantenerla al costado sin recortar el libro ni superponer texto. Continúa siendo un enlace íntegramente clickeable a `/libro/` en pestaña nueva.
+- Verificaciones: compilación y Astro check sin errores, advertencias ni sugerencias; Chrome a 1440, 1024, 768, 390 y 320 px confirmó imagen al costado del listado, cinco credenciales y ausencia de desbordes. Clic en celular abre `/libro/`. Revisadas visualmente capturas de escritorio y celular guardadas en `artifacts/libro-credenciales-*.png`. `git diff --check` correcto.
+- Sin pendientes de implementación. Se mantiene la web local en el puerto 4322 y la rama `feature-vico`.
+
+## 2026-10-16 — Libro alineado sobre mesa de madera
+
+- Editada la imagen suministrada `libro-miniatura.avif` con la herramienta integrada de imágenes. Entregada una primera versión para revisión con el libro alineado a los bordes, vista cenital sin giro y fondo de mesa clásica de madera marrón.
+- Interpretado «cuadrado» como alineación del libro, conservando su forma rectangular. Indicación de edición: enderezar la cubierta, mantener diseño amarillo y magenta y sus textos, sustituir el entorno por madera marrón profesional, sin añadir objetos.
+- Inspeccionados el original y el resultado: libro completo y alineado, fondo de madera y diseño de cubierta conservado visualmente. La fuente original es una miniatura de 320 × 240 px; la edición generativa reconstruye detalles pequeños.
+- Resultado de vista previa: `/Users/juancortabarria/.codex/generated_images/01a14620-a61e-7fc3-ba38-65fdb60ef392/exec-ac66bec6-94de-4869-97f6-5e03c4fdf2c8.png`. Original intacto; no se incorpora todavía a la web. Único archivo del repositorio modificado: `Decisiones.md`. Pendiente: valoración de esta primera versión por la usuaria.
+
+## 2026-10-16 — Nueva imagen del libro y título en cursiva
+
+- Incorporada al acceso lateral del libro la nueva imagen adjunta por la usuaria, con el libro alineado sobre madera. Generadas variantes optimizadas AVIF y WebP de 480 px (`public/images/libro-madera-480.*`), sin modificar el contenido de la imagen ni reemplazar la fotografía de la página independiente.
+- Actualizado `src/components/BookTeaser.astro` con las nuevas rutas y el título completo desde `book.title`, debajo de la imagen. Añadido estilo en `src/styles/book.css`: cursiva de 11 px, interlineado 1,55 y color secundario. Tanto imagen como título forman parte del mismo enlace a `/libro/`.
+- Verificaciones: compilación y Astro check sin errores, advertencias ni sugerencias; Chrome a 1440, 390 y 320 px confirma carga de la nueva imagen, título en cursiva y ausencia de desbordes. En celular, clic tanto en imagen como en título abre el libro en pestaña nueva. Revisadas capturas `artifacts/libro-madera-titulo-*.png` en escritorio y celular. `git diff --check` correcto.
+- Sin pendientes de implementación; web local y rama `feature-vico`.
+
+## 2026-10-17 — Acceso a servicios en la esquina de la imagen principal
+
+- Retirado el cartel «Atención personalizada desde el primer encuentro.» de la portada. Movido el acceso existente «Conocé nuestros servicios / Inmuebles · Certificaciones · Sociedades» desde la franja inferior hasta la esquina inferior derecha de la fotografía principal, sin duplicarlo.
+- Conservados destino `#servicios`, paleta dorada, flecha, oscilación y control para pausar movimiento. Ajustada su entrada animada a la nueva ubicación y adaptado el ancho en celular. El nombre Jure Ramos en la fotografía permanece visible.
+- Archivos: `src/pages/index.astro`, `src/styles/book.css` y `src/scripts/home-motion.ts`.
+- Verificaciones: compilación y Astro check sin errores, advertencias ni sugerencias; Chrome a 1440, 768, 390 y 320 px confirma un único acceso, alineación al borde derecho de la foto, ausencia del cartel retirado y de desbordes, y navegación a `#servicios`. Control de pausa operativo con movimiento habilitado. Sin errores de JavaScript. Capturas de escritorio y celular revisadas en `artifacts/portada-servicios-esquina-*.png`. `git diff --check` correcto.
+- Sin pendientes de implementación. Se conserva el entorno local y la rama `feature-vico`.
+
+## 2026-10-17 — Libro recortado sin mesa de madera
+
+- A pedido de la usuaria, editada la imagen del libro con la herramienta integrada `image_gen` (modo incorporado, sin CLI). Retirada la mesa, con fondo transparente y contorno blanco fino. Se conserva el título pequeño en cursiva debajo y el enlace existente a la página del libro.
+- Resultado original: `/Users/juancortabarria/.codex/generated_images/01a13227-3607-7500-afa4-541f79c78be7/exec-7348b43f-00d1-4bba-b7e2-69224f31017c.png`. Copias finales para la web con alfa preservado: `public/images/libro-sin-fondo-480.png` y `public/images/libro-sin-fondo-480.webp` (480 × 640 px). No se reemplaza la fotografía dentro de `/libro/`.
+- Actualizados `src/components/BookTeaser.astro` y `src/styles/book.css`: nuevas imágenes transparentes, proporción vertical natural, ancho visual máximo de 132 px y sombra tenue para separar el contorno del fondo blanco. Conservados originales y versiones anteriores.
+- Prompt utilizado: «Use case: background-extraction. Edit the supplied book photograph for a notary website. Remove ONLY the entire brown wooden table background, isolating the existing yellow and magenta rectangular book. Keep the exact front-facing orientation, full book including its thin bottom page edge, cover colors, typography, all existing printed text and small publisher logo unchanged. Do not redesign, reinterpret, correct, add or retypeset any text. Transparent alpha background, no table, no backdrop, no added objects, no large cast shadow. Add only a very fine clean white outline around the outside silhouette of the book, like a subtle 2px white keyline at display size. Frame tightly around the complete book with a small transparent margin on every side, portrait proportions. Preserve crisp readable cover title.»
+- Verificaciones: compilación y Astro check sin errores, advertencias ni sugerencias; canal alfa confirmado con esquina transparente. Chrome a 1440, 390 y 320 px: recorte cargado, título en cursiva, sin desbordes. Clic en la imagen abre `/libro/`. Capturas `artifacts/libro-sin-fondo-*.png` revisadas en escritorio y celular. `git diff --check` correcto.
+- Sin pendientes de implementación; web local y rama `feature-vico`.
+
+## 2026-10-17 — Prueba de portada React con áreas de práctica animadas
+
+### Decisiones y cambios
+
+- Leído el prompt adjunto de `animated-hero.tsx` y adaptado a la portada como isla React con HTML inicial en Astro. Se conserva el H1 «Escribanía en Nueva Córdoba.», la descripción profesional, la fotografía y el acceso a servicios. El texto rotativo muestra «Inmuebles», «Certificaciones» y «Sociedades» con transición vertical cada 2,8 segundos, en dorado y cursiva. No se incorporan las frases comerciales inglesas ni imágenes de stock del ejemplo.
+- Creado `src/components/ui/animated-hero.tsx`, con propiedades de WhatsApp, teléfono, persona y registro desde `site`. Conservada la consulta por WhatsApp y añadido acceso telefónico «Llamar», siguiendo la estructura de dos acciones del ejemplo. El contador 1000→2002 permanece fuera de la isla y comparte el dato confirmado.
+- Preparados React, TypeScript, Tailwind y estructura shadcn: `src/components/ui/button.tsx` con Radix Slot y variantes; `src/lib/utils.ts`; `components.json`; alias `@/*` y JSX en `tsconfig.json`; integración React y complemento Tailwind de Vite en `astro.config.mjs`. La ruta `src/components/ui` respeta la organización Astro y se usa mediante `@/components/ui`. Documentada la instalación y estructura en `README.md`.
+- Tailwind utiliza prefijo `tw:` y omite Preflight; los estilos de esta prueba están en `src/styles/hero-ui.css` y se importan desde la portada para preservar las demás páginas. Añadidas las dependencias y actualizado `package-lock.json`.
+- Resuelto conflicto inicial de dependencias fijando `@astrojs/react` 7.0.0 y `@vitejs/plugin-react` 6.1.1, compatibles con `oxc-transform-react` 0.145.0. `npm ls` confirma el árbol sin conflictos. Instalación informó 0 vulnerabilidades.
+- La rotación se pausa cuando el componente sale de pantalla o la pestaña se oculta y respeta movimiento reducido, incluso al cambiarlo durante la sesión. Se sincroniza con los controles globales mediante el estado existente; actualizado `src/scripts/continuous-motion.ts`. Los lectores de pantalla disponen de una frase estable con las tres áreas; la rotación visual no usa una región de anuncios continuos. Sin JavaScript, el contenido y los enlaces reales permanecen disponibles.
+- Usado `LazyMotion`/`domAnimation` para reducir el código del efecto. La integración añade aproximadamente 110 KiB gzip de JavaScript en tres archivos (componente, cliente React y módulo React). Es un coste nuevo frente a la portada Astro anterior; no se atribuyen mejoras de SEO o velocidad ni se repitió Lighthouse en esta tarea.
+
+### Verificaciones y pendientes
+
+- Compilación y Astro check: 0 errores, 0 advertencias, 0 sugerencias; ocho páginas HTML. Auditoría técnica existente correcta. `git diff --check` correcto.
+- Creado `scripts/hero-qa.mjs` y comando `npm run audit:hero`. Chrome a 1440, 768, 390 y 320 px: rotación real, pausa estable durante más de un intervalo, sincronización de controles, ausencia de desbordes y errores de consola/hidratación. H1 único con ubicación, enlaces WhatsApp/teléfono correctos y navegación a servicios con cinco tarjetas.
+- Probadas alternativas con movimiento reducido y JavaScript desactivado; pausa externa, reanudación mediante Enter y cambio dinámico a movimiento reducido. Prueba adicional confirma detención fuera de pantalla y texto azul tinta del botón dorado. Se corrigió la suscripción dinámica de movimiento reducido tras detectar que el hook de la biblioteca no actualizaba ese valor durante la sesión.
+- Revisión de componentes React: efectos y temporizadores con limpieza, propiedades tipadas, enlaces semánticos, nombres accesibles y altura reservada para las palabras. Capturas revisadas en escritorio, tablet y celular. Evidencia: `artifacts/hero-react-qa.json`, `artifacts/hero-react-*.png` y `artifacts/hero-react-final.png`.
+- Referencias técnicas: https://docs.astro.build/en/guides/styling/ ; https://tailwindcss.com/docs/preflight . Compatibilidad de paquetes comprobada con metadatos oficiales de npm y comportamiento del hook contrastado con el código instalado.
+- Pendiente: valoración visual de la usuaria sobre esta prueba y futura medición de rendimiento antes de publicar. Continúa en entorno local, rama `feature-vico`; no se modifica el dominio.
+
+## 2026-10-17 — Animación aplicada al titular y consulta única
+
+- La usuaria corrige el alcance de la prueba: la transición vertical debe alternar primero «Escribanía en Nueva Córdoba.» y luego «Jure Ramos». Movida la animación al H1 en `src/components/ui/animated-hero.tsx`; conservadas cursiva y color dorado para Nueva Córdoba y Ramos. Retirado por completo el bloque rotativo de áreas de práctica.
+- Eliminados el botón de play/pausa de la isla y el botón «Llamar», junto con la propiedad de teléfono que ya no se usa. Queda una única acción «Coordiná tu consulta» por WhatsApp con emoji 📲 y flecha. Los controles textuales existentes de movimiento siguen pausando el titular a través de la preferencia global, sin añadir un botón nuevo.
+- Altura del titular reservada en `src/styles/hero-ui.css` para que ambos textos compartan el espacio sin mover descripción ni botón. H1 con nombre accesible estable que incluye ubicación y nombre; sin JavaScript se muestra primero el titular con la ubicación. Continúa respetando movimiento reducido, también al cambiar la preferencia.
+- Archivos adicionales actualizados: `src/pages/index.astro`, `README.md` y `scripts/hero-qa.mjs` para reflejar el nuevo comportamiento solicitado.
+- Verificaciones: compilación y Astro check sin errores, advertencias ni sugerencias; auditoría técnica correcta. Prueba de navegador a 1440, 768, 390 y 320 px confirmó ambos titulares en secuencia, pausa/reanudación desde el control existente, altura estable, un solo enlace de consulta, presencia del emoji y ausencia de play, llamada y bloque de áreas. Sin desbordes ni errores de consola/hidratación. Confirmadas alternativas sin JavaScript, con movimiento reducido y cambio dinámico de preferencia. Capturas de escritorio y celular revisadas; evidencia en `artifacts/hero-titular-qa.json` y `artifacts/hero-titular-*.png`. `git diff --check` correcto.
+- Sin pendientes de implementación de esta corrección. Continúa local en `feature-vico`; la medición de rendimiento previa a publicación permanece como pendiente general de la prueba React.
+
+## 2026-10-17 — Teléfono clásico y nombre completo en el titular
+
+- Sustituido el emoji de celular del botón «Coordiná tu consulta» por un ícono vectorial de auricular clásico con ondas de llamada, en azul tinta y 20 px, para mejorar su reconocimiento y consistencia visual.
+- El titular animado conserva primero «Escribanía en Nueva Córdoba.» y ahora muestra después «Solange Jure Ramos». El nombre se toma de la configuración existente; se presenta «Solange» en la primera línea y «Jure Ramos» en cursiva dorada debajo, conservando la altura reservada.
+- Archivos modificados: `src/components/ui/animated-hero.tsx`, `src/styles/hero-ui.css`, `scripts/hero-qa.mjs` y `README.md`. No se añaden botones nuevos ni se modifica el destino de WhatsApp.
+- Verificaciones: compilación y Astro check sin errores, advertencias ni sugerencias; Chrome a 1440, 768, 390 y 320 px confirma nombre completo, ícono clásico y ausencia del emoji anterior, ambos titulares en secuencia, altura estable, un solo botón de consulta y ausencia de desbordes o errores de consola/hidratación. Pausa, reanudación, movimiento reducido y alternativa sin JavaScript correctos. Revisadas capturas de escritorio y celular; evidencia actualizada en `artifacts/hero-titular-qa.json`. `git diff --check` correcto.
+- Sin pendientes de esta corrección; entorno local y rama `feature-vico`.
+
+## 2026-10-17 — FAQ sin giro y lectura progresiva de la biografía
+
+- Retirados el giro continuo de «Preguntas frecuentes», su envoltorio animado y el control de pausa que estaba en esa sección. Eliminadas las reglas y fotogramas `faq-turn` de `src/styles/motion.css`; se conserva la entrada discreta del encabezado y la apertura de respuestas.
+- Añadido `src/components/ReadingText.astro` a los dos párrafos indicados de la biografía y a las cinco credenciales. Revelado visual letra por letra al entrar en pantalla, una sola vez y en secuencia. Ritmo base de 14 ms por carácter, con límite de 3 segundos por bloque y una transición de opacidad de 140 ms por letra. Se reserva desde el inicio todo el espacio de los textos.
+- El HTML conserva el texto completo y una copia accesible estable; la copia visual está oculta a lectores de pantalla para evitar lectura fragmentada o duplicada. Sin JavaScript o con movimiento reducido se muestra directamente el contenido completo. Pausar movimiento o activar reducción durante el efecto completa inmediatamente los bloques activos.
+- Creado `src/scripts/biography-reading.ts` e importado en la portada. Actualizados `src/pages/index.astro`, `src/styles/motion.css`, `src/scripts/continuous-motion.ts` (comentario), `README.md` y `package.json`. Añadido `scripts/reading-qa.mjs` y comando `npm run audit:reading`.
+- Verificaciones: compilación y Astro check sin errores, advertencias ni sugerencias; auditoría técnica correcta. Chrome a 1440, 390 y 320 px: comprobadas letras parcialmente visibles durante el efecto, finalización de los siete bloques, correspondencia de texto visual/accesible, ausencia de repetición y altura estable. FAQ sin giro ni control redundante y respuestas operativas. Sin desbordes ni errores de JavaScript. Comprobadas alternativas sin JavaScript y con movimiento reducido, así como finalización inmediata por pausa o cambio de preferencia. Capturas de progreso revisadas; evidencia en `artifacts/lectura-qa.json` y `artifacts/lectura-progreso-*.png`. `git diff --check` correcto.
+- Sin pendientes de esta modificación. Continúa local en `feature-vico`.
+
+## 2026-10-17 — Lectura acelerada y tildes sincronizadas
+
+- Acelerada la aparición de letras de 14 a 4 ms por carácter, reducida la transición de cada letra de 140 a 70 ms y la separación entre bloques de 80 a 35 ms. Se mantiene la secuencia de lectura y la activación única, con tope de 1 segundo de escritura por bloque.
+- Cada tilde de las credenciales comparte ahora el retraso de su texto y aparece cuando comienza la línea. Ya no queda visible mientras la credencial espera su turno. Las alternativas con movimiento reducido y la finalización por pausa conservan visibles texto y tilde completos.
+- Archivos modificados: `src/scripts/biography-reading.ts`, `src/styles/motion.css`, `scripts/reading-qa.mjs` y `README.md`.
+- Verificaciones: compilación y Astro check sin errores, advertencias ni sugerencias. Auditoría de lectura a 1440, 390 y 320 px correcta: progreso de letras, finalización, sincronización de tildes, altura estable, ausencia de repetición y alternativas accesibles. Prueba específica en escritorio confirmó las cinco tildes ocultas mientras esperan y coincidencia exacta de sus retrasos con los de la primera letra de cada credencial. FAQ permanece sin giro y operativa; sin errores de JavaScript ni desbordes. `git diff --check` correcto.
+- Sin pendientes de esta modificación; entorno local y rama `feature-vico`.
+
+## 2026-10-17 — Auditoría de preparación para publicación, costos y guía de migración
+
+- La usuaria solicita pasos de publicación, costos de dominio/alojamiento y revisión de los tres repositorios de referencia. Confirmadas las tres copias en `references/` y coincidencia de HEAD local/remoto el 17/10/2026: astro-chalet `8d55431`, schema-dts `62a5658`, llms-txt `3700a0a`. No se modificaron esas referencias.
+- Compilación y Astro check sin errores, advertencias ni sugerencias; auditoría técnica correcta. Verificados JSON-LD y canonical de las siete páginas de contenido, versiones Markdown y los siete destinos de llms.txt. Pruebas de navegador de portada a 1440/768/390 px y cinco servicios a 1440/390/320 px correctas, incluidas navegación, FAQ, WhatsApp, menú y mapa por acción.
+- Lighthouse móvil oficial 13.5.0 sobre la compilación estática local (puerto 4330), sin desplegar: primera pasada 95 rendimiento, 96 accesibilidad, 100 buenas prácticas y 100 SEO técnico. Detectados spans de contador con aria-label no admitido y nombres accesibles que omitían etiquetas visibles de libro/tarjetas.
+- Corregidos esos hallazgos sin alterar diseño: `src/components/YearCounter.astro` usa texto accesible estático; `src/components/BookTeaser.astro` incluye el título visible en su nombre accesible; tarjetas en `src/pages/index.astro` usan su nombre natural completo. Segunda pasada aislada: 95/100/100/100; LCP 2,9 s, TBT 0 ms y CLS 0,001, sin advertencias. Comprobación posterior de enlaces del libro y servicio inmobiliario en compilación final correcta. Informes inicial/final en `artifacts/publicacion-lighthouse-mobile*.report.*` y auditoría estructural en `artifacts/publicacion-seo-audit.json`. No es una medición de visitantes reales ni una garantía de posicionamiento.
+- Creado `PUBLICACION.md` con recomendación, costos, responsables, pasos de previsualización/publicación, DNS/correo, redirecciones, control del dominio, Google y mantenimiento. Actualizado `PENDIENTES.md` con el estado real de salida a producción y comprobaciones pendientes.
+- Costos oficiales consultados: NIC Argentina publica ARS 8.500 para renovación anual/alta/transferencia de .com.ar (cada trámite según corresponda); Pages ofrece alojamiento estático gratuito dentro de límites y SSL incluido; alternativa Vercel Pro desde USD 20/mes y Hobby restringido a uso personal no comercial. Fuentes y fecha en la guía. No se compra otro dominio: se propone conservar el existente.
+- Detectado contenido bibliográfico inconsistente: la miniatura generada muestra un nombre de autora y prólogo diferentes de la ficha escrita. Marcado como pendiente prioritario confirmar datos con la cubierta real y reemplazar la recreación; no se inventan correcciones. También siguen pendientes permisos de imágenes, aprobación de textos/afiliaciones, pin de Maps y control registral/DNS/correos.
+- Detectados enlaces antiguos a `/areas-practica`, `/jure-ramos` y `/contacto` en la web pública. Preparada propuesta de destinos en la guía; no se implementaron redirecciones ni se verificó exhaustivamente el inventario antiguo. La rama `feature-vico` contiene avances que no deben darse por integrados en main.
+- Documentada la distinción entre clonar un tema, usar tipos Schema.org y cumplir el formato llms.txt; Google indica que llms.txt no beneficia ni perjudica su visibilidad en Search/funciones generativas. No se promete un resultado SEO/GEO por instalar repositorios.
+- `git diff --check` correcto. Pendiente cerrar contenido y migración, aprobar URL temporal y validar el dominio público. No se publicaron sitios, cambiaron DNS, contrataron servicios, enviaron mensajes ni se accedió a cuentas privadas. La web anterior permanece operativa.
+
+## 2026-10-17 — Prólogo confirmado, respaldo público y preparación de SEO local
+
+- La usuaria confirma prólogo «Fernando Pérez Hualde y Juan F. Klaps». Actualizado `src/config/book.ts`; la ficha HTML y Markdown comparten el dato. Fotografías y pin del mapa aprobados; se conservan los textos profesionales actuales hasta nuevas correcciones. No se editaron imágenes: la autoría impresa incorrecta de la miniatura recreada sigue siendo un detalle de ese recurso, no se adopta como fuente de autoría.
+- Confirmada medición con Google Search Console y visitas; la frase «sin Google» fue aclarada mediante pregunta. No se agregan rastreadores hasta disponer de cuentas e identificadores reales. Conservación del dominio y posterior conexión GitHub/Pages aceptadas; sin cambios de DNS o cuentas en esta tarea.
+- Guardada copia HTTP pública del sitio anterior: 131 archivos, 9.112.487 bytes, páginas principales con estado 200, imágenes y recursos locales disponibles. Cuatro errores 404 registrados (sitemap_index.xml y tres CSS antiguos). Manifiesto con URLs, estados y SHA-256; archivo comprimido `artifacts/respaldo-web-anterior-2026-10-17.tar.gz`, SHA-256 `bd5f3f9b251ab433b22623eed704e00107d1e749c5ab11ad019df5b9ee186811`. Excluido de Git por la regla existente de artifacts. No es un clon navegable sin conexión ni copia de WordPress, base de datos, DNS, correo o contenido privado. Estos respaldos administrativos siguen pendientes del proveedor anterior.
+- Inventariados enlaces del HTML de las cuatro páginas antiguas y preparadas ocho reglas 301 en `public/_redirects`: áreas de práctica, Jure Ramos, contacto y sala, con y sin barra final, hacia secciones equivalentes. Sintaxis y anclas verificadas, archivo presente en dist. La respuesta HTTP será comprobada en Pages: Astro no aplica estas reglas localmente. No se redirigen indiscriminadamente los 404.
+- Reforzado enlazado contextual de cuatro FAQ de portada: tres a inmuebles y una a certificaciones, con enlaces descriptivos visibles. Añadidos también a Markdown. Respuestas existentes conservadas. Archivos: `src/config/service-pages.ts`, `src/pages/index.astro`, `src/pages/index.md.ts`, `src/styles/global.css`. Actualizada fecha visible en `src/config/site.ts`.
+- Creado `SEO-LOCAL.md` con URLs actuales, doce contenidos propuestos por intención de búsqueda, requisitos de revisión profesional, medición y listado de información administrativa a preservar. Las doce rutas son propuestas, no páginas publicadas. No se prometen primeros puestos ni se crean variantes duplicadas por barrio. Contrastado con documentación oficial Google de enlaces y políticas de spam, y documentación Cloudflare Pages de redirecciones.
+- Actualizados `PENDIENTES.md` y `PUBLICACION.md`, distinguiendo aprobaciones recibidas, cambios ejecutados y pendientes externos.
+- Verificaciones: compilación/TypeScript sin errores, advertencias ni sugerencias; auditoría técnica correcta; prólogo correcto en HTML/Markdown, cuatro enlaces FAQ y ocho reglas verificadas. Chrome a 1440, 390 y 768 px sin desbordes ni errores de JavaScript, menú y FAQ operativos. `git diff --check` correcto.
+- La usuaria autoriza integrar feature-vico en main al concluir. Remoto consultado antes de integrar; main incluye un commit ajeno que debe preservarse. La publicación, cuentas Google/Cloudflare y DNS/correo siguen pendientes; no se enviaron mensajes a terceros ni se contrataron servicios.
+
+
+## 2026-10-17 — Integración de feature-vico en main
+
+- Integradas las mejoras verificadas de feature-vico en main mediante merge, preservando el commit de conversión académica que existía únicamente en main y su archivo de salida.
+- Único conflicto en Decisiones.md: ambas ramas añadían entradas al final. Resuelto conservando íntegramente ambas series de entradas, sin descartar decisiones ni cambios ajenos. No hubo conflictos de código.
+- Conservados los archivos ya versionados de la rama de origen; el respaldo HTTP nuevo continúa excluido de Git.
+- Comprobaciones previas: compilación y auditoría técnica correctas y prueba de navegador satisfactoria. Tras resolver el conflicto se repiten compilación/auditoría y se verifica que main conserve ambos historiales y el archivo académico.
+- La integración comparte código y no constituye publicación ni cambio de dominio. Quedan pendientes acceso administrativo, copia completa del hosting, URL temporal de Pages, revisión final, DNS/correo y activación de Google.

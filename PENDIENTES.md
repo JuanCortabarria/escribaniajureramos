@@ -31,3 +31,43 @@
 - **PENDIENTE — aprobación final:** la usuaria es la profesional responsable y aprobará la versión final. Solicitó tenerla lista de inmediato para revisar.
 
 No hay testimonios, calificaciones, precios ni resultados inventados. La página actual y el dominio no se modificaron.
+
+## Libro de la escribana · 16/10/2026
+
+- Incorporadas la primera y tercera imágenes adjuntas por la usuaria: miniatura en la biografía y fotografía en la página independiente `/libro/`, que abre en una pestaña nueva. El relato completo se retiró de la portada. La segunda queda como alternativa y no se publica en la web.
+- Texto en primera persona redactado a partir de los motivos aportados por la usuaria: trayectoria, mentor y pasión por el tema. Título, autoría, editorial y prólogo tomados de la cubierta. Pendiente aprobación de la redacción final por Solange; sin inventar nombre del mentor, fechas ni duración de investigación.
+- A pedido de la usuaria, sustituida la frase técnica «En sus páginas estudio…» y corregida la editorial visible a «Cátedra Jurídica».
+
+## Cierre de publicación — revisión del 17/10/2026
+
+Este apartado actualiza el estado de publicación; las referencias anteriores a recuadros e imágenes corresponden a etapas previas del diseño. La portada actual tiene el acceso a servicios sobre la foto y el libro recortado junto a las credenciales.
+
+- **COMPROBADO:** los tres repositorios de referencia están clonados y coinciden con su HEAD remoto actual. `schema-dts` está integrado; JSON-LD, sitemap, robots, Markdown y los siete enlaces de llms.txt pasan la revisión local.
+- **COMPROBADO:** compilación sin errores y revisión funcional de portada/cinco servicios en navegador. Lighthouse móvil local final: 95 rendimiento, 100 accesibilidad, 100 buenas prácticas y 100 SEO técnico. Se corrigieron etiquetas accesibles de contadores, libro y servicios. La prueba no certifica posicionamiento ni sustituye la validación en producción.
+- **P0 — LIBRO:** la miniatura generada contiene un nombre de autora y un segundo prologuista que no coinciden con `src/config/book.ts`. Reemplazar por una cubierta real o recurso bibliográfico verificado y confirmar autoría/prólogo/editorial con Solange. No tomar textos recreados por IA como fuente bibliográfica.
+- **P0 — DOMINIO/DNS:** confirmar titular, vencimiento y control de NIC Argentina; obtener inventario y respaldo de DNS/correos/alojamiento anterior. No se verificó aún desde una cuenta autenticada.
+- **P0 — CONTENIDO:** aprobación final de textos, trayectoria ampliada, dirección, pin de Maps y permisos de imágenes sigue pendiente.
+- **P0 — MIGRACIÓN:** inventariar URLs antiguas e implementar/probar redirecciones de `/areas-practica`, `/jure-ramos` y `/contacto` y otras que aparezcan en el inventario. Las rutas se detectaron en el menú viejo; no se implementaron redirecciones nuevas en esta revisión.
+- **P0 — VERSIÓN Y PUBLICACIÓN:** revisar la URL temporal de la versión de `feature-vico`, integrar la versión aprobada a producción y solo entonces conectar el dominio. La rama main no debe suponerse actualizada.
+- **P1 — VALIDACIÓN PÚBLICA:** HTTPS, correo, DNS, redirecciones, 404, canonical, robots, sitemap, JSON-LD y velocidad en el dominio real; realizar prueba humana de recepción por WhatsApp. La revisión no envió mensajes.
+- **P1 — GOOGLE:** recuperar/configurar Search Console y Perfil de Empresa existente; mantener datos y horarios coherentes. Google Analytics continúa sin activar, según decisión previa.
+
+Guía detallada, costos oficiales y responsabilidades en `PUBLICACION.md`. Recomendación propuesta: conservar escribaniajureramos.com.ar y Cloudflare Pages Free; no se contrató, pagó ni publicó ningún servicio.
+
+
+## Actualización confirmada por la usuaria — 17/10/2026
+
+Este apartado prevalece sobre los pendientes históricos anteriores.
+
+- **CONFIRMADO:** fotografías y ubicación del mapa correctas. Mantenerlas.
+- **CONFIRMADO:** conservar por ahora los textos profesionales actuales; habrá correcciones posteriores.
+- **CORREGIDO:** prólogo escrito a Fernando Pérez Hualde y Juan F. Klaps, confirmado expresamente. La configuración alimenta HTML y Markdown. No se modifica la impresión de las imágenes; la diferencia tipográfica de la autoría de la miniatura sigue siendo un detalle de esa recreación.
+- **PREPARADO:** ocho redirecciones permanentes en `public/_redirects`, para las cuatro rutas antiguas detectadas y sus variantes con barra final. Aplicación HTTP pendiente de Cloudflare Pages; no la realiza Astro local.
+- **EJECUTADO:** enlaces desde las FAQ de portada a sus páginas de inmuebles y certificaciones, también en Markdown. Plan de ampliación de contenido en `SEO-LOCAL.md`; sus nuevas rutas propuestas no se publicaron.
+- **CONFIRMADO:** conservar dominio y seguir con Search Console y medición de visitas en Google. Requiere recuperar o configurar las cuentas e identificadores reales; no hay rastreadores añadidos aún.
+- **AUTORIZADO:** integrar feature-vico en main al cerrar comprobaciones. La publicación y los cambios DNS se hacen después de revisar una URL temporal y preservar el correo.
+- **PENDIENTE ADMINISTRATIVO:** titular/vencimiento/permisos NIC, exportación de DNS, dependencias de correo y respaldo completo del alojamiento anterior. No enviar contraseñas ni guardar secretos en Git.
+
+### Integración de ramas
+
+La integración en main se ejecuta en este cierre, conservando el historial y el archivo académico que estaban únicamente en main. La validación pública y conexión de Cloudflare siguen pendientes; main no equivale a web publicada.

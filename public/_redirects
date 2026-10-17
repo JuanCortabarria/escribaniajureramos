@@ -1,0 +1,9 @@
+# Legacy public URLs. Cloudflare Pages applies these permanent redirects.
+/areas-practica /#servicios 301
+/areas-practica/ /#servicios 301
+/jure-ramos /#escribana 301
+/jure-ramos/ /#escribana 301
+/contacto /#ubicacion 301
+/contacto/ /#ubicacion 301
+/sala /#ubicacion 301
+/sala/ /#ubicacion 301

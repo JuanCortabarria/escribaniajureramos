@@ -104,3 +104,9 @@ export const servicePages: ServicePage[] = [
 export const servicePath = (service: ServicePage) => `/servicios/${service.slug}/`;
 export const serviceMarkdownPath = (service: ServicePage) => `/servicios/${service.slug}.md`;
 export const serviceWhatsApp = (service: ServicePage) => `${site.whatsappUrl}%20Mi%20consulta%20es%20sobre%20${encodeURIComponent(service.title)}.`;
+
+// Contextual links from the existing home FAQ to the relevant service page.
+export const faqServiceLink = (index: number) => {
+  const page = index <= 2 ? servicePages[0] : index === 4 ? servicePages[1] : undefined;
+  return page ? { href: servicePath(page), label: page.title } : undefined;
+};

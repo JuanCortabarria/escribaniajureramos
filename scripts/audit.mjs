@@ -45,6 +45,20 @@ for (const slug of ['escrituras-inmuebles','certificaciones','sociedades','famil
   assert.ok(page.includes('href="/#escribana"') && page.includes('href="/#servicios"'));
 }
 
+// The publication has its own page; only the teaser belongs on the home page.
+const bookHtml=await readFile('dist/libro/index.html','utf8');
+const bookMarkdown=await readFile('dist/libro.md','utf8');
+const bookGraph=JSON.parse(bookHtml.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
+const publication=bookGraph['@graph'].find(node=>node['@type']==='Book');
+assert.ok(publication && !bookGraph['@graph'].some(node=>node['@type']==='FAQPage'));
+assert.equal((bookHtml.match(/<h1\b/g)||[]).length,1);
+assert.ok(html.includes('href="/libro/"') && !html.includes('id="libro"'));
+assert.ok(!html.includes('Mi trayectoria, la influencia de mi mentor'));
+assert.ok(bookMarkdown.includes(publication.name) && bookHtml.includes('Cátedra Jurídica'));
+assert.ok(!bookHtml.includes('En sus páginas estudio'));
+assert.ok(bookHtml.includes('href="/libro.md"') && sitemap.includes(publication.url));
+assert.ok(llms.includes('/libro.md'));
+
 const report={date:new Date().toISOString(),status:'passed',checks:['H1 único','JSON-LD parseable con cuatro entidades tipadas','Contacto coherente entre HTML y schema','6 FAQ visibles y en Markdown','Anclas internas y recursos presentes','robots, sitemap, llms.txt, Markdown y 404 generados','Sin iframe inicial ni rastreadores externos','Cinco páginas enlazadas e incluidas en sitemap','FAQ específicas coinciden entre HTML, JSON-LD y Markdown','Horarios y navegación a la portada coherentes']};
 await writeFile('artifacts/auditoria-tecnica.json',JSON.stringify(report,null,2));
 console.log('Auditoría técnica: todas las verificaciones pasaron.');

@@ -11,6 +11,10 @@ Atención para particulares, empresas e inmobiliarias. Consultas y presupuestos 
 
 - [Servicios, trayectoria y contacto](${site.url}/index.md): Contenido de la portada, ubicación, horarios y preguntas generales.
 
+## Publicación de la escribana
+
+- [Libro de María Solange Jure Ramos](${site.url}/libro.md): Obra y relato de la autora.
+
 ## Servicios
 
 ${servicePages.map(service=>`- [${service.title}](${site.url}${serviceMarkdownPath(service)}): Actuaciones, modalidad de atención y consultas frecuentes.`).join('\n')}

@@ -1,5 +1,6 @@
-import type { Thing, Graph, Notary, Person, WebSite, WebPage, Service, BreadcrumbList, FAQPage } from 'schema-dts';
+import type { Thing, Graph, Notary, Person, WebSite, WebPage, Service, BreadcrumbList, FAQPage, Book } from 'schema-dts';
 import { site } from '../config/site';
+import { book } from '../config/book';
 import type { ServicePage } from '../config/service-pages';
 
 export function structuredData(canonical: string, title: string, service?: ServicePage): Graph {
@@ -14,14 +15,19 @@ export function structuredData(canonical: string, title: string, service?: Servi
   const website: WebSite = { '@type': 'WebSite', '@id': `${site.url}/#website`, name: site.name, url: site.url, inLanguage: 'es-AR', publisher: { '@id': `${site.url}/#escribania` } };
   const nodes: Thing[] = [business, person, website];
   const home = canonical === `${site.url}/`;
-  if (home || service) {
-    const page: WebPage = { '@type': 'WebPage', '@id': `${canonical}#webpage`, url: canonical, name: title, inLanguage: 'es-AR', isPartOf: { '@id': `${site.url}/#website` }, about: { '@id': service ? `${canonical}#service` : `${site.url}/#escribania` } };
+  const bookPage = canonical === `${site.url}/libro/`;
+  if (home || service || bookPage) {
+    const page: WebPage = { '@type': 'WebPage', '@id': `${canonical}#webpage`, url: canonical, name: title, inLanguage: 'es-AR', isPartOf: { '@id': `${site.url}/#website` }, about: { '@id': service ? `${canonical}#service` : bookPage ? `${canonical}#book` : `${site.url}/#escribania` } };
     nodes.push(page);
-    const faqs = service ? service.faq : site.faq;
+    const faqs = service ? service.faq : home ? site.faq : [];
     if (faqs.length) {
       const faq: FAQPage = { '@type': 'FAQPage', '@id': `${canonical}#preguntas`, isPartOf: { '@id': `${canonical}#webpage` }, mainEntity: faqs.map(item => ({ '@type': 'Question', name: item.q, acceptedAnswer: { '@type': 'Answer', text: item.a } })) };
       nodes.push(faq);
     }
+  }
+  if (bookPage) {
+    const publication: Book = { '@type': 'Book', '@id': `${canonical}#book`, name: book.title, author: { '@id': `${site.url}/#solange` }, publisher: { '@type': 'Organization', name: book.publisher }, url: canonical, image: `${site.url}/images/libro-cafe-1000.webp`, inLanguage: 'es-AR' };
+    nodes.push(publication);
   }
   if (service) {
     const entity: Service = { '@type': 'Service', '@id': `${canonical}#service`, name: service.title, description: service.introduction, url: canonical, provider: { '@id': `${site.url}/#escribania` }, areaServed: { '@type': 'City', name: 'Córdoba' } };

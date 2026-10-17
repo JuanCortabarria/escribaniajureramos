@@ -1,0 +1,15 @@
+/* Prefix utilities and omit Preflight to preserve the established Astro pages. */
+@layer theme, base, components, utilities;
+@import 'tailwindcss/theme.css' layer(theme) prefix(tw);
+@import 'tailwindcss/utilities.css' layer(utilities) prefix(tw);
+
+.hero-title-viewport{position:relative;display:block;height:2.35em;overflow:clip}
+.hero-title-slide{position:absolute;inset:0;display:block;padding-block:.1em}
+.hero-title-slide--name em{white-space:nowrap}
+.hero-actions{margin-top:26px;align-items:center}
+.hero-action{font-size:12px;line-height:1.5;text-decoration:none;color:var(--color-dark-bg)}
+.hero-phone-icon{flex-shrink:0}
+.hero .hero-person{margin-top:22px}
+@media(max-width:1050px){.hero-action{padding:14px 18px}}
+@media(max-width:760px){.hero .hero-description{margin-top:22px}.hero-actions{margin-top:22px}.hero-action{padding:14px 18px}.hero .hero-person{margin-top:20px}}
+@media(max-width:360px){.hero-action{padding:13px 15px;font-size:11px}}

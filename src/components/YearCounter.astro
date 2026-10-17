@@ -2,11 +2,13 @@
 interface Props { year: number; prefix?: string }
 const { year, prefix = 'Desde' } = Astro.props;
 ---
-<span class="year-counter" data-year-counter={year} aria-label={`Desde ${year}`}>
+<span class="year-counter" data-year-counter={year}>
+  <span class="year-accessible">{prefix} {year}</span>
   <span aria-hidden="true">{prefix} <span class="year-value">{year}</span></span>
 </span>
 
 <style>
+  .year-accessible { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
   .year-value { display: inline-block; min-width: 4ch; font-variant-numeric: tabular-nums; }
 </style>
 
