@@ -5,6 +5,8 @@ import Footer from '../components/Footer.astro';
 import { consultation, servicePages, servicePath } from '../config/service-pages';
 import Icon from '../components/Icon.astro';
 import YearCounter from '../components/YearCounter.astro';
+import { Hero } from '../components/ui/animated-hero';
+import '../styles/hero-ui.css';
 import BookTeaser from '../components/BookTeaser.astro';
 import '../styles/book.css';
 import { site } from '../config/site';
@@ -17,10 +19,7 @@ import '../styles/motion.css';
 <main id="contenido">
 <section class="hero" aria-labelledby="hero-title"><div class="container hero-grid">
  <div class="hero-copy"><p class="eyebrow light"><span class="line"></span> CÓRDOBA · <YearCounter year={site.since} prefix="DESDE"/></p>
- <h1 id="hero-title"><span class="title-line"><span data-title-line>Escribanía en</span></span> <span class="title-line"><em data-title-line>Nueva Córdoba.</em></span></h1>
- <p class="hero-description">Asesoramiento notarial y legal general.</p>
- <a class="button button-gold" href={site.whatsappUrl} target="_blank" rel="noopener noreferrer">Coordiná tu consulta <Icon name="arrow" size={19}/></a>
- <p class="hero-person">Esc. Solange Jure Ramos <span>Registro Notarial N.º 132</span></p>
+ <Hero client:load whatsappUrl={site.whatsappUrl} phoneHref={site.phoneHref} person={site.person} registration={site.registration}/>
  </div>
  <div class="hero-visual"><div class="photo-frame"><picture><source srcset="/images/portada-jure-ramos-420.avif 420w, /images/portada-jure-ramos-800.avif 800w" sizes="(max-width: 760px) calc(100vw - 65px), 500px" type="image/avif"/><source srcset="/images/portada-jure-ramos-420.webp 420w, /images/portada-jure-ramos-800.webp 800w" sizes="(max-width: 760px) calc(100vw - 65px), 500px" type="image/webp"/><img src="/images/portada-jure-ramos.jpg" alt="Interior de oficina con escritorio, sillas y el nombre Jure Ramos en la pared" width="1122" height="1402" fetchpriority="high"/></picture></div><div class="services-jump-group"><a class="services-jump continuous-motion" href="#servicios"><span class="services-jump-copy"><strong>Conocé nuestros servicios</strong><span>Inmuebles · Certificaciones · Sociedades</span></span><Icon name="down" size={24}/></a><button class="motion-toggle" type="button" data-motion-toggle aria-pressed="false" hidden>Pausar movimiento</button></div></div>
 </div><div class="container hero-bottom"><span>PARTICULARES · EMPRESAS · INMOBILIARIAS</span></div></section>

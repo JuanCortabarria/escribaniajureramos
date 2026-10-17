@@ -1,0 +1,70 @@
+import { chromium } from 'playwright';
+import assert from 'node:assert/strict';
+import { writeFile } from 'node:fs/promises';
+const base = process.env.QA_BASE_URL || 'http://127.0.0.1:4322';
+const browser = await chromium.launch({ channel: 'chrome', headless: true });
+const results = [];
+try {
+  for (const width of [1440, 768, 390, 320]) {
+    const page = await browser.newPage({ viewport: { width, height: 1000 } });
+    const errors = [];
+    page.on('pageerror', error => errors.push(error.message));
+    page.on('console', message => { if (message.type() === 'error') errors.push(message.text()); });
+    await page.goto(base, { waitUntil: 'networkidle' });
+    const pause = page.locator('.hero-rotation-toggle');
+    await pause.waitFor();
+    assert.equal(await page.locator('h1').count(), 1);
+    assert.match(await page.locator('h1').innerText(), /Escribanía en\s+Nueva Córdoba/);
+    const word = page.locator('.hero-rotating-word');
+    const initial = await word.getAttribute('data-current-area');
+    await page.waitForFunction(value => document.querySelector('.hero-rotating-word')?.getAttribute('data-current-area') !== value, initial, { timeout: 6000 });
+    await pause.click();
+    assert.equal(await pause.getAttribute('aria-pressed'), 'true');
+    assert.ok(await page.locator('[data-motion-toggle]').evaluateAll(elements => elements.every(e => e.getAttribute('aria-pressed') === 'true')));
+    const stable = await word.getAttribute('data-current-area');
+    await page.waitForTimeout(3100);
+    assert.equal(await word.getAttribute('data-current-area'), stable);
+    assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+    assert.ok((await page.locator('.hero-actions a').first().getAttribute('href')).startsWith('https://wa.me/'));
+    assert.ok((await page.locator('.hero-call').getAttribute('href')).startsWith('tel:'));
+    await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
+    await page.screenshot({ path: `artifacts/hero-react-${width}.png` });
+    await page.locator('.hero-visual .services-jump').click();
+    await page.waitForURL('**/#servicios');
+    assert.equal(await page.locator('.service-card').count(), 5);
+    assert.deepEqual(errors, []);
+    results.push({ width, rotates: true, pause: true, synchronized: true, overflow: false, errors });
+    await page.close();
+  }
+  for (const options of [{ reducedMotion: 'reduce' }, { javaScriptEnabled: false }]) {
+    const page = await browser.newPage(options);
+    await page.goto(base, { waitUntil: 'networkidle' });
+    const word = page.locator('.hero-rotating-word');
+    const initial = await word.innerText();
+    await page.waitForTimeout(3100);
+    assert.equal(await word.innerText(), initial);
+    assert.ok(await page.locator('h1').isVisible());
+    assert.equal(await page.locator('.hero-actions a').count(), 2);
+    assert.equal(await page.locator('.hero-rotation-toggle').count(), 0);
+    results.push({ options, staticContent: true, realLinks: true });
+    await page.close();
+  }
+  const page = await browser.newPage();
+  await page.goto(base, { waitUntil: 'networkidle' });
+  await page.locator('.hero-rotation-toggle').waitFor();
+  await page.locator('.hero-visual [data-motion-toggle]').click();
+  await page.waitForFunction(() => document.querySelector('.hero-rotation-toggle')?.getAttribute('aria-pressed') === 'true');
+  await page.locator('.hero-rotation-toggle').press('Enter');
+  await page.waitForFunction(() => document.documentElement.dataset.motionPaused === 'false');
+  const area = await page.locator('.hero-rotating-word').getAttribute('data-current-area');
+  await page.waitForFunction(value => document.querySelector('.hero-rotating-word')?.getAttribute('data-current-area') !== value, area, { timeout: 6000 });
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.waitForTimeout(400);
+  const stable = await page.locator('.hero-rotating-word').innerText();
+  await page.waitForTimeout(3100);
+  assert.equal(await page.locator('.hero-rotating-word').innerText(), stable);
+  results.push({ externalPause: true, keyboardResume: true, dynamicReducedMotion: true });
+  await page.close();
+  await writeFile('artifacts/hero-react-qa.json', JSON.stringify(results, null, 2));
+  console.log(JSON.stringify(results));
+} finally { await browser.close(); }

@@ -9,17 +9,33 @@
     "preview": "astro preview --host 127.0.0.1",
     "audit": "node scripts/audit.mjs",
     "audit:browser": "node scripts/browser-qa.mjs",
-    "audit:services": "node scripts/services-qa.mjs"
+    "audit:services": "node scripts/services-qa.mjs",
+    "audit:hero": "node scripts/hero-qa.mjs"
   },
   "dependencies": {
+    "@astrojs/react": "7.0.0",
     "@astrojs/sitemap": "^3.0.0",
     "@fontsource/cormorant-garamond": "^5.0.0",
     "@fontsource/inter": "^5.0.0",
+    "@radix-ui/react-slot": "^1.5.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "@vitejs/plugin-react": "6.1.1",
     "astro": "^7.3.8",
-    "schema-dts": "^1.1.5"
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^14.3.0",
+    "lucide-react": "^1.59.0",
+    "oxc-transform-react": "^0.145.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "schema-dts": "^1.1.5",
+    "tailwind-merge": "^3.7.0",
+    "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
     "playwright": "^1.64.0",
     "typescript": "^5.0.0"
   },

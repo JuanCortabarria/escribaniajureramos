@@ -1,3 +1,5 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-export default defineConfig({ site: 'https://escribaniajureramos.com.ar', integrations: [sitemap()], output: 'static', devToolbar: { enabled: false } });
+import react from '@astrojs/react';
+import tailwindcss from '@tailwindcss/vite';
+export default defineConfig({ site: 'https://escribaniajureramos.com.ar', integrations: [sitemap(), react()], output: 'static', vite: { plugins: [tailwindcss()] }, devToolbar: { enabled: false } });

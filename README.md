@@ -61,3 +61,15 @@ La información se edita en `src/config/service-pages.ts`, incluyendo las reglas
 La miniatura de la biografía abre `/libro/` en una pestaña nueva. El relato y datos se editan en `src/config/book.ts`; `/libro.md` ofrece la misma información en Markdown. La página incluye datos estructurados del libro y aparece en el sitemap.
 
 `src/styles/page-transitions.css` habilita transiciones nativas de 200 ms entre páginas en navegadores compatibles. Los efectos continuos del acceso a servicios y del título de FAQ pueden pausarse con sus controles sincronizados. El dispositivo con movimiento reducido los muestra estáticos. La preferencia de pausa se aplica a la página actual y se reinicia al volver a cargarla.
+
+### Portada animada (React)
+
+La portada incorpora una isla React con renderizado HTML inicial en Astro; no se migra el resto del sitio. El componente del prompt está adaptado en `src/components/ui/animated-hero.tsx`: título fijo y áreas de práctica rotativas en español. La ubicación `src/components/ui` sigue la estructura del proyecto dentro de `src`; el alias `@/components/ui` apunta allí. `components.json` registra esa estructura para componentes shadcn.
+
+`src/components/ui/button.tsx` contiene el botón reutilizable de estilo shadcn, con Radix Slot y variantes. `src/lib/utils.ts` resuelve clases. Tailwind se integra mediante su complemento de Vite y `src/styles/hero-ui.css`, con prefijo `tw:` y sin Preflight para conservar los estilos existentes. TypeScript configura el alias `@/*` y JSX de React.
+
+La instalación habitual (`npm install`) prepara las dependencias; `npm run dev` abre la versión local. No es necesario volver a ejecutar el asistente de shadcn. Para conservar compatibilidad entre sus dependencias, la integración React y su complemento de Vite están fijados en versiones compatibles en `package.json`.
+
+La rotación se detiene al pausar movimiento desde cualquiera de los controles, al ocultar la pestaña o al salir la portada de pantalla. Con movimiento reducido se muestra una palabra estable. Sin JavaScript permanecen visibles el título, descripción, área inicial y enlaces reales. La foto de portada y el acceso a servicios se conservan; no se incorporan imágenes de stock ni textos comerciales del ejemplo.
+
+Verificación específica de esta portada: `npm run audit:hero` (servidor local en 4322; se puede cambiar con `QA_BASE_URL`). Las capturas y resultados quedan en `artifacts/`.
