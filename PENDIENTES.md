@@ -37,3 +37,19 @@ No hay testimonios, calificaciones, precios ni resultados inventados. La página
 - Incorporadas la primera y tercera imágenes adjuntas por la usuaria: miniatura en la biografía y fotografía en la página independiente `/libro/`, que abre en una pestaña nueva. El relato completo se retiró de la portada. La segunda queda como alternativa y no se publica en la web.
 - Texto en primera persona redactado a partir de los motivos aportados por la usuaria: trayectoria, mentor y pasión por el tema. Título, autoría, editorial y prólogo tomados de la cubierta. Pendiente aprobación de la redacción final por Solange; sin inventar nombre del mentor, fechas ni duración de investigación.
 - A pedido de la usuaria, sustituida la frase técnica «En sus páginas estudio…» y corregida la editorial visible a «Cátedra Jurídica».
+
+## Cierre de publicación — revisión del 17/10/2026
+
+Este apartado actualiza el estado de publicación; las referencias anteriores a recuadros e imágenes corresponden a etapas previas del diseño. La portada actual tiene el acceso a servicios sobre la foto y el libro recortado junto a las credenciales.
+
+- **COMPROBADO:** los tres repositorios de referencia están clonados y coinciden con su HEAD remoto actual. `schema-dts` está integrado; JSON-LD, sitemap, robots, Markdown y los siete enlaces de llms.txt pasan la revisión local.
+- **COMPROBADO:** compilación sin errores y revisión funcional de portada/cinco servicios en navegador. Lighthouse móvil local final: 95 rendimiento, 100 accesibilidad, 100 buenas prácticas y 100 SEO técnico. Se corrigieron etiquetas accesibles de contadores, libro y servicios. La prueba no certifica posicionamiento ni sustituye la validación en producción.
+- **P0 — LIBRO:** la miniatura generada contiene un nombre de autora y un segundo prologuista que no coinciden con `src/config/book.ts`. Reemplazar por una cubierta real o recurso bibliográfico verificado y confirmar autoría/prólogo/editorial con Solange. No tomar textos recreados por IA como fuente bibliográfica.
+- **P0 — DOMINIO/DNS:** confirmar titular, vencimiento y control de NIC Argentina; obtener inventario y respaldo de DNS/correos/alojamiento anterior. No se verificó aún desde una cuenta autenticada.
+- **P0 — CONTENIDO:** aprobación final de textos, trayectoria ampliada, dirección, pin de Maps y permisos de imágenes sigue pendiente.
+- **P0 — MIGRACIÓN:** inventariar URLs antiguas e implementar/probar redirecciones de `/areas-practica`, `/jure-ramos` y `/contacto` y otras que aparezcan en el inventario. Las rutas se detectaron en el menú viejo; no se implementaron redirecciones nuevas en esta revisión.
+- **P0 — VERSIÓN Y PUBLICACIÓN:** revisar la URL temporal de la versión de `feature-vico`, integrar la versión aprobada a producción y solo entonces conectar el dominio. La rama main no debe suponerse actualizada.
+- **P1 — VALIDACIÓN PÚBLICA:** HTTPS, correo, DNS, redirecciones, 404, canonical, robots, sitemap, JSON-LD y velocidad en el dominio real; realizar prueba humana de recepción por WhatsApp. La revisión no envió mensajes.
+- **P1 — GOOGLE:** recuperar/configurar Search Console y Perfil de Empresa existente; mantener datos y horarios coherentes. Google Analytics continúa sin activar, según decisión previa.
+
+Guía detallada, costos oficiales y responsabilidades en `PUBLICACION.md`. Recomendación propuesta: conservar escribaniajureramos.com.ar y Cloudflare Pages Free; no se contrató, pagó ni publicó ningún servicio.

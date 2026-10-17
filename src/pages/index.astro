@@ -33,7 +33,7 @@ import '../styles/motion.css';
  <div class="section-heading"><div><p class="eyebrow">04 / ÁREAS DE PRÁCTICA</p><h2 id="services-title">Servicios notariales</h2></div></div>
  <div class="services-grid">{site.services.map((service,i)=> {
    const detail = servicePages.find(page=>page.serviceIndex===i)!;
-   return <a class="service-card" href={servicePath(detail)} aria-labelledby={`service-title-${i}`}>
+   return <a class="service-card" href={servicePath(detail)}>
      <div class="card-top"><Icon name={service.icon} size={28}/><span>0{i+1}</span></div>
      <p class="service-label">{service.label}</p><h3 id={`service-title-${i}`}>{service.title}</h3>
      <span class="card-navigation" aria-hidden="true"><Icon name="arrow" size={22}/></span>
