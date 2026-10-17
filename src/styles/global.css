@@ -7,3 +7,5 @@
 
 /* Keep the signing gesture visible above the photo caption. */
 .hero-visual .photo-note{bottom:-18px}
+
+.faq-service-link{display:flex;align-items:center;gap:10px;width:fit-content;margin-top:15px;text-decoration:underline;text-underline-offset:4px;color:var(--color-text);font-weight:600}.faq-service-link svg{flex-shrink:0}

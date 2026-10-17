@@ -53,3 +53,17 @@ Este apartado actualiza el estado de publicación; las referencias anteriores a 
 - **P1 — GOOGLE:** recuperar/configurar Search Console y Perfil de Empresa existente; mantener datos y horarios coherentes. Google Analytics continúa sin activar, según decisión previa.
 
 Guía detallada, costos oficiales y responsabilidades en `PUBLICACION.md`. Recomendación propuesta: conservar escribaniajureramos.com.ar y Cloudflare Pages Free; no se contrató, pagó ni publicó ningún servicio.
+
+
+## Actualización confirmada por la usuaria — 17/10/2026
+
+Este apartado prevalece sobre los pendientes históricos anteriores.
+
+- **CONFIRMADO:** fotografías y ubicación del mapa correctas. Mantenerlas.
+- **CONFIRMADO:** conservar por ahora los textos profesionales actuales; habrá correcciones posteriores.
+- **CORREGIDO:** prólogo escrito a Fernando Pérez Hualde y Juan F. Klaps, confirmado expresamente. La configuración alimenta HTML y Markdown. No se modifica la impresión de las imágenes; la diferencia tipográfica de la autoría de la miniatura sigue siendo un detalle de esa recreación.
+- **PREPARADO:** ocho redirecciones permanentes en `public/_redirects`, para las cuatro rutas antiguas detectadas y sus variantes con barra final. Aplicación HTTP pendiente de Cloudflare Pages; no la realiza Astro local.
+- **EJECUTADO:** enlaces desde las FAQ de portada a sus páginas de inmuebles y certificaciones, también en Markdown. Plan de ampliación de contenido en `SEO-LOCAL.md`; sus nuevas rutas propuestas no se publicaron.
+- **CONFIRMADO:** conservar dominio y seguir con Search Console y medición de visitas en Google. Requiere recuperar o configurar las cuentas e identificadores reales; no hay rastreadores añadidos aún.
+- **AUTORIZADO:** integrar feature-vico en main al cerrar comprobaciones. La publicación y los cambios DNS se hacen después de revisar una URL temporal y preservar el correo.
+- **PENDIENTE ADMINISTRATIVO:** titular/vencimiento/permisos NIC, exportación de DNS, dependencias de correo y respaldo completo del alojamiento anterior. No enviar contraseñas ni guardar secretos en Git.

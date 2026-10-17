@@ -164,3 +164,12 @@ Medición aislada local de producción con Lighthouse 13.5.0 del 17/10/2026, des
 Se corrigieron dos clases de hallazgos, sin cambiar el diseño: (1) etiquetas ARIA no admitidas en spans genéricos de los contadores, sustituidas por texto accesible estable; (2) nombres accesibles que omitían parte de la etiqueta visible en el acceso al libro y en las tarjetas de servicios. El nombre del libro ahora forma parte del nombre accesible y las tarjetas usan el nombre natural de todo su contenido visible.
 
 Informes locales: `artifacts/publicacion-lighthouse-mobile.report.html` y `.report.json`. La primera pasada se conserva como `publicacion-lighthouse-mobile-inicial.report.*`. Los informes detallan oportunidades de mejorar imágenes, CSS y JavaScript; se puede seguir optimizando el LCP. La publicación sigue pendiente de los puntos de contenido, dominio, redirecciones y validación pública descritos arriba.
+
+
+## Actualización de decisiones — 17/10/2026
+
+La usuaria aprobó las fotografías y el mapa, pidió mantener los textos profesionales actuales y confirmó el prólogo «Fernando Pérez Hualde y Juan F. Klaps», ya corregido en la ficha. Estas decisiones actualizan las solicitudes de aprobación previas del documento. Las imágenes se conservan; la recreación de la miniatura sigue teniendo una autoría impresa diferente.
+
+Ya están preparadas ocho reglas en `public/_redirects`, incluidas `/sala` y las variantes con barra final. Esto sustituye la nota anterior de que no había reglas: falta probarlas por HTTP en Pages. Se sumaron enlaces contextuales desde FAQ a servicios. El plan de futuras páginas y el inventario de información administrativa están en `SEO-LOCAL.md`.
+
+La usuaria autoriza integrar `feature-vico` en `main` al terminar las comprobaciones y elige medición con Google. Aún faltan accesos de dominio/Cloudflare/Google y preservar DNS/correo antes de conectar el dominio. No hay etiquetas de analítica añadidas ni cambios de DNS.
