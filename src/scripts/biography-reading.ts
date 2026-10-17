@@ -28,13 +28,14 @@ if ('IntersectionObserver' in window) {
         return;
       }
       const count = element.querySelectorAll('.reading-character').length;
-      const step = Math.min(14, 3000 / Math.max(count, 1));
+      const step = Math.min(4, 1000 / Math.max(count, 1));
       const now = performance.now();
       const delay = Math.max(0, nextStart - now);
-      const duration = count * step + 140;
-      nextStart = now + delay + duration + 80;
+      const duration = count * step + 70;
+      nextStart = now + delay + duration + 35;
       element.style.setProperty('--reading-step', `${step}ms`);
       element.style.setProperty('--reading-delay', `${delay}ms`);
+      element.closest('li')?.style.setProperty('--reading-delay', `${delay}ms`);
       element.dataset.readingState = 'playing';
       pending.set(element, window.setTimeout(() => finish(element), delay + duration));
     });

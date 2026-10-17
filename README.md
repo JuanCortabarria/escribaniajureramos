@@ -74,6 +74,6 @@ La rotación se detiene al pausar movimiento desde cualquiera de los controles, 
 
 Verificación específica de esta portada: `npm run audit:hero` (servidor local en 4322; se puede cambiar con `QA_BASE_URL`). Las capturas y resultados quedan en `artifacts/`.
 
-La presentación y las cinco credenciales de la escribana se revelan letra por letra al entrar en pantalla, una sola vez y en orden de lectura. `ReadingText.astro` conserva una copia accesible completa; sin JavaScript o con movimiento reducido el texto aparece completo. Pausar movimiento termina el revelado activo y deja visible todo el texto.
+La presentación y las cinco credenciales de la escribana se revelan letra por letra al entrar en pantalla, una sola vez y en orden de lectura, con ritmo rápido de 4 ms por carácter. Cada tilde aparece al mismo tiempo que comienza su credencial. `ReadingText.astro` conserva una copia accesible completa; sin JavaScript o con movimiento reducido el texto aparece completo. Pausar movimiento termina el revelado activo y deja visible todo el texto.
 
 Verificación del revelado de biografía y de FAQ sin giro: `npm run audit:reading` (mismo servidor local y variable `QA_BASE_URL`).

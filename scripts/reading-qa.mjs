@@ -16,6 +16,11 @@ try {
     await page.waitForTimeout(180);
     const progress = await first.locator('.reading-character').evaluateAll(es => es.map(e => Number(getComputedStyle(e).opacity)));
     assert.ok(progress.some(v => v > .1)); assert.ok(progress.some(v => v === 0));
+    const ticks = await page.locator('.credentials li').evaluateAll(es => es.filter(e => e.querySelector('[data-reading-state="playing"]')).map(e => ({
+      tickDelay: getComputedStyle(e.querySelector('svg')).animationDelay,
+      textDelay: getComputedStyle(e.querySelector('.reading-character')).animationDelay,
+    })));
+    assert.ok(ticks.every(tick => tick.tickDelay === tick.textDelay));
     const before = await first.evaluate(e => e.getBoundingClientRect().height);
     await page.screenshot({ path: `artifacts/lectura-progreso-${width}.png` });
     for (let index = 1; index < 7; index++) { await roots.nth(index).scrollIntoViewIfNeeded(); await page.waitForTimeout(60); }
@@ -32,7 +37,7 @@ try {
     await page.locator('.faq-list summary').first().click(); await page.waitForTimeout(400);
     assert.equal(await page.locator('.faq-list details').first().getAttribute('open'), '');
     assert.deepEqual(errors, []);
-    results.push({ width, progressiveLetters: true, complete: true, noReplay: true, stableLayout: true, faqNoRotation: true, faqWorks: true, errors });
+    results.push({ width, progressiveLetters: true, complete: true, ticksSynchronized: true, noReplay: true, stableLayout: true, faqNoRotation: true, faqWorks: true, errors });
     await page.close();
   }
   for (const options of [{ reducedMotion: 'reduce' }, { javaScriptEnabled: false }]) {
