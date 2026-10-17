@@ -60,7 +60,7 @@ La información se edita en `src/config/service-pages.ts`, incluyendo las reglas
 
 La miniatura de la biografía abre `/libro/` en una pestaña nueva. El relato y datos se editan en `src/config/book.ts`; `/libro.md` ofrece la misma información en Markdown. La página incluye datos estructurados del libro y aparece en el sitemap.
 
-`src/styles/page-transitions.css` habilita transiciones nativas de 200 ms entre páginas en navegadores compatibles. Los efectos continuos del acceso a servicios y del título de FAQ pueden pausarse con sus controles sincronizados. El dispositivo con movimiento reducido los muestra estáticos. La preferencia de pausa se aplica a la página actual y se reinicia al volver a cargarla.
+`src/styles/page-transitions.css` habilita transiciones nativas de 200 ms entre páginas en navegadores compatibles. Los efectos continuos del acceso a servicios y del titular de portada pueden pausarse con el control de movimiento. El título de preguntas frecuentes permanece sin giro. El dispositivo con movimiento reducido los muestra estáticos. La preferencia de pausa se aplica a la página actual y se reinicia al volver a cargarla.
 
 ### Portada animada (React)
 
@@ -73,3 +73,7 @@ La instalación habitual (`npm install`) prepara las dependencias; `npm run dev`
 La rotación se detiene al pausar movimiento desde cualquiera de los controles, al ocultar la pestaña o al salir la portada de pantalla. Con movimiento reducido se muestra un titular estable. Sin JavaScript permanecen visibles el titular inicial con la ubicación, descripción y enlace real. La foto de portada y el acceso a servicios se conservan; no se incorporan imágenes de stock ni textos comerciales del ejemplo.
 
 Verificación específica de esta portada: `npm run audit:hero` (servidor local en 4322; se puede cambiar con `QA_BASE_URL`). Las capturas y resultados quedan en `artifacts/`.
+
+La presentación y las cinco credenciales de la escribana se revelan letra por letra al entrar en pantalla, una sola vez y en orden de lectura. `ReadingText.astro` conserva una copia accesible completa; sin JavaScript o con movimiento reducido el texto aparece completo. Pausar movimiento termina el revelado activo y deja visible todo el texto.
+
+Verificación del revelado de biografía y de FAQ sin giro: `npm run audit:reading` (mismo servidor local y variable `QA_BASE_URL`).

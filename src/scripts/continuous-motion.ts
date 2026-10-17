@@ -1,4 +1,4 @@
-// Two synchronized, keyboard-accessible controls pause the continuous effects.
+// Shared, keyboard-accessible controls pause the continuous effects.
 const controls = document.querySelectorAll<HTMLButtonElement>('[data-motion-toggle]');
 const syncControls = () => {
   const paused = document.documentElement.dataset.motionPaused === 'true';

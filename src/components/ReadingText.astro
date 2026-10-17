@@ -1,0 +1,5 @@
+---
+interface Props { text: string }
+const { text } = Astro.props;
+---
+<span class="reading-text" data-reading-text><span class="reading-accessible">{text}</span><span class="reading-visual" aria-hidden="true">{Array.from(text).map((character, index) => <span class="reading-character" style={`--reading-index:${index}`}>{character}</span>)}</span></span>

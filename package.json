@@ -10,7 +10,8 @@
     "audit": "node scripts/audit.mjs",
     "audit:browser": "node scripts/browser-qa.mjs",
     "audit:services": "node scripts/services-qa.mjs",
-    "audit:hero": "node scripts/hero-qa.mjs"
+    "audit:hero": "node scripts/hero-qa.mjs",
+    "audit:reading": "node scripts/reading-qa.mjs"
   },
   "dependencies": {
     "@astrojs/react": "7.0.0",
