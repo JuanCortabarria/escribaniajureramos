@@ -465,3 +465,11 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - Actualizado `src/components/BookTeaser.astro` con las nuevas rutas y el título completo desde `book.title`, debajo de la imagen. Añadido estilo en `src/styles/book.css`: cursiva de 11 px, interlineado 1,55 y color secundario. Tanto imagen como título forman parte del mismo enlace a `/libro/`.
 - Verificaciones: compilación y Astro check sin errores, advertencias ni sugerencias; Chrome a 1440, 390 y 320 px confirma carga de la nueva imagen, título en cursiva y ausencia de desbordes. En celular, clic tanto en imagen como en título abre el libro en pestaña nueva. Revisadas capturas `artifacts/libro-madera-titulo-*.png` en escritorio y celular. `git diff --check` correcto.
 - Sin pendientes de implementación; web local y rama `feature-vico`.
+
+## 2026-10-17 — Acceso a servicios en la esquina de la imagen principal
+
+- Retirado el cartel «Atención personalizada desde el primer encuentro.» de la portada. Movido el acceso existente «Conocé nuestros servicios / Inmuebles · Certificaciones · Sociedades» desde la franja inferior hasta la esquina inferior derecha de la fotografía principal, sin duplicarlo.
+- Conservados destino `#servicios`, paleta dorada, flecha, oscilación y control para pausar movimiento. Ajustada su entrada animada a la nueva ubicación y adaptado el ancho en celular. El nombre Jure Ramos en la fotografía permanece visible.
+- Archivos: `src/pages/index.astro`, `src/styles/book.css` y `src/scripts/home-motion.ts`.
+- Verificaciones: compilación y Astro check sin errores, advertencias ni sugerencias; Chrome a 1440, 768, 390 y 320 px confirma un único acceso, alineación al borde derecho de la foto, ausencia del cartel retirado y de desbordes, y navegación a `#servicios`. Control de pausa operativo con movimiento habilitado. Sin errores de JavaScript. Capturas de escritorio y celular revisadas en `artifacts/portada-servicios-esquina-*.png`. `git diff --check` correcto.
+- Sin pendientes de implementación. Se conserva el entorno local y la rama `feature-vico`.

@@ -34,7 +34,7 @@ if ('IntersectionObserver' in window && 'animate' in Element.prototype) {
       } else if (element.matches('.hero-visual img')) {
         animate(element, [{ transform: 'scale(1.018)' }, { transform: 'scale(1)' }],
           { duration: 800, easing });
-      } else if (element.matches('.hero-description, .hero-copy > .button, .hero-person, .hero-visual .photo-note')) {
+      } else if (element.matches('.hero-description, .hero-copy > .button, .hero-person, .hero-visual .services-jump-group')) {
         const delay = element.matches('.hero-copy > .button') ? 160
           : element.matches('.hero-person') ? 200 : 90;
         animate(element, [
@@ -57,7 +57,7 @@ if ('IntersectionObserver' in window && 'animate' in Element.prototype) {
     }
   }, { threshold: .12 });
 
-  document.querySelectorAll('#hero-title, #about-title, .hero-visual img, .hero-description, .hero-copy > .button, .hero-person, .hero-visual .photo-note, .portrait-wrap > picture, main h2:not(#about-title), .service-card, .service-help, .book-visual, .book-teaser')
+  document.querySelectorAll('#hero-title, #about-title, .hero-visual img, .hero-description, .hero-copy > .button, .hero-person, .hero-visual .services-jump-group, .portrait-wrap > picture, main h2:not(#about-title), .service-card, .service-help, .book-visual, .book-teaser')
     .forEach(element => observer.observe(element));
 
   // Preserve native details semantics and keyboard activation, including rapid toggles.
