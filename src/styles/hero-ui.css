@@ -3,17 +3,13 @@
 @import 'tailwindcss/theme.css' layer(theme) prefix(tw);
 @import 'tailwindcss/utilities.css' layer(utilities) prefix(tw);
 
-.hero-specialties{margin-top:24px;border-left:1px solid #d4b48370;padding-left:18px;max-width:390px}
-.hero-specialties-top{display:flex;align-items:center;justify-content:space-between;min-height:28px;gap:12px}
-.hero-specialties-top>span{font-size:9px;letter-spacing:1.7px;color:#bdc4d0;font-weight:500}
-.hero-rotation-toggle{width:28px;min-height:28px;height:28px;padding:5px;cursor:pointer}
-.hero-rotating-word{position:relative;overflow:clip;height:54px;display:flex;align-items:center;color:var(--color-accent-bright);font-family:var(--font-heading);font-style:italic;font-size:43px;line-height:1.1;letter-spacing:-.6px}
-.hero-rotating-word>span{display:block;white-space:nowrap}
-.hero-specialties-accessible{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.hero-title-viewport{position:relative;display:block;height:2.35em;overflow:clip}
+.hero-title-slide{position:absolute;inset:0;display:block;padding-block:.1em}
+.hero-title-slide--name{display:flex;align-items:center;gap:.2em;white-space:nowrap}
 .hero-actions{margin-top:26px;align-items:center}
 .hero-action{font-size:12px;line-height:1.5;text-decoration:none;color:var(--color-dark-bg)}
-.hero-call{font-size:11px;color:var(--color-dark-text)}
+.hero-phone-emoji{font-size:19px;line-height:1}
 .hero .hero-person{margin-top:22px}
-@media(max-width:1050px){.hero-action{padding:14px 18px}.hero-rotating-word{font-size:38px}}
-@media(max-width:760px){.hero-specialties{margin-top:24px;max-width:350px}.hero-rotating-word{font-size:38px;height:49px}.hero .hero-description{margin-top:22px}.hero-actions{margin-top:22px}.hero-action{padding:14px 18px}.hero .hero-person{margin-top:20px}}
-@media(max-width:360px){.hero-rotating-word{font-size:34px}.hero-action{padding:13px 15px;font-size:11px}.hero-call{font-size:10px}}
+@media(max-width:1050px){.hero-action{padding:14px 18px}}
+@media(max-width:760px){.hero .hero-description{margin-top:22px}.hero-actions{margin-top:22px}.hero-action{padding:14px 18px}.hero .hero-person{margin-top:20px}}
+@media(max-width:360px){.hero-action{padding:13px 15px;font-size:11px}}

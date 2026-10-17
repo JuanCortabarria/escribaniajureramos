@@ -1,17 +1,16 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { AnimatePresence, LazyMotion, domAnimation, m } from 'framer-motion';
-import { MoveRight, PhoneCall, Pause, Play } from 'lucide-react';
+import { MoveRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface HeroProps {
   whatsappUrl: string;
-  phoneHref: string;
   person: string;
   registration: string;
 }
 
 /** The supplied rotating-word hero, adapted to the notary's content and design. */
-function Hero({ whatsappUrl, phoneHref, person, registration }: HeroProps) {
+function Hero({ whatsappUrl, person, registration }: HeroProps) {
   const [titleNumber, setTitleNumber] = useState(0);
   const [paused, setPaused] = useState(false);
   const [inView, setInView] = useState(false);
@@ -19,7 +18,7 @@ function Hero({ whatsappUrl, phoneHref, person, registration }: HeroProps) {
   const [ready, setReady] = useState(false);
   const root = useRef<HTMLDivElement>(null);
   const [reducedMotion, setReducedMotion] = useState(true);
-  const titles = useMemo(() => ['Inmuebles', 'Certificaciones', 'Sociedades'], []);
+  const titles = useMemo(() => ['Escribanía en Nueva Córdoba.', 'Jure Ramos'], []);
   const moving = ready && reducedMotion === false && !paused;
 
   useEffect(() => {
@@ -51,33 +50,22 @@ function Hero({ whatsappUrl, phoneHref, person, registration }: HeroProps) {
     return () => window.clearTimeout(timer);
   }, [moving, inView, pageVisible, titleNumber, titles.length]);
 
-  const toggleMotion = () => {
-    document.documentElement.dataset.motionPaused = String(!paused);
-    document.dispatchEvent(new Event('motion-preference-change'));
-  };
-
   return (
     <div ref={root} data-animated-hero>
-      <h1 id="hero-title"><span className="title-line"><span data-title-line>Escribanía en</span></span>{' '}<span className="title-line"><em data-title-line>Nueva Córdoba.</em></span></h1>
-      <p className="hero-description">Asesoramiento notarial y legal general.</p>
-      <div className="hero-specialties">
-        <div className="hero-specialties-top"><span>ÁREAS DE PRÁCTICA</span>
-          {ready && reducedMotion === false ? <Button type="button" variant="ghost" size="icon" className="hero-rotation-toggle" onClick={toggleMotion} aria-label={paused ? 'Reanudar movimiento' : 'Pausar movimiento'} aria-pressed={paused}>
-            {paused ? <Play size={13} aria-hidden="true"/> : <Pause size={13} aria-hidden="true"/>}
-          </Button> : null}
-        </div>
-        <span className="hero-specialties-accessible">Inmuebles, certificaciones y sociedades.</span>
-        <div className="hero-rotating-word" aria-hidden="true" data-current-area={titles[titleNumber]}>
-          {moving ? <LazyMotion features={domAnimation} strict><AnimatePresence initial={false} mode="popLayout">
-            <m.span key={titleNumber} initial={moving ? { opacity: 0, y: 28 } : false} animate={{ opacity: 1, y: 0 }} exit={moving ? { opacity: 0, y: -28 } : { opacity: 0 }} transition={moving ? { type: 'spring', stiffness: 90, damping: 21, mass: .8 } : { duration: 0 }}>
-              {titles[titleNumber]}
+      <h1 id="hero-title" aria-label="Escribanía en Nueva Córdoba. Jure Ramos.">
+        <span className="hero-title-viewport" aria-hidden="true" data-current-title={titles[titleNumber]}>
+          {moving ? <LazyMotion features={domAnimation} strict><AnimatePresence initial={false}>
+            <m.span className={`hero-title-slide${titleNumber === 1 ? ' hero-title-slide--name' : ''}`} key={titleNumber} initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -28 }} transition={{ type: 'spring', stiffness: 90, damping: 21, mass: .8 }}>
+              {titleNumber === 0 ? <>Escribanía en<br/><em>Nueva Córdoba.</em></> : <>Jure <em>Ramos</em></>}
             </m.span>
-          </AnimatePresence></LazyMotion> : <span>{titles[titleNumber]}</span>}
-        </div>
-      </div>
+          </AnimatePresence></LazyMotion> : <span className={`hero-title-slide${titleNumber === 1 ? ' hero-title-slide--name' : ''}`}>
+            {titleNumber === 0 ? <>Escribanía en<br/><em>Nueva Córdoba.</em></> : <>Jure <em>Ramos</em></>}
+          </span>}
+        </span>
+      </h1>
+      <p className="hero-description">Asesoramiento notarial y legal general.</p>
       <div className="hero-actions tw:flex tw:flex-wrap tw:gap-3">
-        <Button asChild size="lg" className="hero-action"><a href={whatsappUrl} target="_blank" rel="noopener noreferrer">Coordiná tu consulta <MoveRight size={18} aria-hidden="true"/></a></Button>
-        <Button asChild variant="outline" size="lg" className="hero-action hero-call"><a href={`tel:${phoneHref}`}><PhoneCall size={16} aria-hidden="true"/>Llamar</a></Button>
+        <Button asChild size="lg" className="hero-action"><a href={whatsappUrl} target="_blank" rel="noopener noreferrer"><span className="hero-phone-emoji" aria-hidden="true">📲</span>Coordiná tu consulta <MoveRight size={18} aria-hidden="true"/></a></Button>
       </div>
       <p className="hero-person">Esc. {person}<span>Registro Notarial N.º {registration}</span></p>
     </div>
