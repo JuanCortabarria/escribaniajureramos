@@ -16,9 +16,9 @@ try {
     await page.evaluate(() => document.fonts.ready);
     await page.waitForTimeout(600);
     assert.equal(await page.locator('h1').count(), 1);
-    assert.equal(await page.locator('h1').getAttribute('aria-label'), 'Escribanía en Nueva Córdoba. Jure Ramos.');
+    assert.equal(await page.locator('h1').getAttribute('aria-label'), 'Escribanía en Nueva Córdoba. Solange Jure Ramos.');
     const top = await page.locator('.hero-description').evaluate(e => e.getBoundingClientRect().top + window.scrollY);
-    await page.waitForFunction(() => document.querySelector('.hero-title-viewport')?.getAttribute('data-current-title') === 'Jure Ramos', null, { timeout: 6000 });
+    await page.waitForFunction(() => document.querySelector('.hero-title-viewport')?.getAttribute('data-current-title') === 'Solange Jure Ramos', null, { timeout: 6000 });
     const pause = page.locator('.hero-visual [data-motion-toggle]');
     await pause.click();
     await page.waitForFunction(() => document.documentElement.dataset.motionPaused === 'true');
@@ -28,7 +28,8 @@ try {
     assert.ok(Math.abs(await page.locator('.hero-description').evaluate(e => e.getBoundingClientRect().top + window.scrollY) - top) < 1);
     assert.equal(await page.locator('.hero-rotation-toggle, .hero-specialties, .hero-call').count(), 0);
     assert.equal(await page.locator('.hero-actions a').count(), 1);
-    assert.equal(await page.locator('.hero-phone-emoji').innerText(), '📲');
+    assert.equal(await page.locator('.hero-phone-icon.lucide-phone-call').count(), 1);
+    assert.equal(await page.locator('.hero-phone-emoji').count(), 0);
     assert.ok((await page.locator('.hero-actions a').getAttribute('href')).startsWith('https://wa.me/'));
     assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
     await page.screenshot({ path: `artifacts/hero-titular-nombre-${width}.png` });

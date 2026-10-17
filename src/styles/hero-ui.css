@@ -5,10 +5,10 @@
 
 .hero-title-viewport{position:relative;display:block;height:2.35em;overflow:clip}
 .hero-title-slide{position:absolute;inset:0;display:block;padding-block:.1em}
-.hero-title-slide--name{display:flex;align-items:center;gap:.2em;white-space:nowrap}
+.hero-title-slide--name em{white-space:nowrap}
 .hero-actions{margin-top:26px;align-items:center}
 .hero-action{font-size:12px;line-height:1.5;text-decoration:none;color:var(--color-dark-bg)}
-.hero-phone-emoji{font-size:19px;line-height:1}
+.hero-phone-icon{flex-shrink:0}
 .hero .hero-person{margin-top:22px}
 @media(max-width:1050px){.hero-action{padding:14px 18px}}
 @media(max-width:760px){.hero .hero-description{margin-top:22px}.hero-actions{margin-top:22px}.hero-action{padding:14px 18px}.hero .hero-person{margin-top:20px}}

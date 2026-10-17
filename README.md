@@ -64,7 +64,7 @@ La miniatura de la biografía abre `/libro/` en una pestaña nueva. El relato y 
 
 ### Portada animada (React)
 
-La portada incorpora una isla React con renderizado HTML inicial en Astro; no se migra el resto del sitio. El componente del prompt está adaptado en `src/components/ui/animated-hero.tsx`: titular que alterna «Escribanía en Nueva Córdoba.» y «Jure Ramos», con una sola acción de consulta por WhatsApp y emoji 📲. La ubicación `src/components/ui` sigue la estructura del proyecto dentro de `src`; el alias `@/components/ui` apunta allí. `components.json` registra esa estructura para componentes shadcn.
+La portada incorpora una isla React con renderizado HTML inicial en Astro; no se migra el resto del sitio. El componente del prompt está adaptado en `src/components/ui/animated-hero.tsx`: titular que alterna «Escribanía en Nueva Córdoba.» y «Solange Jure Ramos», con una sola acción de consulta por WhatsApp y un ícono clásico de teléfono. La ubicación `src/components/ui` sigue la estructura del proyecto dentro de `src`; el alias `@/components/ui` apunta allí. `components.json` registra esa estructura para componentes shadcn.
 
 `src/components/ui/button.tsx` contiene el botón reutilizable de estilo shadcn, con Radix Slot y variantes. `src/lib/utils.ts` resuelve clases. Tailwind se integra mediante su complemento de Vite y `src/styles/hero-ui.css`, con prefijo `tw:` y sin Preflight para conservar los estilos existentes. TypeScript configura el alias `@/*` y JSX de React.
 
