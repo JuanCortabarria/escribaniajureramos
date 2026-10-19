@@ -612,3 +612,8 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - Descargados los JPEG originales referenciados en `/wp-content/uploads/2024/01/`: `6.jpg` (mesa de reuniones), `5.jpg` (escritorio cuadrado) y `1.jpg` (recepción).
 - Verificada visualmente la correspondencia de las tres fotos. Guardadas copias sin edición con nombres descriptivos y un ZIP en `artifacts/imagenes-web-original/`, carpeta de entregas locales ignorada por Git. No se incorporaron a la web.
 - Único archivo versionado modificado: este registro. Sin pruebas de código por tratarse de recuperación de imágenes. Sin pendientes ni bloqueos de entrega.
+
+## 2026-10-19 — Conversión de portada a JPEG
+
+- Convertido el archivo adjunto `portada-jure-ramos.avif` a `artifacts/portada-jure-ramos.jpg`, conservando el original y sin modificar la web.
+- Verificado el formato JPEG y sus dimensiones de 800 × 1000 píxeles. Entrega local en artifacts, ignorado por Git; único archivo versionado modificado: este registro. Sin pendientes ni pruebas de código necesarias.
