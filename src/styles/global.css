@@ -16,3 +16,8 @@
   html:not([data-scripts-enabled]) .header .header-inner{height:auto;min-height:80px;flex-wrap:wrap}
   html:not([data-scripts-enabled]) .header nav{display:flex;position:static;width:100%;padding:12px 0 20px;border:0}
 }
+
+/* Contact details keep each schedule and its time unit together. */
+.location .contact-hours strong,.location .contact-details strong{display:block}
+.location .contact-row .contact-time{display:inline;white-space:nowrap;color:inherit;font-size:inherit;margin:0}
+.location .contact-details>a{display:block}
