@@ -45,6 +45,10 @@
   .location .contact-row .contact-time { font-size: inherit; line-height: inherit; }
   .location .contact-row .email-link { font-size: 14px; }
   .location .contact-row a { display: flex; align-items: flex-start; min-height: 44px; overflow-wrap: anywhere; }
+  .faq .faq-grid { display: flex; flex-direction: column; gap: 0; align-items: stretch; }
+  .faq .faq-intro { display: contents; }
+  .faq .faq-list { order: 1; margin-top: 32px; }
+  .faq .faq-contact { order: 2; align-self: flex-start; margin-top: 20px; }
   .faq .faq-grid > div > p { font-size: 14px; }
   .faq-list summary h3 { font-size: 14px; line-height: 1.6; }
   .faq .faq-list details > p, .service-prose .faq-list details > p { font-size: 14px; line-height: 1.8; }
