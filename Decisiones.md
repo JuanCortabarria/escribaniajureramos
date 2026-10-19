@@ -605,3 +605,10 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 - Actualizados README.md, PUBLICACION.md y PENDIENTES.md. Referencias contrastadas el 19/10/2026 con documentación oficial Cloudflare de build image, headers y preview deployments; enlaces en la guía.
 - Verificaciones: npm run check:release correcto, compilación/Astro sin errores, advertencias ni sugerencias, auditoría técnica correcta y ocho redirecciones verificadas. Audit:site en producción local a 4330: siete páginas, 18 destinos internos, 37 recursos, metadatos/404/navegación sin JS/pausa/libro correctos. Audit:browser a 1440/390/768 px sin desbordes ni errores; FAQ, menú y mapa correctos. Búsqueda de referencias en src confirma ausencia del fijo y de phone/phoneHref. git diff --check correcto. No se repitió Lighthouse al no modificar arquitectura ni animaciones; la medición histórica no se presenta como una nueva prueba.
 - No se creó ni vinculó un proyecto de Cloudflare desde esta tarea, no se conoce una URL temporal nueva y no se cambiaron dominio/DNS/correo. Pendientes: acceso a cuenta Cloudflare/GitHub para vincular Pages, revisión pública y datos mínimos del dominio. No se enviaron mensajes ni se activó seguimiento con identificadores ficticios.
+
+## 2026-10-19 — Recuperación de fotografías de los espacios
+
+- Revisados el HTML y la carpeta de recursos aportados por el usuario para localizar las fotografías de mesa, escritorio y recepción. El HTML conserva enlaces remotos del carrusel que no estaban descargados en la carpeta.
+- Descargados los JPEG originales referenciados en `/wp-content/uploads/2024/01/`: `6.jpg` (mesa de reuniones), `5.jpg` (escritorio cuadrado) y `1.jpg` (recepción).
+- Verificada visualmente la correspondencia de las tres fotos. Guardadas copias sin edición con nombres descriptivos y un ZIP en `artifacts/imagenes-web-original/`, carpeta de entregas locales ignorada por Git. No se incorporaron a la web.
+- Único archivo versionado modificado: este registro. Sin pruebas de código por tratarse de recuperación de imágenes. Sin pendientes ni bloqueos de entrega.
