@@ -13,6 +13,13 @@
   .hero .hero-description { font-size: 14px; }
   .hero .hero-person { font-size: 12px; }
   .hero .hero-person span { font-size: 11px; }
+  .trust-strip .trust-grid { padding-block: 9px; row-gap: 6px; }
+  .trust-strip .trust-grid > div { gap: 8px; }
+  .trust-strip .trust-grid > div:first-child > span + span { display: none; }
+  .trust-strip .trust-number { font-size: 22px; line-height: 1.1; font-weight: 400; }
+  .trust-strip .trust-grid p { font-size: 10px; line-height: 1.4; font-weight: 400; }
+  .trust-strip .trust-grid strong { font-weight: 400; }
+  .trust-strip .trust-grid svg { width: 20px; height: 20px; flex-shrink: 0; stroke-width: 1.2; }
   .about .about-copy > p:not(.eyebrow):not(.registration):not(.about-intro) { font-size: 15px; line-height: 1.8; }
   .about .credentials { font-size: 13px; line-height: 1.7; }
   .about .bio-more { font-size: 13px; }
