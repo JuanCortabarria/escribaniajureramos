@@ -617,3 +617,8 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 
 - Convertido el archivo adjunto `portada-jure-ramos.avif` a `artifacts/portada-jure-ramos.jpg`, conservando el original y sin modificar la web.
 - Verificado el formato JPEG y sus dimensiones de 800 × 1000 píxeles. Entrega local en artifacts, ignorado por Git; único archivo versionado modificado: este registro. Sin pendientes ni pruebas de código necesarias.
+
+## 2026-10-19 — Entrega de imagen adjunta en PNG y JPEG
+
+- Copiada la nueva imagen PNG adjunta sin alteraciones y generada una versión JPEG con calidad 95 en `artifacts/portada-formatos/jure-ramos.png` y `jure-ramos.jpeg`. Se conserva el original y no se modifica la web.
+- Comprobados ambos formatos y dimensiones de 800 × 1000 píxeles. Archivos de entrega locales ignorados por Git; único cambio versionado: este registro. Sin pendientes ni pruebas de código necesarias.
