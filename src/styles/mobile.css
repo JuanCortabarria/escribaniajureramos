@@ -38,7 +38,6 @@
   .book-copy blockquote p { font-size: 15px; line-height: 1.8; }
   .book-copy .book-publisher { font-size: 13px; }
   .footer-main p, .footer-main > div, .footer-bottom p { font-size: 12px; }
-  .hero-visual .motion-toggle { min-height: 44px; padding-inline: 6px; font-size: 12px; }
   .home-page .floating-wa { visibility: hidden; opacity: 0; pointer-events: none; }
   .home-page[data-show-contact-shortcut="true"] .floating-wa { visibility: visible; opacity: 1; pointer-events: auto; }
   .floating-wa { right: max(18px, env(safe-area-inset-right)); bottom: max(18px, env(safe-area-inset-bottom)); }

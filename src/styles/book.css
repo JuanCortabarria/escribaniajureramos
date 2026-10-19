@@ -63,7 +63,6 @@
 /* Service access sits at the lower right of the main photograph. */
 .hero-visual .services-jump-group{position:absolute;right:24px;bottom:18px;width:min(360px,calc(100% - 27px))}
 .hero-visual .services-jump{width:100%;justify-content:space-between}
-.hero-visual .services-jump-group .motion-toggle{position:absolute;top:100%;right:0}
 @media(max-width:760px){
   .hero-visual .services-jump-group{right:15px;width:calc(100% - 25px)}
 }

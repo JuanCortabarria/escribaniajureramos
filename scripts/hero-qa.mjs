@@ -19,8 +19,8 @@ try {
     assert.equal(await page.locator('h1').getAttribute('aria-label'), 'Escribanía en Nueva Córdoba. Solange Jure Ramos.');
     const top = await page.locator('.hero-description').evaluate(e => e.getBoundingClientRect().top + window.scrollY);
     await page.waitForFunction(() => document.querySelector('.hero-title-viewport')?.getAttribute('data-current-title') === 'Solange Jure Ramos', null, { timeout: 6000 });
-    const pause = page.locator('.hero-visual [data-motion-toggle]');
-    await pause.click();
+    assert.equal(await page.locator('[data-motion-toggle]').count(), 0);
+    await page.evaluate(() => document.documentElement.dataset.motionPaused = 'true');
     await page.waitForFunction(() => document.documentElement.dataset.motionPaused === 'true');
     const stable = await page.locator(headline).getAttribute('data-current-title');
     await page.waitForTimeout(3100);
@@ -33,9 +33,9 @@ try {
     assert.ok((await page.locator('.hero-actions a').getAttribute('href')).startsWith('https://wa.me/'));
     assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
     await page.screenshot({ path: `artifacts/hero-titular-nombre-${width}.png` });
-    await pause.press('Enter');
+    await page.evaluate(() => document.documentElement.dataset.motionPaused = 'false');
     await page.waitForFunction(() => document.querySelector('.hero-title-viewport')?.getAttribute('data-current-title') === 'Escribanía en Nueva Córdoba.', null, { timeout: 6000 });
-    await pause.click();
+    await page.evaluate(() => document.documentElement.dataset.motionPaused = 'true');
     await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
     await page.screenshot({ path: `artifacts/hero-titular-ubicacion-${width}.png` });
     await page.locator('.hero-visual .services-jump').click();

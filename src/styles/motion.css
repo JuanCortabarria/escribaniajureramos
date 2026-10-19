@@ -10,12 +10,10 @@
 .hero .photo-frame > picture { display: block; height: 100%; overflow: clip; }
 
 .services-jump-group{display:flex;flex-direction:column;align-items:flex-end;gap:2px}
-.motion-toggle{display:block;border:0;background:transparent;color:var(--color-accent-bright);font-size:10px;line-height:1.5;min-height:36px;padding:8px 2px;text-decoration:underline;text-underline-offset:3px}
-.motion-toggle[hidden]{display:none}
-@media(max-width:760px){.services-jump-group{align-items:stretch}.services-jump-group .motion-toggle{align-self:flex-end}}
+@media(max-width:760px){.services-jump-group{align-items:stretch}}
 
 @media (prefers-reduced-motion: no-preference) {
-  [data-motion-ready="true"] .services-jump.continuous-motion{animation:services-float 3s ease-in-out infinite}
+  .services-jump.continuous-motion{animation:services-float 3s ease-in-out infinite}
   .services-jump-group:is(:hover,:focus-within) .services-jump,
   [data-motion-paused="true"] .continuous-motion{animation-play-state:paused}
   .text-link svg, .button svg, .nav-cta svg {
@@ -30,7 +28,7 @@
 }
 
 @keyframes services-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
-@media(prefers-reduced-motion:reduce){.continuous-motion{animation:none!important}.motion-toggle{display:none}}
+@media(prefers-reduced-motion:reduce){.continuous-motion{animation:none!important}}
 
 /* A stable accessible copy accompanies the visual letter-by-letter reading. */
 .reading-accessible{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
