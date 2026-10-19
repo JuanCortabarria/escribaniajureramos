@@ -30,7 +30,7 @@ npm run preview
 - `src/components/Seo.astro`: metadatos y JSON-LD tipado.
 - `src/pages/index.md.ts`, `llms.txt.ts` y `robots.txt.ts`: generados desde la misma configuración.
 
-WhatsApp, teléfono, correo y Google Maps funcionan mediante enlaces directos. No hay formulario, analytics, cookies propias ni solicitudes a Google Fonts. El mapa externo carga únicamente tras pulsar su enlace; sin JavaScript, ese enlace abre Maps directamente. Las FAQ usan elementos nativos de HTML.
+WhatsApp, correo y Google Maps funcionan mediante enlaces directos. No hay formulario, analytics, cookies propias ni solicitudes a Google Fonts. El mapa externo carga únicamente tras pulsar su enlace; sin JavaScript, ese enlace abre Maps directamente. Las FAQ usan elementos nativos de HTML.
 
 ## Referencias descargadas
 
@@ -100,3 +100,10 @@ QA_BASE_URL=http://127.0.0.1:4330 npm run audit:reading
 ```
 
 `audit:site` recorre las siete páginas desde el sitemap, comprueba enlaces, anclas, recursos adaptativos, metadatos y 404, y cubre navegación móvil sin JS, foco por Escape, contador pausado durante la suma, apertura del libro y ausencia de IntersectionObserver. Los informes y capturas se guardan en `artifacts/`. Las pruebas de rendimiento deben ejecutarse sin otras pruebas de navegador simultáneas para evitar distorsionar las métricas.
+
+
+## Preparación para Cloudflare Pages — 19/10/2026
+
+Configuración operativa y pendientes mínimos en `CLOUDFLARE-PAGES.md`. El panel debe usar `npm run check:release` y salida `dist`; `.node-version` fija Node 24. Esa comprobación compila y audita el resultado antes de publicar. `_headers` evita indexar las direcciones pages.dev sin bloquear el dominio definitivo. Comprobar esas cabeceras por HTTP cuando exista el proyecto.
+
+El teléfono fijo retirado ya no forma parte del contenido ni de los datos estructurados: el contacto telefónico del negocio es el WhatsApp activo. No hay enlaces de llamada al fijo.

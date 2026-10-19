@@ -34,7 +34,6 @@ Esc. ${site.person}. Registro Notarial N.º ${site.registration}.
 
 - Dirección: ${site.address}, Nueva Córdoba, Córdoba, Argentina.
 - Horario: ${site.hours}.
-- Teléfono: ${site.phone}.
 - Email: ${site.email}.
 - [Consultar por WhatsApp](${serviceWhatsApp(service)}).
 - [Página del servicio](${site.url}${servicePath(service)}).

@@ -79,3 +79,12 @@ La integración en main se ejecuta en este cierre, conservando el historial y el
 - **PREPARADO:** cabeceras de seguridad de Pages en public/_headers. Falta verificar su aplicación HTTP junto con las redirecciones al desplegar.
 - **SIGUE PENDIENTE:** dominio/DNS/correo, previsualización pública, recepción humana de consulta y configuración real de Google. No se publicaron sitios ni cambiaron cuentas.
 - Detalle y límites de la evaluación en REVISION-TECNICA.md. Estas métricas actualizan las mediciones históricas de preparación local.
+
+## Preparación para Pages y baja del fijo — 19/10/2026
+
+- **EJECUTADO:** retirado el teléfono fijo de la configuración, portada, cinco servicios y versiones Markdown. Schema.org usa únicamente el número de WhatsApp activo. Fecha de contenido actualizada al 19/10/2026.
+- **PREPARADO:** .node-version con Node 24 y comando npm run check:release para compilar y auditar antes de publicar; reglas de exclusión de buscadores solo en pages.dev, con dominio final indexable.
+- **COMPROBADO:** compilación, auditoría técnica, controles de contacto/redirecciones/archivos de publicación y pruebas Chrome de siete páginas y portada móvil/escritorio correctos.
+- **SIGUIENTE PASO:** crear/vincular el proyecto de Pages con GitHub desde una cuenta de la escribanía y revisar la URL temporal real. No depende de recibir primero el dominio.
+- **PENDIENTE EXTERNO MÍNIMO:** administración del dominio, cambios DNS y conservación de correo/otros servicios asociados. El código o la base de datos anteriores no son necesarios para alojar la nueva web. Las herramientas de Google siguen pendientes de acceso; actualizar también el teléfono en la ficha existente si aún figura el fijo retirado.
+- Guía operativa actual en CLOUDFLARE-PAGES.md. No se publicaron sitios, accedió a cuentas ni cambiaron DNS en esta tarea.

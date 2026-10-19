@@ -29,7 +29,7 @@ const related = servicePages.filter(page => page.slug !== service.slug);
 <div class="sidebar-contact"><Icon name="pin" size={21}/><address>{site.address}<br/>Nueva Córdoba · Córdoba</address></div>
 <div class="sidebar-contact"><Icon name="clock" size={21}/><p>{site.hours}</p></div>
 <p class="sidebar-visit">{consultation.visit}</p><a class="button button-navy" href={serviceWhatsApp(service)} target="_blank" rel="noopener noreferrer">Consultar por WhatsApp <Icon name="arrow" size={17}/></a>
-<a class="text-link" href={`tel:${site.phoneHref}`}>{site.phone}</a><a class="sidebar-profile" href="/#escribana">Trayectoria profesional <Icon name="arrow" size={16}/></a>
+<a class="sidebar-profile" href="/#escribana">Trayectoria profesional <Icon name="arrow" size={16}/></a>
 </aside></div>
 <section class="related-services section" aria-labelledby="related-title"><div class="container"><p class="eyebrow">ÁREAS DE PRÁCTICA</p><h2 id="related-title">Otros servicios notariales</h2><div class="related-grid">{related.map(page=><a href={servicePath(page)}><h3>{page.title}</h3><Icon name="arrow" size={22}/></a>)}</div><a class="text-link" href="/#servicios">Ver todas las áreas de práctica <Icon name="arrow" size={18}/></a></div></section>
 </main><Footer/>

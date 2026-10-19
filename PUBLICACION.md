@@ -89,7 +89,7 @@ Responsable: responsable técnico, dentro de una cuenta de la escribanía.
 - Crear o usar la cuenta y conectar el repositorio GitHub existente.
 - Elegir Pages e importar el repositorio.
 - Crear primero una versión de revisión de `feature-vico`, sin apuntar todavía el dominio real.
-- Configuración del proyecto: directorio raíz del repositorio, **Node 24**, comando **`npm run build`**, carpeta de salida **`dist`**.
+- Configuración del proyecto: directorio raíz del repositorio, **Node 24**, comando **`npm run check:release`**, carpeta de salida **`dist`**.
 - Es un sitio estático con una isla React de cliente; no necesita base de datos, un servidor Node permanente ni añadir un adaptador de ejecución del lado del servidor para Pages.
 - Proteger la previsualización y evitar su indexación; comprobar que la versión de producción sí sea indexable al lanzarla.
 - Comprobar imágenes, tipografías, enlaces y Markdown en la URL temporal. El acceso de prueba no sustituye la validación posterior del dominio definitivo.
@@ -181,3 +181,10 @@ Integración de feature-vico en main ejecutada en este cierre. Único conflicto 
 ### Revisión técnica posterior del 17/10/2026
 
 Aplicadas correcciones de navegación móvil, foco, mapa alternativo y pausa de efectos/contadores, además de reducir código e incorporar variantes de imágenes. Medición final local de producción: 96 rendimiento, 100 accesibilidad, 100 buenas prácticas y 100 SEO técnico; LCP 2,6 s, TBT 0 ms, CLS 0,001. Cabeceras de seguridad preparadas en public/_headers. Ver REVISION-TECNICA.md para pruebas y límites. Continúa pendiente validar el alojamiento público, dominio/correo y las herramientas de Google.
+
+
+## Preparación actualizada — 19/10/2026
+
+La usuaria confirma Cloudflare Pages. Configuración resumida en CLOUDFLARE-PAGES.md: main, Node 24 mediante .node-version, comando npm run check:release, salida dist. Añadida validación de salida antes de publicar y reglas noindex limitadas a pages.dev. El dominio definitivo conserva indexación habilitada. Retirado el teléfono fijo; se conserva WhatsApp como contacto activo, también en Schema.org.
+
+El mínimo necesario para conectar el dominio es su administración, posibilidad de cambiar DNS y conservación de servicios existentes asociados. El repositorio y la base de datos de la web vieja no son requisitos para publicar nuestra versión. Falta crear/vincular Pages desde una cuenta de la escribanía y comprobar su URL real antes de conectar el dominio.

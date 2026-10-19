@@ -6,7 +6,7 @@ import type { ServicePage } from '../config/service-pages';
 export function structuredData(canonical: string, title: string, service?: ServicePage): Graph {
   const business: Notary = {
     '@type': 'Notary', '@id': `${site.url}/#escribania`, name: site.name, url: site.url,
-    telephone: site.phoneHref, email: site.email, image: `${site.url}/images/solange-jure-ramos.webp`,
+    telephone: site.whatsapp.replace(/[^+\d]/g, ''), email: site.email, image: `${site.url}/images/solange-jure-ramos.webp`,
     address: { '@type': 'PostalAddress', streetAddress: site.address, addressLocality: site.city, addressRegion: 'Córdoba', postalCode: site.postalCode, addressCountry: 'AR' },
     geo: { '@type': 'GeoCoordinates', latitude: site.latitude, longitude: site.longitude }, hasMap: site.maps,
     openingHoursSpecification: site.openingHours.map(hours => ({ '@type': 'OpeningHoursSpecification' as const, dayOfWeek: [...hours.days], opens: hours.opens, closes: hours.closes })),
