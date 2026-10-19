@@ -88,3 +88,10 @@ La integración en main se ejecuta en este cierre, conservando el historial y el
 - **SIGUIENTE PASO:** crear/vincular el proyecto de Pages con GitHub desde una cuenta de la escribanía y revisar la URL temporal real. No depende de recibir primero el dominio.
 - **PENDIENTE EXTERNO MÍNIMO:** administración del dominio, cambios DNS y conservación de correo/otros servicios asociados. El código o la base de datos anteriores no son necesarios para alojar la nueva web. Las herramientas de Google siguen pendientes de acceso; actualizar también el teléfono en la ficha existente si aún figura el fijo retirado.
 - Guía operativa actual en CLOUDFLARE-PAGES.md. No se publicaron sitios, accedió a cuentas ni cambiaron DNS en esta tarea.
+
+## Revisión móvil — 19/10/2026
+
+- **EJECUTADO:** mejora de lectura, áreas táctiles, menú horizontal y acceso flotante sin tapar el CTA de servicios. Se conserva el diseño de escritorio y el libro al costado de las credenciales.
+- **COMPROBADO:** 35 vistas táctiles en Chrome, alternativa sin JS, auditoría de sitio y check:release correctos. Evidencia en artifacts/auditoria-movil.json y capturas móvil antes/después.
+- **DISPONIBLE:** vista previa de dist en la red local mediante preview:mobile. Usar la dirección Network indicada por Astro; puerto asignado en esta sesión: 4333. Requiere misma Wi-Fi y computadora encendida.
+- **PENDIENTE:** revisión visual en el teléfono real de la usuaria. No equivale a publicación en Cloudflare ni modifica los pendientes del dominio.

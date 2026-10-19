@@ -107,3 +107,18 @@ QA_BASE_URL=http://127.0.0.1:4330 npm run audit:reading
 Configuración operativa y pendientes mínimos en `CLOUDFLARE-PAGES.md`. El panel debe usar `npm run check:release` y salida `dist`; `.node-version` fija Node 24. Esa comprobación compila y audita el resultado antes de publicar. `_headers` evita indexar las direcciones pages.dev sin bloquear el dominio definitivo. Comprobar esas cabeceras por HTTP cuando exista el proyecto.
 
 El teléfono fijo retirado ya no forma parte del contenido ni de los datos estructurados: el contacto telefónico del negocio es el WhatsApp activo. No hay enlaces de llamada al fijo.
+
+## Ver y revisar en un celular
+
+1. Conectar el teléfono y la computadora a la misma red Wi-Fi.
+2. Ejecutar `npm run check:release` y luego `npm run preview:mobile`.
+3. Abrir en Safari o Chrome del teléfono la dirección que aparece en **Network**. Usar la IP de la computadora, no localhost. El puerto solicitado es 4331; si está ocupado, Astro puede indicar otro.
+4. Mantener la computadora encendida y el servidor activo. Esta vista sirve la compilación estática y no publica el sitio en Internet. Tras editar, volver a compilar para ver los cambios.
+
+`npm run audit:mobile` verifica las siete páginas en 320/390/430 px y dos vistas horizontales con interacción táctil, navegación y alternativa sin JavaScript. Se puede cambiar el servidor mediante QA_BASE_URL; usa 4330 por defecto. Capturas e informe en artifacts/movil-*.png y artifacts/auditoria-movil.json.
+
+Los ajustes exclusivos de pantallas pequeñas están en src/styles/mobile.css. Las capturas aisladas de secciones ocultan los elementos fijos para que no aparezcan repetidos dentro de una captura larga; la portada conserva la vista normal.
+
+También se puede aproximar la vista desde la computadora con el modo de dispositivos de Chrome: abrir las herramientas de desarrollo, activar el ícono de celular/tablet y elegir un tamaño. Esto no reemplaza probar Safari/Chrome en el teléfono real. [Documentación oficial](https://developer.chrome.com/docs/devtools/device-mode).
+
+En celular, el WhatsApp flotante de inicio aparece al dejar atrás el botón principal de consulta, para no cubrir el acceso a servicios de la fotografía. Sin JavaScript se conservan los contactos del menú y las secciones; no se muestra ese acceso flotante duplicado en inicio. El comportamiento de escritorio se conserva.

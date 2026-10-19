@@ -9,6 +9,7 @@ import Seo from '../components/Seo.astro';
 import '../styles/global.css';
 import '../styles/services.css';
 import '../styles/page-transitions.css';
+import '../styles/mobile.css';
 import type { ServicePage } from '../config/service-pages';
 interface Props { title?: string; description?: string; noindex?: boolean; service?: ServicePage; markdown?: string; }
 ---
@@ -20,4 +21,4 @@ interface Props { title?: string; description?: string; noindex?: boolean; servi
       delete document.documentElement.dataset.scriptsEnabled;
     }
   }, { once: true });
-</script><meta name="theme-color" content="#14213d"/><link rel="icon" href="/favicon.svg" type="image/svg+xml"/><Seo {...Astro.props}/></head><body class:list={{'service-page': Astro.props.service !== undefined}}><slot/></body></html>
+</script><meta name="theme-color" content="#14213d"/><link rel="icon" href="/favicon.svg" type="image/svg+xml"/><Seo {...Astro.props}/></head><body class:list={{'service-page': Astro.props.service !== undefined, 'home-page': Astro.url.pathname === '/'}}><slot/></body></html>

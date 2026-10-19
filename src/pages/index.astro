@@ -48,6 +48,7 @@ import '../styles/motion.css';
  import '../scripts/home-motion';
  import '../scripts/biography-reading';
  import '../scripts/continuous-motion';
+ import '../scripts/home-contact';
  document.querySelector<HTMLAnchorElement>('#load-map')?.addEventListener('click',event=>{ const panel=document.querySelector('.map-panel'); if(!panel)return; const source=(event.currentTarget as HTMLAnchorElement).dataset.mapSrc; if(!source)return; event.preventDefault(); const frame=document.createElement('iframe');frame.title='Ubicación de Escribanía Jure Ramos en Córdoba';frame.src=source;frame.referrerPolicy='no-referrer';frame.allowFullscreen=true; panel.replaceChildren(frame); });
 </script>
 </Layout>

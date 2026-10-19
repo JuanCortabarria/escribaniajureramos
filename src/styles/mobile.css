@@ -1,0 +1,39 @@
+/* Mobile reading and touch targets; desktop typography remains unchanged. */
+@media (max-width: 760px) {
+  .menu-toggle { min-width: 48px; min-height: 48px; align-items: center; justify-content: center; }
+  .header[data-menu-enhanced] nav {
+    max-height: calc(100vh - 80px);
+    max-height: calc(100dvh - 80px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  html:not([data-scripts-enabled]) .header { position: static; }
+  .hero .hero-actions { display: block; }
+  .hero .hero-action { width: 100%; min-height: 50px; font-size: 13px; }
+  .hero .hero-description { font-size: 14px; }
+  .hero .hero-person { font-size: 12px; }
+  .hero .hero-person span { font-size: 11px; }
+  .about .about-copy > p:not(.eyebrow):not(.registration):not(.about-intro) { font-size: 15px; line-height: 1.8; }
+  .about .credentials { font-size: 13px; line-height: 1.7; }
+  .about .bio-more { font-size: 13px; }
+  .about .bio-more summary { font-size: 13px; min-height: 48px; align-items: center; }
+  .about .bio-more p { font-size: 14px; line-height: 1.8; }
+  .location .contact-row { font-size: 14px; line-height: 1.7; }
+  .location .contact-row a { display: inline-flex; align-items: center; min-height: 44px; overflow-wrap: anywhere; }
+  .faq .faq-grid > div > p { font-size: 14px; }
+  .faq-list summary h3 { font-size: 14px; line-height: 1.6; }
+  .faq .faq-list details > p, .service-prose .faq-list details > p { font-size: 14px; line-height: 1.8; }
+  .approach .steps p { font-size: 14px; line-height: 1.8; }
+  .services .service-label { font-size: 11px; }
+  .text-link, .sidebar-profile, .book-back { min-height: 44px; font-size: 13px; }
+  .service-sidebar .sidebar-contact p, .service-sidebar .sidebar-contact address, .service-sidebar .sidebar-visit { font-size: 14px; }
+  .service-sidebar .sidebar-registration { font-size: 12px; }
+  .service-sidebar .button { font-size: 13px; min-height: 48px; }
+  .book-copy blockquote p { font-size: 15px; line-height: 1.8; }
+  .book-copy .book-publisher { font-size: 13px; }
+  .footer-main p, .footer-main > div, .footer-bottom p { font-size: 12px; }
+  .hero-visual .motion-toggle { min-height: 44px; padding-inline: 6px; font-size: 12px; }
+  .home-page .floating-wa { visibility: hidden; opacity: 0; pointer-events: none; }
+  .home-page[data-show-contact-shortcut="true"] .floating-wa { visibility: visible; opacity: 1; pointer-events: auto; }
+  .floating-wa { right: max(18px, env(safe-area-inset-right)); bottom: max(18px, env(safe-area-inset-bottom)); }
+}

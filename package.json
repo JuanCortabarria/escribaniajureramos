@@ -13,7 +13,9 @@
     "audit:hero": "node scripts/hero-qa.mjs",
     "audit:reading": "node scripts/reading-qa.mjs",
     "audit:site": "node scripts/site-qa.mjs",
-    "check:release": "npm run build && npm run audit && node scripts/release-check.mjs"
+    "check:release": "npm run build && npm run audit && node scripts/release-check.mjs",
+    "preview:mobile": "astro preview --host 0.0.0.0 --port 4331",
+    "audit:mobile": "node scripts/mobile-qa.mjs"
   },
   "dependencies": {
     "@astrojs/react": "7.0.0",
