@@ -20,6 +20,14 @@
   .trust-strip .trust-grid p { font-size: 10px; line-height: 1.4; font-weight: 400; }
   .trust-strip .trust-grid strong { font-weight: 400; }
   .trust-strip .trust-grid svg { width: 20px; height: 20px; flex-shrink: 0; stroke-width: 1.2; }
+  .about .about-grid { display: flex; flex-direction: column; gap: 0; align-items: stretch; }
+  .about .about-copy { display: contents; }
+  .about .about-copy > * { order: 5; }
+  .about .about-copy > .eyebrow { order: 0; }
+  .about .about-copy > h2 { order: 1; }
+  .about .about-copy > .registration { order: 2; }
+  .about .portrait-wrap { order: 3; margin: 28px auto 8px; }
+  .about .about-intro { order: 4; }
   .about .about-copy > p:not(.eyebrow):not(.registration):not(.about-intro) { font-size: 15px; line-height: 1.8; }
   .about .credentials { font-size: 13px; line-height: 1.7; }
   .about .bio-more { font-size: 13px; }
