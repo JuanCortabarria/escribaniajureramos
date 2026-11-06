@@ -693,3 +693,8 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 
 - Aplicada la grafía indicada por el usuario en ambas alineaciones, relatos, instrucciones y fuentes editables del manual deportivo externo. Regenerados el archivo autónomo y los tres dibujos de entrega, además de las capturas de la pizarra. El material nominal sigue fuera del repositorio de la escribanía.
 - Verificada la ausencia de la grafía anterior y la coincidencia del nombre corregido en los dos planteles. Verificación existente del manual correcta: 41 secuencias, 162 fases y controles sin errores. En el proyecto sólo se modifica este registro; no hay cambios del sitio ni publicación web.
+
+## 2026-11-05 — Suplentes por formación en el manual externo
+
+- Incorporadas las dos listas de suplentes confirmadas por el usuario a los datos de ambas alineaciones, los dibujos y la pizarra de animaciones. La segunda lista se aplica también a la variante con ambos delanteros arriba. No se asignan puestos de reemplazo ni cambios automáticos no indicados por el usuario. El material nominal continúa fuera del repositorio.
+- Regenerados el manual autónomo y los tres dibujos de entrega; listas comprobadas y verificación existente correcta (41 secuencias, 162 fases, sin errores ni desbordes). Sólo se modifica este registro en el proyecto de la escribanía, sin cambios del sitio ni publicación web.
