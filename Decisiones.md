@@ -698,3 +698,9 @@ Este archivo registra las decisiones tomadas y los cambios ejecutados desde el 1
 
 - Incorporadas las dos listas de suplentes confirmadas por el usuario a los datos de ambas alineaciones, los dibujos y la pizarra de animaciones. La segunda lista se aplica también a la variante con ambos delanteros arriba. No se asignan puestos de reemplazo ni cambios automáticos no indicados por el usuario. El material nominal continúa fuera del repositorio.
 - Regenerados el manual autónomo y los tres dibujos de entrega; listas comprobadas y verificación existente correcta (41 secuencias, 162 fases, sin errores ni desbordes). Sólo se modifica este registro en el proyecto de la escribanía, sin cambios del sitio ni publicación web.
+
+## 2026-11-05 — Plan C en el manual táctico externo
+
+- Agregada la variante de la segunda formación solicitada por el usuario: el enganche anterior sale del once, el volante de contención ocupa ese lugar y el suplente indicado entra como 5. Actualizadas las referencias nominales y la lista de suplentes en los datos, el tercer dibujo, los textos de funciones y el selector de planes. Se conserva tanto la base con enganche como la variante con dos delanteros. Los nombres y el material siguen fuera del repositorio de la escribanía.
+- Adaptadas las 21 secuencias del segundo esquema al nuevo plantel sin añadir jugadores en cancha: el manual queda con 62 animaciones. Regenerados el archivo autónomo, los dibujos individuales y la lámina conjunta. Verificadas 245 fases, ocho jugadores por equipo, funciones y suplentes del Plan C, controles, funcionamiento sin conexión, anchos 320/390/760/1200 px, tema oscuro y movimiento reducido, sin errores ni desbordes. Inspeccionado visualmente el dibujo nuevo.
+- En este proyecto sólo cambia el registro documental; no se modifica ni se publica la web de la escribanía. No hay pendientes técnicos de esta ampliación.
